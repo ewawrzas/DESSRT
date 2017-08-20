@@ -1,7 +1,7 @@
 # DESSRT
 
-+ [Heroku link:](https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs)
-+ [Trello link:](https://trello.com/b/vFwzEiag/dessrt)
++ [Heroku link](https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs)
++ [Trello link](https://trello.com/b/vFwzEiag/dessrt)
 
 ## Minimum Viable Product
 Based on Untappd, DESSRT is a web application built using Ruby on Rails and React/Redux. By the end of week 9 the following features will be styled and implemented with bug free navigation and sufficient seed data:
