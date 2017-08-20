@@ -6,6 +6,8 @@
 [Trello link:](https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs)
 
 ## Minimum Viable Product
+Based on Untappd, DESSRT is a web application for dessert lovers built using Ruby on Rails and React/Redux. DESSRT will, by the end of week 9, 
+
 
 + Hosting on Heroku
 + Production README
@@ -19,11 +21,11 @@
 
 ## Design Docs
 
-+ View Wireframes
-+ React Components
-+ Sample State
-+ DB Schema
-+ API Endpoints
++ [View Wireframes] (https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs/wireframes)
++ [React Components] (https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/component-hierarchy.md)
++ [Sample State] (https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/sample-state.md)
++ [DB Schema] (https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/schema.md)
++ [API Endpoints] (https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/api-endpoints.md)
 
 ## Implementation Timeline
 

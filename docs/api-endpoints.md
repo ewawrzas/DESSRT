@@ -18,3 +18,9 @@
 ### Dessert
 + `POST` /api/dessert
 + `GET` /api/dessert/:id
+
+### Reviews
++ `POST` /api/reviews
++ `PATCH` /api/reviews/:id
++ `DELETE` /api/reviews/:id
++ `GET` /api/reviews
