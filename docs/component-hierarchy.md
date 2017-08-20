@@ -2,25 +2,25 @@
 
 ## App
 
-* AuthFormContainer
+### AuthFormContainer
  + AuthForm `connect`s to `errors`
 
-* HomeContainer
+### HomeContainer
   + Navbar `connect`s to `dessert` and `user`
   + Sidebar `connect`s to `user`
   + ReviewsIndex `connect`s to `review`
 
-* UserProfileContainer
+### UserProfileContainer
  + Navbar `connect`s to `new` and `user`
  + ReviewsIndex `connect`s to `review`
 
-* DessertDetailContainer
+### DessertDetailContainer
  + Navbar `connect`s to `new` and `user`
  + ReviewsIndex `connect`s to `review`
  + CheckInForm
  + CheckInButton `connect`s to `review` and `user`
 
-* NewDessertContainer
+### NewDessertContainer
   + NewDessertButton `connect`s to `dessert`
 
 
