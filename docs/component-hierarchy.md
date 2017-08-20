@@ -1,12 +1,12 @@
 # Component Hierarchy
 
-## AuthFormContainer
- + AuthForm `connect`s to `errors`
-
 ## App
 
+* AuthFormContainer
+ + AuthForm `connect`s to `errors`
+
 * HomeContainer
-  + Navbar `connect`s to `new` and `user`
+  + Navbar `connect`s to `dessert` and `user`
   + Sidebar `connect`s to `user`
   + ReviewsIndex `connect`s to `review`
 
@@ -17,10 +17,11 @@
 * DessertDetailContainer
  + Navbar `connect`s to `new` and `user`
  + ReviewsIndex `connect`s to `review`
- + CheckInContainer
+ + CheckInForm
+ + CheckInButton `connect`s to `review` and `user`
 
 * NewDessertContainer
-  + NewDessertButton
+  + NewDessertButton `connect`s to `dessert`
 
 
 # Routes
