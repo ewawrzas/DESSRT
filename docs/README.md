@@ -1,7 +1,7 @@
 # DESSRT
 
-[Heroku link:](https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs)
-[Trello link:](https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs)
++ [Heroku link:](https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs)
++ [Trello link:](https://trello.com/b/vFwzEiag/dessrt)
 
 ## Minimum Viable Product
 Based on Untappd, DESSRT is a web application built using Ruby on Rails and React/Redux. By the end of week 9 the following features will be styled and implemented with bug free navigation and sufficient seed data:
@@ -12,7 +12,7 @@ Based on Untappd, DESSRT is a web application built using Ruby on Rails and Reac
 + Delete or update existing account
 + User login, guest/demo login
 + View other user accounts
-+ Create new dessert
++ Create and view desserts
 + Create, edit, delete and view Checkins
 
 
@@ -34,8 +34,6 @@ Based on Untappd, DESSRT is a web application built using Ruby on Rails and Reac
 #### Aim: Desserts can be added and viewed through the API
 ### Phase 4: Checkin Model, API, and components (2 days)
 #### Aim: Checkins belong to desserts and users, and can be created, updated, and destroyed.
-### Phase 5:
-#### Aim:
 
 
 ### Bonus Features (TBD)
