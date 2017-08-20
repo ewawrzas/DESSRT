@@ -10,6 +10,7 @@
 + `POST` /api/users
 + `PATCH` /api/users
 + `DELETE` /api/users/:id
++ `GET` /api/user/:id
 
 ### Session
 + `POST` /api/session
@@ -19,8 +20,8 @@
 + `POST` /api/dessert
 + `GET` /api/dessert/:id
 
-### Reviews
-+ `POST` /api/reviews
-+ `PATCH` /api/reviews/:id
-+ `DELETE` /api/reviews/:id
-+ `GET` /api/reviews
+### Checkin
++ `POST` /api/checkin/add
++ `PATCH` /api/checkins/:id
++ `DELETE` /api/checkins/:id
++ `GET` /api/checkin

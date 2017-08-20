@@ -1,37 +1,37 @@
 ```
 {
-    reviews : {
+    checkins : {
         byId : {
             1 : {
                 id : 1,
-                author_id : 1,
+                user_id : 1,
                 dessert_id : 1,
-                body : "......",
+                comment : "......",
                 rating: 3,
             },
             2 : {
                 id : 2
-                author_id : 1,
+                user_id : 1,
                 dessert : 2,
-                body : "......",
+                comment : "......",
                 rating: 4,    
             }
         }
-        allIds : [1, 2] //used to filter selected reviews
+        allIds : [1, 2] //used to filter selected checkins
     },
     desserts : {
         byId : {
             1 : {
                 id : 1,
                 description : ".....",
-                review_id : 1,
+                checkin_id : 1,
                 name : "...",
                 category : "..."
             },
             2 : {
                 id : 2  ,
                 description : ".....",
-                review_id : 2,
+                checkin_id : 2,
                 name : "...",
                 category : "..."
             }            

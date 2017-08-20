@@ -11,13 +11,13 @@
 | session_token   | string    | not null, indexed, unique |
 
 
-## reviews
+## checkin
 
 | Column Name | Data Type | Details                                              |
 | ------------|-----------| -----------------------------------------------------|
 | id          | integer   | not null, primary key                                |
-| body        | string    | not null                                             |
-| reviewer_id | integer   | not null, foreign key (references users), indexed    |
+| comment     | string    | not null                                             |
+| user_id     | integer   | not null, foreign key (references users), indexed    |
 | dessert_id  | integer   | not null, foreign key (references desserts), indexed |                  
 | image_url   | string    |                                                      |
 | rating      | integer   |                                                      |
@@ -29,7 +29,7 @@
 | ------------|-----------| -----------------------------------------------------|
 | id          | integer   | not null, primary key                                |
 | description | string    | not null                                             |
-| review_id   | integer   | not null, foreign key (references reviews), indexed  |                  
+| checkin_id  | integer   | not null, foreign key (references checkins), indexed |                  
 | image_url   | string    |                                                      |
 | name        | string    | not null, unique                                     |
 | category    | string    |

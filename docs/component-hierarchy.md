@@ -8,17 +8,17 @@
 ### HomeContainer
   + Navbar `connect`s to `dessert` and `user`
   + Sidebar `connect`s to `user`
-  + ReviewsIndex `connect`s to `review`
+  + CheckinsIndex `connect`s to `checkin`
 
 ### UserProfileContainer
  + Navbar `connect`s to `new` and `user`
- + ReviewsIndex `connect`s to `review`
+ + CheckinsIndex `connect`s to `checkins`
 
 ### DessertDetailContainer
  + Navbar `connect`s to `new` and `user`
- + ReviewsIndex `connect`s to `review`
+ + CheckinsIndex `connect`s to `checkins`
  + CheckInForm
- + CheckInButton `connect`s to `review` and `user`
+ + CheckInButton `connect`s to `checkins` and `user`
 
 ### NewDessertContainer
   + NewDessertButton `connect`s to `dessert`
