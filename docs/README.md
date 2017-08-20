@@ -1,7 +1,9 @@
-# Dessrt
+# DESSRT
 
-[Heroku link:]
-[Trello link:]
+
+
+[Heroku link:](https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs)
+[Trello link:](https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs)
 
 ## Minimum Viable Product
 
@@ -16,6 +18,12 @@
 
 
 ## Design Docs
+
++ View Wireframes
++ React Components
++ Sample State
++ DB Schema
++ API Endpoints
 
 ## Implementation Timeline
 
