@@ -1,6 +1,6 @@
-#Schema
+# Schema
 
-##users
+## users
 
 | Column Name     | Data Type | Details                   |
 | ----------------|-----------| --------------------------|
@@ -11,7 +11,7 @@
 | session_token   | string    | not null, indexed, unique |
 
 
-##reviews
+## reviews
 
 | Column Name | Data Type | Details                                              |
 | ------------|-----------| -----------------------------------------------------|
@@ -23,7 +23,7 @@
 | rating      | integer   |                                                      |
 
 
-##desserts
+## desserts
 
 | Column Name | Data Type | Details                                              |
 | ------------|-----------| -----------------------------------------------------|
@@ -32,4 +32,4 @@
 | review_id   | integer   | not null, foreign key (references reviews), indexed  |                  
 | image_url   | string    |                                                      |
 | name        | string    | not null, unique                                     |
-| category    | string    | 
+| category    | string    |
