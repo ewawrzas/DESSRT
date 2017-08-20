@@ -6,8 +6,7 @@
 [Trello link:](https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs)
 
 ## Minimum Viable Product
-Based on Untappd, DESSRT is a web application for dessert lovers built using Ruby on Rails and React/Redux. DESSRT will, by the end of week 9, 
-
+Based on Untappd, DESSRT is a web application built using Ruby on Rails and React/Redux. By the end of week 9 the following features will be styled and implemented with bug free navigation and sufficient seed data:
 
 + Hosting on Heroku
 + Production README
@@ -21,29 +20,28 @@ Based on Untappd, DESSRT is a web application for dessert lovers built using Rub
 
 ## Design Docs
 
-+ [View Wireframes] (https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs/wireframes)
-+ [React Components] (https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/component-hierarchy.md)
-+ [Sample State] (https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/sample-state.md)
-+ [DB Schema] (https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/schema.md)
-+ [API Endpoints] (https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/api-endpoints.md)
++ [View Wireframes](https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs/wireframes)
++ [React Components](https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/component-hierarchy.md)
++ [Sample State](https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/sample-state.md)
++ [DB Schema](https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/schema.md)
++ [API Endpoints](https://github.com/ewawrzas/Full-Stack-Proposal/blob/master/docs/api-endpoints.md)
 
 ## Implementation Timeline
 
-### Phase 1:
-#### Aim:
-### Phase 2:
-#### Aim:
-### Phase 3:
-#### Aim:
-### Phase 4:
-#### Aim:
+### Phase 1: Backend setup and Front End User Authentication (2 days)
+#### Aim: Functional rails backend with front-end Authentication
+### Phase 2: Users API and components (2 days)
+#### Aim: User profiles can be read, updated, and destroyed through the API
+### Phase 3: Desserts model, API, and components (2 days)
+#### Aim: Desserts can be added and viewed through the API
+### Phase 4: Reviews model, API, and components (2 days)
+#### Aim: Reviews belong to desserts and users, and can be created, updated, and destroyed.
 ### Phase 5:
 #### Aim:
-### Phase 6:
-#### Aim:
+
 
 ### Bonus Features (TBD)
-+ Friends
++ Users can add and delete friends
 + Search
 + Venues
-+ Badges
++ Users earn badges for number of check-ins
