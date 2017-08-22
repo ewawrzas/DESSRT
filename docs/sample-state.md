@@ -54,7 +54,7 @@
         2: {
           username : "user2",
           email: "....",
-          checkIns: [],
+          checkin_ids: [],
         }
       }
     }
