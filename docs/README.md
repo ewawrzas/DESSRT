@@ -1,6 +1,6 @@
 # DESSRT
 
-+ [Heroku link](https://github.com/ewawrzas/Full-Stack-Proposal/tree/master/docs)
++ [Heroku link](google.com)
 + [Trello link](https://trello.com/b/vFwzEiag/dessrt)
 
 ## Minimum Viable Product

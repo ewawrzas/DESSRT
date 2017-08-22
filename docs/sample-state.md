@@ -24,14 +24,14 @@
             1 : {
                 id : 1,
                 description : ".....",
-                checkin_id : 1,
+                checkin_ids : [],
                 name : "...",
                 category : "..."
             },
             2 : {
                 id : 2  ,
                 description : ".....",
-                checkin_id : 2,
+                checkin_ids : [],
                 name : "...",
                 category : "..."
             }            
@@ -44,6 +44,19 @@
             }  
         }
 
+    },
+    forms: {
+      signUp: {errors: []},
+      logIn: {errors: []}
+    },
+    user: {
+      byId : {
+        2: {
+          username : "user2",
+          email: "....",
+          checkIns: [],
+        }
+      }
     }
 }
 ```
