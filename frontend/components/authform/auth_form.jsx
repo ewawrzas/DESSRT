@@ -7,7 +7,6 @@ class AuthForm extends React.Component {
     this.state = {
       username: "",
       password: "",
-      email: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -16,7 +15,7 @@ class AuthForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
-    this.setState({username:"", password:"", email:""})
+    this.setState({username:"", password:""})
   }
 
   handleChange(field) {
@@ -24,12 +23,9 @@ class AuthForm extends React.Component {
   }
 
   renderErrors() {
-    debugger
     if (!this.props.errors){
-      debugger
        return null;
     } else {
-      debugger
       return(
         <ul>
           {this.props.errors.map((error, i) => (
@@ -46,19 +42,6 @@ class AuthForm extends React.Component {
   render() {
     const link = (this.props.location.pathname === "/login") ? <Link to="/signup">Sign up!</Link> : <Link to="/login">Signin</Link>;
 
-    const emailInput = (
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-        type="email"
-        id="email"
-        onChange={ this.handleChange('email') }
-        value={ this.state.email }
-        />
-      </div>
-    );
-
-    const revealEmail = (this.props.location.pathname === "/login") ? "" : emailInput
 
     return (
       <div>
@@ -81,7 +64,7 @@ class AuthForm extends React.Component {
             value={ this.state.password }
             />
           <br/>
-          { revealEmail }
+
           { this.renderErrors() }
           <button>{ this.props.buttonText }</button>
           <br/>
