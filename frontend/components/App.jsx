@@ -8,6 +8,7 @@ const App = () => (
   <div>
     <header>
       <h1>DESSRT</h1>
+      <h4>EAT SOCIALLY</h4>
       <GreetingContainer/>
     </header>
 

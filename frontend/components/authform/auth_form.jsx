@@ -46,7 +46,7 @@ class AuthForm extends React.Component {
       <div>
         <label htmlFor="email">Email</label>
         <input
-        type="text"
+        type="email"
         id="email"
         onChange={ this.handleChange('email') }
         value={ this.state.email }
