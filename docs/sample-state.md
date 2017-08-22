@@ -53,7 +53,6 @@
       byId : {
         2: {
           username : "user2",
-          email: "....",
           checkin_ids: [],
         }
       }

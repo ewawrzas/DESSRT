@@ -1,6 +1,6 @@
 # DESSRT
 
-+ [Heroku link](google.com)
++ [Heroku link](https://dessrt.herokuapp.com/#/)
 + [Trello link](https://trello.com/b/vFwzEiag/dessrt)
 
 ## Minimum Viable Product

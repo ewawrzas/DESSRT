@@ -6,7 +6,8 @@ class AuthForm extends React.Component {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      email: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -23,9 +24,12 @@ class AuthForm extends React.Component {
   }
 
   renderErrors() {
+    debugger
     if (!this.props.errors){
+      debugger
        return null;
     } else {
+      debugger
       return(
         <ul>
           {this.props.errors.map((error, i) => (
