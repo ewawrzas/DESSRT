@@ -23,16 +23,21 @@ class AuthForm extends React.Component {
   }
 
   renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
-  }
+    if (!this.props.errors){
+       return null;
+    } else {
+      return(
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+  };
+
 
   render() {
     const link = (this.props.location.pathname === "/login") ? <Link to="/signup">Sign up!</Link> : <Link to="/login">Signin</Link>;
@@ -72,8 +77,8 @@ class AuthForm extends React.Component {
             value={ this.state.password }
             />
           <br/>
-          {revealEmail}
-
+          { revealEmail }
+          { this.renderErrors() }
           <button>{ this.props.buttonText }</button>
           <br/>
           {link}

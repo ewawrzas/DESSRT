@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   attr_reader :password
 
   validates :username, :password_digest, :session_token, :email, presence: true
