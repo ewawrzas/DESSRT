@@ -44,33 +44,35 @@ class AuthForm extends React.Component {
 
 
     return (
-      <div>
-        <h1>{this.props.formType}</h1>
+      <div className='authFormParent'>
         <br/>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            id="username"
-            onChange={ this.handleChange('username') }
-            value={ this.state.username }
-            />
-          <br/>
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            onChange={ this.handleChange('password') }
-            value={ this.state.password }
-            />
-          <br/>
-
-          { this.renderErrors() }
-          <button>{ this.props.buttonText }</button>
-          <br/>
-          {link}
-
-        </form>
+        <div className="authInfo">
+          <span className="formType">
+            <h1>{this.props.formType}</h1>
+          </span>
+          <form onSubmit={this.handleSubmit}>
+            <label htmlFor="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              onChange={ this.handleChange('username') }
+              value={ this.state.username }
+              />
+            <br/>
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              onChange={ this.handleChange('password') }
+              value={ this.state.password }
+              />
+            <br/>
+            { this.renderErrors() }
+            <button>{ this.props.buttonText }</button>
+            <br/>
+            {link}
+          </form>
+        </div>
       </div>
     );
   }
