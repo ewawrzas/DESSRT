@@ -96,12 +96,16 @@ form {
 .errDiv {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  max-height: 30px;
 }
 
 .erList {
+  list-style: none;
   display: flex;
   justify-content: center;
+  padding: auto 0;
+  margin: auto 0;
 }
 
 

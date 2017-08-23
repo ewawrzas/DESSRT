@@ -15,11 +15,11 @@ h1 {
   display: grid;
 }
 
-li {
+#navSignIn {
   background-color: #ffccd5;
   border: none;
   color: white;
-  padding: 10px 32px;
+  padding: 5px 32px;
   text-align: center;
   text-decoration: none;
   display: flex;
@@ -30,6 +30,20 @@ li {
   border-radius: 5px 5px 5px 5px;
 }
 
+#navSignUp {
+  background-color: #ffccd5;
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  position: relative;
+  margin-right: 25px;
+  align-items: center;
+  border-radius: 5px 5px 5px 5px;
+}
 
 li:hover {
   background-color: lightgrey;
