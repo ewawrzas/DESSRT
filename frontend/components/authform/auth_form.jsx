@@ -27,7 +27,7 @@ class AuthForm extends React.Component {
        return null;
     } else {
       return(
-        <ul>
+        <ul id="errList">
           {this.props.errors.map((error, i) => (
             <li id="errors" key={`error-${i}`}>
               {error}
@@ -40,8 +40,11 @@ class AuthForm extends React.Component {
 
 
   render() {
-    const link = (this.props.location.pathname === "/login") ? <Link to="/signup">Sign up!</Link> : <Link to="/login">Signin</Link>;
+    const link = (this.props.location.pathname === "/login") ? <Link to="/signup">Sign up!</Link> : <Link to="/login">{"Sign In"}</Link>;
 
+    const userMsg = (this.props.location.pathname === "/login") ? "New around here?" : "Already have an account?";
+
+    const buttonText = (this.props.location.pathname === "/login") ? "Login" : "Sign Up";
 
     return (
       <div className='dessertContainer'>
@@ -58,7 +61,7 @@ class AuthForm extends React.Component {
                 value={ this.state.username }
                 />
               </div>
-            <br/>
+
             <div className="password">
               <input
                 type="password"
@@ -67,12 +70,14 @@ class AuthForm extends React.Component {
                 value={ this.state.password }
                 />
             </div>
-            <br/>
-            { this.renderErrors() }
+            <div className="errDiv">
+              { this.renderErrors() }
+            </div>
             <span>
-              <button id="signIn">{ (this.props.buttonText) }</button>
+              <button id="signIn">{ buttonText }</button>
             </span>
             <br/>
+            {userMsg}
             {link}
           </form>
         </div>

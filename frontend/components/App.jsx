@@ -11,7 +11,7 @@ const App = () => (
         <h1>DESSRT</h1>
         <h4>EAT SOCIALLY</h4>
       </div>
-        <ul id="nav-links">
+        <ul id="navLinks">
           <li id="navSignUp"><Link to="/signup">CREATE AN ACCOUNT</Link></li>
           <li id="navSignIn"><Link to="/login">SIGNIN</Link></li>
         </ul>

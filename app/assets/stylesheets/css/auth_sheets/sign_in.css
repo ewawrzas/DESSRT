@@ -4,6 +4,7 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+
 h1 {
   font-size: 38px;
   font-weight: bold;
@@ -47,7 +48,7 @@ form {
 .authInfo {
   display: flex;
   flex-direction: column-reverse;
-  height: 60%;
+  height: 65%;
   width: 300px;
   background: white;
   justify-content: center;
@@ -65,6 +66,7 @@ form {
   display: inline-block;
   font-size: 16px;
   position: relative;
+  border-radius: 5px 5px 5px 5px;
 }
 
 #signIn:hover {
@@ -73,7 +75,7 @@ form {
 
 .username {
   border: 1px solid lightgrey;
-  margin: 0 2px 0 5px;
+  margin: 5px 2px 5px 5px;
   background-image: url(./001-profile.png);
   background-position: left;
   background-repeat: no-repeat;
@@ -81,12 +83,27 @@ form {
 
 .password {
   border: 1px solid lightgrey;
-  margin: 0 2px 0 5px;
+  margin: 5px 2px 5px 5px;
   background-image: url(./002-padlock.png);
   background-position: left;
   background-repeat: no-repeat;
 }
-/*
-#errors {
 
-}*/
+.errDiv {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#erList {
+  display: flex;
+  justify-content: center;
+}
+
+
+#errors {
+  background-color: white;
+  font-size: 10px;
+  color: grey;
+  padding: 0 0 0 0;
+}

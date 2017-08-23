@@ -1,4 +1,4 @@
-ul {
+#navLinks {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -27,11 +27,9 @@ li {
   position: relative;
   margin-right: 25px;
   align-items: center;
+  border-radius: 5px 5px 5px 5px;
 }
 
-.navBar {
-  height:
-}
 
 li:hover {
   background-color: lightgrey;
