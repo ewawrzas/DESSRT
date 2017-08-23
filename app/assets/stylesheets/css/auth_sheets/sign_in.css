@@ -9,7 +9,7 @@ input {
   display: flex;
   align-self: center;
   align-items: flex-start;
-  padding: 2px 2px 2px 2px;
+  padding: 2px 2px 2px 15px;
   margin: 5px 5px 5px 5px;
   /*border: solid 1px lightgrey;*/
 }
@@ -58,7 +58,7 @@ form {
 
 .username {
   border: 1px solid lightgrey;
-  margin: 0 2px 0 2px;
+  margin: 0 2px 0 5px;
   background-image: url(./001-profile.png);
   background-position: left;
   background-repeat: no-repeat;
@@ -66,6 +66,7 @@ form {
 
 .password {
   border: 1px solid lightgrey;
+  margin: 0 2px 0 5px;
   background-image: url(./002-padlock.png);
   background-position: left;
   background-repeat: no-repeat;
