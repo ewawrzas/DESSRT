@@ -12,6 +12,10 @@ h1 {
   letter-spacing: 2px;
 }
 
+h2 {
+  margin-top: 7px;
+}
+
 h4 {
   font-size: 16px;
   letter-spacing: 2px;
@@ -27,7 +31,7 @@ input {
 }
 
 .dessertContainer {
-  background-image: url(./blurrypinkcupcakes.jpg);
+  background-image: image-url('blurrypinkcupcakes.jpg');
   height: 600px;
   width: auto;
   display: flex;
@@ -48,8 +52,8 @@ form {
 .authInfo {
   display: flex;
   flex-direction: column-reverse;
-  height: 65%;
-  width: 300px;
+  height: 68%;
+  width: 340px;
   background: white;
   justify-content: center;
   align-items: center;
@@ -57,7 +61,7 @@ form {
 
 
 #signIn {
-  background-color: pink;
+  background-color: #ffccd5;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -76,7 +80,7 @@ form {
 .username {
   border: 1px solid lightgrey;
   margin: 5px 2px 5px 5px;
-  background-image: url(./001-profile.png);
+  background-image: image-url('001-profile.png');
   background-position: left;
   background-repeat: no-repeat;
 }
@@ -84,7 +88,7 @@ form {
 .password {
   border: 1px solid lightgrey;
   margin: 5px 2px 5px 5px;
-  background-image: url(./002-padlock.png);
+  background-image: image-url('002-padlock.png');
   background-position: left;
   background-repeat: no-repeat;
 }
@@ -98,7 +102,6 @@ form {
 .erList {
   display: flex;
   justify-content: center;
-  padding: 0 0 0 0;
 }
 
 
@@ -106,5 +109,4 @@ form {
   background-color: white;
   font-size: 10px;
   color: grey;
-  padding: 0 0 0 0;
 }
