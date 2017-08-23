@@ -9,6 +9,7 @@ class AuthForm extends React.Component {
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   handleSubmit(e) {
@@ -20,6 +21,10 @@ class AuthForm extends React.Component {
 
   handleChange(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value });
+  }
+
+  handleDemo() {
+    this.props.demoLogin(this.props.demoUser);
   }
 
   renderErrors() {
@@ -40,7 +45,7 @@ class AuthForm extends React.Component {
 
 
   render() {
-    const link = (this.props.location.pathname === "/login") ? <Link onClick={ this.props.removeErrors } to="/signup">Sign up!</Link> : <Link onClick={ this.props.removeErrors }to="/login">{"Sign In"}</Link>;
+    const link = (this.props.location.pathname === "/login") ? <Link onClick={ this.props.removeErrors } to="/signup">Sign up!</Link> : <Link onClick={ this.props.removeErrors } to="/login">{"Sign In"}</Link>;
 
     const userMsg = (this.props.location.pathname === "/login") ? "New around here?" : "Already have an account?";
 
@@ -79,7 +84,7 @@ class AuthForm extends React.Component {
             </div>
 
             <div className="authBttns">
-              <button id="demo">Demo</button>
+              <button onClick={this.handleDemo} id="demo">Demo</button>
               <button id="signIn">{ formName }</button>
             </div>
 
