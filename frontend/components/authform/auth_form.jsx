@@ -73,12 +73,16 @@ class AuthForm extends React.Component {
                 value={ this.state.password }
                 />
             </div>
+
             <div className="errDiv">
               { this.renderErrors() }
             </div>
-            <span>
+
+            <div className="authBttns">
+              <button id="demo">Demo</button>
               <button id="signIn">{ formName }</button>
-            </span>
+            </div>
+
             <br/>
             {userMsg}
             {link}
