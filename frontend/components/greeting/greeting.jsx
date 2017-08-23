@@ -14,16 +14,18 @@ class Greeting extends React.Component {
   render () {
     if (this.props.currentUser) {
       return (
-        <div>
-          <h2>Your Recent Activity</h2>
+        <div className="greeting">
           {this.props.currentUser.username}
+          <h2>Your Recent Activity</h2>
           <br/>
-          <button onClick={this.handleClick}>Logout</button>
+          <button id="logout" onClick={this.handleClick}>Logout</button>
         </div>
       );
     } else {
       return (
         <div>
+          <h1>DESSRT</h1>
+          <h4>EAT SOCIALLY</h4>
           <Link to="/signup">CREATE AN ACCOUNT</Link><br/>
           <Link to="/login">SIGNIN</Link>
         </div>

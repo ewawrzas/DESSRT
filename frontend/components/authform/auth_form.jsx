@@ -29,7 +29,7 @@ class AuthForm extends React.Component {
       return(
         <ul>
           {this.props.errors.map((error, i) => (
-            <li key={`error-${i}`}>
+            <li id="errors" key={`error-${i}`}>
               {error}
             </li>
           ))}
@@ -48,6 +48,8 @@ class AuthForm extends React.Component {
         <br/>
         <div className="authInfo">
           <form onSubmit={this.handleSubmit}>
+            <h1>DESSRT</h1>
+            <h4>EAT SOCIALLY</h4>
             <div className="username">
               <input
                 type="text"

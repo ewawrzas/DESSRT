@@ -1,0 +1,38 @@
+ul {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 25px;
+}
+
+
+h1 {
+  display: grid;
+}
+
+li {
+  background-color: pink;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  position: relative;
+  margin-right: 25px;
+  align-items: center;
+}
+
+.navBar {
+  height:
+}
+
+li:hover {
+  background-color: lightgrey;
+}
