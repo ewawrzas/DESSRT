@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const LandingPage = () => (
   <div>
     <header className="navBar">
@@ -13,7 +14,6 @@ const LandingPage = () => (
           <li id="navSignIn"><Link to="/login">{'SIGN IN'}</Link></li>
         </ul>
     </header>
-
   </div>
 );
 

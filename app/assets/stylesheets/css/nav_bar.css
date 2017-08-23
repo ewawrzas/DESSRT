@@ -1,6 +1,7 @@
 #navLinks {
   display: flex;
   flex-direction: row-reverse;
+  padding-left: 0;
 }
 
 header {

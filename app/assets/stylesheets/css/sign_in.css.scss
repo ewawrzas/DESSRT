@@ -122,8 +122,8 @@ form {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding: auto 0;
-  margin: auto 0;
+  padding-right: 32;
+  margin: 0;
 }
 
 
@@ -131,4 +131,5 @@ form {
   background-color: white;
   font-size: 10px;
   color: grey;
+  text-align: left;
 }
