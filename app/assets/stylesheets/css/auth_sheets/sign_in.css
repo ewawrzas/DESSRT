@@ -1,18 +1,72 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-img {
 
+input {
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  padding: 2px 2px 2px 2px;
+  margin: 5px 5px 5px 5px;
+  /*border: solid 1px lightgrey;*/
 }
-.authFormParent {
-  background-image: url(./pinkcupcakes.jpg);
+
+.dessertContainer {
+  background-image: url(./blurrypinkcupcakes.jpg);
   height: 600px;
   width: auto;
-  display: block;
+  display: flex;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.authInfo {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 60%;
+  width: 300px;
+  background: white;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#signIn {
+  background-color: pink;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+}
+
+.username {
+  border: 1px solid lightgrey;
+  margin: 0 2px 0 2px;
+  background-image: url(./001-profile.png);
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.password {
+  border: 1px solid lightgrey;
+  background-image: url(./002-padlock.png);
+  background-position: left;
+  background-repeat: no-repeat;
 }

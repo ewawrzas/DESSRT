@@ -1,4 +1,4 @@
-html, body, figure, div, button {
+button, input, html, body, figure, div, link {
   margin: 0;
   padding: 0;
   border: 0;
@@ -33,8 +33,8 @@ input[type="submit"] {
 }
 
 
-.group:after {
+/*.group:after {
   content: "";
   display: block;
   clear: both;
-}
+}*/
