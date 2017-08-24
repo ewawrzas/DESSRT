@@ -8,7 +8,7 @@
 
 ### Users
 + `POST` /api/users
-+ `PATCH` /api/users
++ `PATCH` /api/users/:id
 + `GET` /api/user/:id
 + `GET` /api/users/:id/checkins
   * index of all checkins for a user

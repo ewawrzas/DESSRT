@@ -1,7 +1,6 @@
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import AuthFormContainer from './authform/auth_form_container';
-import NavBar from './navbar/nav_container'
 import { Route, Link, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LandingPage from './landing'
