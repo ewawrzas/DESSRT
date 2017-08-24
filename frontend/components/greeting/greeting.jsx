@@ -12,16 +12,6 @@ class Greeting extends React.Component {
   }
 
   render () {
-    if (!this.props.currentUser) {
-      return (
-        <div>
-          <h1>DESSRT</h1>
-          <h4>EAT SOCIALLY</h4>
-          <Link to="/signup">CREATE AN ACCOUNT</Link><br/>
-          <Link to="/login">SIGNIN</Link>
-        </div>
-      );
-    } else {
       return (
         <div className="greeting">
           <div className="homeNav">
@@ -31,20 +21,24 @@ class Greeting extends React.Component {
               </div>
                 <ul id="homeNavLinks">
                   <button id="logout" onClick={this.handleClick}>Logout</button>
+                  <button id="addDessert">Add Dessert will go here</button>
                 </ul>
             </header>
+            <div className="searchDiv">
+              <h4>Search will go here</h4>
+            </div>
           </div>
           <div className="homePage">
-            <h2 id="feed">Your Recent Activity</h2>
-            <div className="welcome">
-              <h3>Welcome</h3>
-              {this.props.currentUser.username}
+            <div className="homeContent">
+              <p id="user">{this.props.currentUser.username}</p>
             </div>
+            <h2 id="feed">Your Recent Activity</h2>
+
           </div>
       </div>
       );
     }
-  }
+
 }
 
 export default Greeting;
