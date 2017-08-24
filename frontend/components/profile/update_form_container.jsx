@@ -1,12 +1,10 @@
 import { connect } from 'react-redux';
-import UserChangeForm from 'update_form';
+import UpdateForm from './update_form';
+import { requestSingleUser, updateUser } from '../../actions/user_actions';
 
-const MapStateToProps = (state, OwnProps) => {
-  return const user = state.users[ownProps.matchparams.userId];
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  requestSingleUser: (userId) => dispatch(requestSingleUser(userId)),
+const mapDispatchToProps = (dispatch, { user }) => ({
+  fetchSingleUser: () => dispatch(fetchSingleUser(user.id)),
+  updateUser: () => dispatch(updateUser(user.id))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserChangeForm);
+export default connect(mapDispatchToProps)(UpdateForm);

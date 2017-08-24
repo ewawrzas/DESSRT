@@ -24,8 +24,11 @@ class Greeting extends React.Component {
                   <button id="addDessert">Add Dessert will go here</button>
                 </ul>
             </header>
-            <div className="searchDiv">
-              <h4>Search will go here</h4>
+            <div className="searchDrop">
+              <Link to="/update" className="updateLink">Update</Link>
+              <div className="searchDiv">
+                <h4>Search will go here</h4>
+              </div>
             </div>
           </div>
           <div className="homePage">

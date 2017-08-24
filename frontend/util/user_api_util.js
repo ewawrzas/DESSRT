@@ -1,5 +1,5 @@
 export const fetchSingleUser = (id) => (
-  return $.ajax({
+ $.ajax({
     url: `api/users/${id}`,
     method: 'GET'
   })

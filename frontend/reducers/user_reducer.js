@@ -1,5 +1,6 @@
 import merge from 'lodash/merge';
 import { RECEIVE_SINGLE_USER } from '../actions/user_actions';
+import { RECEIVE_ERRORS, REMOVE_ERRORS } from '../actions/session_actions'
 
 const userReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -12,3 +13,5 @@ const userReducer = (state = {}, action) => {
       return state;
   }
 };
+
+export default userReducer;
