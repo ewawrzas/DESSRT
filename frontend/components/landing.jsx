@@ -5,18 +5,20 @@ class LandingPage extends React.Component {
 
   render () {
     return (
-
-      <header className="navBar">
-        <div>
-          <h1>DESSRT</h1>
-          <h4>EAT SOCIALLY</h4>
+      <div className="landing">
+        <div className="landingContent">
+          <header className="landingNavBar">
+              <ul id="landingLinks">
+                <li id="landingSignUp"><Link to="/signup">CREATE AN ACCOUNT</Link></li>
+                <li id="landingSignIn"><Link to="/login">{'SIGN IN'}</Link></li>
+              </ul>
+          </header>
+          <div className="logo">
+            <h1>DESSRT</h1>
+            <h4>EAT SOCIALLY</h4>
+          </div>
         </div>
-          <ul id="navLinks">
-            <li id="navSignUp"><Link to="/signup">CREATE AN ACCOUNT</Link></li>
-            <li id="navSignIn"><Link to="/login">{'SIGN IN'}</Link></li>
-          </ul>
-      </header>
-
+      </div>
     );
   }
 }
