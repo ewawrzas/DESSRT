@@ -63,6 +63,14 @@
   margin-right: 25px;
 }
 
+#addDessert:hover {
+  opacity: .6;
+}
+
+#logout:hover {
+  opacity: .6;
+}
+
 #feed {
   padding-left: 25px;
 }
@@ -71,4 +79,5 @@
   border-radius: 5px 5px 5px 5px;
   border: 2px lightgrey solid;
   margin-right: 25px;
+  opacity: .4;
 }
