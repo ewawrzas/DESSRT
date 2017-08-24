@@ -24,23 +24,24 @@ class Greeting extends React.Component {
     } else {
       return (
         <div className="greeting">
-          <header className="navBar">
-            <div>
-              <h1>DESSRT</h1>
-              <h4>EAT SOCIALLY</h4>
-            </div>
+          <div className="homeNav">
+            <header className="navBar">
+              <div className="homeLogo">
+                <h1>DESSRT</h1>
+              </div>
+                <ul id="homeNavLinks">
+                  <button id="logout" onClick={this.handleClick}>Logout</button>
+                </ul>
+            </header>
+          </div>
+          <div className="homePage">
+            <h2 id="feed">Your Recent Activity</h2>
             <div className="welcome">
-              <h2>Welcome</h2>
+              <h3>Welcome</h3>
               {this.props.currentUser.username}
             </div>
-              <ul id="navLinks">
-                <button id="logout" onClick={this.handleClick}>Logout</button>
-              </ul>
-          </header>
-          <h2>Your Recent Activity</h2>
-          <br/>
-
-        </div>
+          </div>
+      </div>
       );
     }
   }

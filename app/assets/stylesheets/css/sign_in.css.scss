@@ -125,17 +125,12 @@ form {
 
 .errDiv {
   display: flex;
-  justify-content: center;
   align-items: center;
-  max-height: 30px;
+  height: 30px;
 }
 
 .erList {
-  list-style: none;
   display: flex;
-  justify-content: center;
-  padding-right: 32;
-  margin: 0;
 }
 
 
@@ -144,4 +139,5 @@ form {
   font-size: 10px;
   color: grey;
   text-align: left;
+  margin: 0;
 }

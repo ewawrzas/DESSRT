@@ -33,13 +33,13 @@ class AuthForm extends React.Component {
        return null;
     } else {
       return(
-        <ul className="errList">
+        <div className="errList">
           {this.props.errors.map((error, i) => (
-            <li id="errors" key={`error-${i}`}>
+            <p id="errors" key={`error-${i}`}>
               {error}
-            </li>
+            </p>
           ))}
-        </ul>
+        </div>
       );
     }
   };
