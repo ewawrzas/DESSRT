@@ -27,6 +27,7 @@ class AuthForm extends React.Component {
     this.props.demoLogin(this.props.demoUser);
   }
 
+
   renderErrors() {
     if (!this.props.errors){
        return null;
