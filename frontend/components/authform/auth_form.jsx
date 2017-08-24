@@ -52,9 +52,10 @@ class AuthForm extends React.Component {
 
     const formName = (this.props.location.pathname === "/login") ? "Sign In" : "Sign Up";
 
+    const dessertContainer = (this.props.location.pathname === "/login") ? "img1" : "img2";
 
     return (
-      <div className='dessertContainer'>
+      <div className={dessertContainer} >
         <br/>
         <div className="authInfo">
           <form onSubmit={this.handleSubmit}>

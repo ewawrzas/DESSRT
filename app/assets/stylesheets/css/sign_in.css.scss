@@ -29,8 +29,20 @@ input {
   margin: 5px 5px 5px 5px;
 }
 
-.dessertContainer {
+.img1 {
   background-image: image-url('blurrypinkcupcakes.jpg');
+  height: 600px;
+  width: auto;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.img2 {
+  background-image: image-url('blueberry.jpg');
   height: 600px;
   width: auto;
   display: flex;
