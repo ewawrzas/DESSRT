@@ -29,7 +29,7 @@ Based on Untappd, DESSRT is a web application built using Ruby on Rails and Reac
 ### Phase 1: Backend setup and Front End User Authentication (2 days)
 #### Aim: Functional rails backend with front-end Authentication
 ### Phase 2: Users API and components (2 days)
-#### Aim: User profiles can be read, updated, and destroyed through the API
+#### Aim: User profiles can be created, read, and updated through the API
 ### Phase 3: Desserts model, API, and components (2 days)
 #### Aim: Desserts can be added and viewed through the API
 ### Phase 4: Checkin Model, API, and components (2 days)
