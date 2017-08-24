@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import LandingPage from './landing'
+import NavBar from './landing'
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -9,4 +9,4 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps)(LandingPage);
+export default connect(mapStateToProps)(NavBar);
