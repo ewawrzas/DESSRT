@@ -9,7 +9,7 @@ Based on Untappd, DESSRT is a web application built using Ruby on Rails and Reac
 + Hosting on Heroku
 + Production README
 + Create new account
-+ Delete or update existing account
++ Update existing account
 + User login, guest/demo login
 + View other user accounts
 + Create and view desserts

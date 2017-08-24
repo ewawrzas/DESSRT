@@ -25,9 +25,10 @@ class ApplicationController < ActionController::Base
     @current_user = nil
   end
 
+
   def require_logged_in
     unless current_user
-      render json: { base: ['invalid credentials'] }, status: 401
+      render json: ["You must be logged in to do that"], status: :unauthorized
     end
   end
 
