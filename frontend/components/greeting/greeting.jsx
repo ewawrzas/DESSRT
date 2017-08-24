@@ -24,10 +24,22 @@ class Greeting extends React.Component {
     } else {
       return (
         <div className="greeting">
-          {this.props.currentUser.username}
+          <header className="navBar">
+            <div>
+              <h1>DESSRT</h1>
+              <h4>EAT SOCIALLY</h4>
+            </div>
+            <div className="welcome">
+              <h2>Welcome</h2>
+              {this.props.currentUser.username}
+            </div>
+              <ul id="navLinks">
+                <button id="logout" onClick={this.handleClick}>Logout</button>
+              </ul>
+          </header>
           <h2>Your Recent Activity</h2>
           <br/>
-          <button id="logout" onClick={this.handleClick}>Logout</button>
+
         </div>
       );
     }
