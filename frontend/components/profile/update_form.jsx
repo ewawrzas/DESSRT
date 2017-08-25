@@ -5,18 +5,13 @@ import { withRouter } from 'react-router-dom'
 class UpdateForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      username: "",
-      password: ""
-    }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.update(user);
-    this.setState({username:"", password:""})
+    const user = Object.assign({}, this.props);
+    this.props.updateUser(user);
   }
 
   handleChange(field) {
@@ -24,33 +19,38 @@ class UpdateForm extends React.Component {
   }
 
   render() {
+    debugger
+    const modal = (this.props.location.pathname === "/home/update") ? "active" : "inactive"
+
     return (
-      <div className="updateUser">
-        <form className="updateUserForm">
-          <p>Update Your Username and Password</p>
-          <div className="updateInputs">
-            <div className="inputPad1">
-              <input
-                type="text"
-                id="usernameChange"
-                onChange={ this.handleChange('username') }
-                value={ this.state.username }
-                />
+      <div className={ modal }>
+        <div className="updateUser">
+          <form onSubmit={this.handleSubmit} className="updateUserForm">
+            <p>Update Your Username and Password</p>
+            <div className="updateInputs">
+              <div className="inputPad1">
+                <input
+                  type="text"
+                  id="usernameChange"
+                  onChange={ this.handleChange('username') }
+                  value={ this.props.username }
+                  />
+              </div>
+              <div className="inputPad2">
+                <input
+                  type="password"
+                  id="passwordChange"
+                  onChange={ this.handleChange('password') }
+                  value={ this.props.password }
+                  />
+              </div>
             </div>
-            <div className="inputPad2">
-              <input
-                type="password"
-                id="passwordChange"
-                onChange={ this.handleChange('password') }
-                value={ this.state.password }
-                />
-            </div>
-          </div>
-          <button id="updateUserBtn">Submit</button>
-        </form>
+            <button id="updateUserBtn">Submit</button>
+          </form>
+        </div>
       </div>
     )
   }
 }
 
-export default withRouter(UpdateForm)
+export default UpdateForm

@@ -39,6 +39,7 @@
 }
 
 
+
 #logout{
   color: grey;
   padding: 7px 4px;
@@ -63,11 +64,27 @@
   margin-right: 25px;
 }
 
+#updateLink{
+  color: grey;
+  padding: 7px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 5px 5px 5px 5px;
+  margin-right: 25px;
+}
+
 #addDessert:hover {
   opacity: .6;
 }
 
 #logout:hover {
+  opacity: .6;
+}
+
+#updateLink:hover {
   opacity: .6;
 }
 
@@ -80,4 +97,10 @@
   border: 2px lightgrey solid;
   margin-right: 25px;
   opacity: .4;
+}
+
+.searchDrop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

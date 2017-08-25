@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Route, NavLink, Link } from 'react-router-dom';
+import updateFormContainer from '../profile/update_form_container';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class Greeting extends React.Component {
                 </ul>
             </header>
             <div className="searchDrop">
-              <Link to="/update" className="updateLink">Update</Link>
+              <Link to="/home/update" id="updateLink" >Update</Link>
               <div className="searchDiv">
                 <h4>Search will go here</h4>
               </div>
@@ -36,7 +37,7 @@ class Greeting extends React.Component {
               <p id="user">{this.props.currentUser.username}</p>
             </div>
             <h2 id="feed">Your Recent Activity</h2>
-
+            <Route path="/update" component={updateFormContainer} />
           </div>
       </div>
       );

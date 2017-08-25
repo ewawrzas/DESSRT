@@ -1,10 +1,15 @@
 import { connect } from 'react-redux';
 import UpdateForm from './update_form';
-import { requestSingleUser, updateUser } from '../../actions/user_actions';
+import { fetchSingleUser, updateUser } from '../../actions/user_actions';
 
-const mapDispatchToProps = (dispatch, { user }) => ({
-  fetchSingleUser: () => dispatch(fetchSingleUser(user.id)),
-  updateUser: () => dispatch(updateUser(user.id))
+const mapStateToProps = (state) => {
+  const user = state.session.currentUser;
+  return { user };
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchSingleUser: (userId) => dispatch(fetchSingleUser(userId)),
+  updateUser: (user) => dispatch(updateUser(user))
 });
 
-export default connect(mapDispatchToProps)(UpdateForm);
+export default connect(mapStateToProps, mapDispatchToProps)(UpdateForm);
