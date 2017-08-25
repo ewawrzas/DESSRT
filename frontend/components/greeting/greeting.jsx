@@ -37,9 +37,7 @@ class Greeting extends React.Component {
           </header>
           <div className="searchDrop">
 
-              <Link to={`/users/${this.props.currentUser.id}`} id="userLink">
-
-              </Link>
+              <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
             <div className="searchDiv">
               <h4>Search will go here</h4>

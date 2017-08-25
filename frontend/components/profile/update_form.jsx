@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import { merge }from 'lodash'
 
 class UpdateForm extends React.Component {
   constructor(props) {
@@ -10,12 +11,13 @@ class UpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.props);
-    this.props.updateUser(user);
-    this.setState({username:'', password:''});
+    debugger
+    const user = merge({}, this.props.user);
+    return this.props.updateUser(user);
   }
 
   handleChange(field) {
+    debugger
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 

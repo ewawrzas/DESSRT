@@ -7,6 +7,7 @@ const userReducer = (state = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_SINGLE_USER:
+    debugger
       const newUser = action.payload;
       const merged = merge({}, state, { [newUser.id]: newUser });
       return merged;
