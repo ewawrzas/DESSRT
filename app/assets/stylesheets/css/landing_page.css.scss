@@ -27,6 +27,9 @@
   padding-bottom: 95px;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #landingSignIn {
