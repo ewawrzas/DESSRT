@@ -12,6 +12,7 @@ class UpdateForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.props);
     this.props.updateUser(user);
+    this.setState({username:'', password:''});
   }
 
   handleChange(field) {
@@ -19,8 +20,8 @@ class UpdateForm extends React.Component {
   }
 
   render() {
-    debugger
-    const modal = (this.props.location.pathname === "/home/update") ? "active" : "inactive"
+
+    const modal = (this.props.location.pathname === "/users/:userId/update") ? "active" : "inactive"
 
     return (
       <div className={ modal }>
@@ -53,4 +54,4 @@ class UpdateForm extends React.Component {
   }
 }
 
-export default UpdateForm
+export default withRouter(UpdateForm)

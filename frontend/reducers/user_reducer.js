@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { RECEIVE_SINGLE_USER } from '../actions/user_actions';
+import { RECEIVE_SINGLE_USER, RECEIVE_ALL_USERS } from '../actions/user_actions';
 import { RECEIVE_ERRORS, REMOVE_ERRORS } from '../actions/session_actions'
 
 const userReducer = (state = {}, action) => {
@@ -7,8 +7,11 @@ const userReducer = (state = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_SINGLE_USER:
-      const newUser = {[action.user.id]: action.user};
-      return merge({}, state, newUser);
+      const newUser = action.payload;
+      const merged = merge({}, state, { [newUser.id]: newUser });
+      return merged;
+    case RECEIVE_ALL_USERS:
+      return action.users;
     default:
       return state;
   }

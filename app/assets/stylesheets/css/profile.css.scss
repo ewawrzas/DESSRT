@@ -1,4 +1,4 @@
-.homeNav {
+.userProfileNav {
   background-color: #ffe6ea;
   max-height: 50px;
   display: flex;
@@ -6,6 +6,16 @@
   justify-content: space-between;
 }
 
+.userProfileContent {
+  background-image: image-url('goldencupcakes.jpg');
+  height: 250px;
+  width: auto;
+  display: flex;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: flex-end;
+}
 
 #user {
   color: white;
@@ -15,7 +25,7 @@
   opacity: 1;
 }
 
-.homeLogo {
+.userProfileLogo {
   padding-top: 10px;
 }
 
