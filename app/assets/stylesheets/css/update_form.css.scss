@@ -13,10 +13,10 @@
 .updateUserForm {
   width: 350px;
   height: 200px;
-  border: orange;
+  border: grey;
   display: flex;
   align-content: space-around;
-  border: red solid 2px;
+  position: relative;
 }
 
 .updateInputs input{

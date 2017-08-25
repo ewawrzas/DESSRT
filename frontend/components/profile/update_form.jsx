@@ -6,18 +6,20 @@ import { merge }from 'lodash'
 class UpdateForm extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      username: "",
+      password: ""
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
-    const user = merge({}, this.props.user);
-    return this.props.updateUser(user);
+    this.props.updateUser(this.state)
+      .then(data => this.props.history.push(`/users/${data.user.id}`));
   }
 
   handleChange(field) {
-    debugger
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
@@ -28,7 +30,7 @@ class UpdateForm extends React.Component {
     return (
       <div className={ modal }>
         <div className="updateUser">
-          <form onSubmit={this.handleSubmit} className="updateUserForm">
+          <form className="updateUserForm" onSubmit={this.handleSubmit}>
             <p>Update Your Username and Password</p>
             <div className="updateInputs">
               <div className="inputPad1">
@@ -36,7 +38,7 @@ class UpdateForm extends React.Component {
                   type="text"
                   id="usernameChange"
                   onChange={ this.handleChange('username') }
-                  value={ this.props.username }
+                  value={ this.state.username }
                   />
               </div>
               <div className="inputPad2">
@@ -44,7 +46,7 @@ class UpdateForm extends React.Component {
                   type="password"
                   id="passwordChange"
                   onChange={ this.handleChange('password') }
-                  value={ this.props.password }
+                  value={ this.state.password }
                   />
               </div>
             </div>
