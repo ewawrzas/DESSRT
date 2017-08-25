@@ -24,8 +24,6 @@ class UserProfile extends React.Component {
 
   render () {
     const { user } = this.props;
-    debugger
-
 
     if (!user) return null;
 
@@ -42,7 +40,7 @@ class UserProfile extends React.Component {
                 </ul>
             </header>
             <div className="searchDrop">
-              <Link to="/users/:userId/update" id="updateLink" >Update</Link>
+              <Link to={`/users/${user.id}/update`} id="updateLink" >Update</Link>
               <div className="searchDiv">
                 <h4>Search will go here</h4>
               </div>
@@ -51,10 +49,9 @@ class UserProfile extends React.Component {
           <div className="homePage">
             <div className="userProfileContent">
               <h1>{this.props.user.username}</h1>
-              // <p id="user">{this.props.currentUser.username}</p>
             </div>
             <h2>{this.props.user.username} Recent Activity</h2>
-            // <Route path="/users/:userId/update" component={updateFormContainer} />
+            <Route path={`/users/${user.id}/update`} component={updateFormContainer} />
           </div>
       </div>
       );

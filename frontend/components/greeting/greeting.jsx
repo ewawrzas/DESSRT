@@ -10,18 +10,19 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    debugger
-  }
-
-  componentWillMount() {
-    this.props.fetchAllUsers();
   }
 
   handleClick() {
     this.props.logout();
   }
 
+  componentDidMount() {
+    this.props.fetchAllUsers();
+  }
+
   render () {
+
+
     return (
       <div className="greeting">
         <div className="homeNav">
@@ -35,7 +36,11 @@ class Greeting extends React.Component {
               </ul>
           </header>
           <div className="searchDrop">
-            <Link to="/users/:userId" id="userLink" >My Profile</Link>
+
+              <Link to={`/users/${this.props.currentUser.id}`} id="userLink">
+
+              </Link>
+
             <div className="searchDiv">
               <h4>Search will go here</h4>
             </div>

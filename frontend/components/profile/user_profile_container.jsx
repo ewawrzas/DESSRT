@@ -3,11 +3,10 @@ import { logout } from '../../actions/session_actions';
 import UserProfile from './user_profile'
 import { fetchSingleUser } from '../../actions/user_actions';
 
-const mapStateToProps = (state, { location }) => {
-  debugger
+const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: state.session.currentUser,
-    user: state.users[state.userDisplay]
+    user: state.entities.users[ownProps.match.params.userId]
   };
 };
 

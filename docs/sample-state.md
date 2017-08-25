@@ -37,12 +37,6 @@
             }            
         },
     },
-    currentUser : {
-        byId : {
-            1: {
-                username : "user1",
-            }  
-        }
 
     },
     forms: {
