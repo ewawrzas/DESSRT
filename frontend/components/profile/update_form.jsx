@@ -15,6 +15,12 @@ class UpdateForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   };
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.userId !== nextProps.match.params.userId) {
+      this.props.fetchSingleUser(nextProps.match.params.userId);
+    }
+  }
+
   handleChange(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
@@ -62,7 +68,7 @@ debugger
 
             <button id="updateUserBtn">Submit</button>
           </form>
-
+          
         </div>
       </div>
     )

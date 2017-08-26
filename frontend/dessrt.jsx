@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   window.getState = store.getState;
-  window.dispatch = store.dispatch
+  window.dispatch = store.dispatch;
+
+  window.fetchSingleDessert = fetchSingleDessert;
+  window.fetchAllDesserts = fetchAllDesserts;
+  window.createDessert = createDessert;
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);

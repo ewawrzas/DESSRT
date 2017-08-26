@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import merge from 'lodash/merge';
 
-import users from './user_reducer'
+import users from './user_reducer';
+import desserts from './dessert_reducer';
 
 export default combineReducers({
-  users
+  users,
+  desserts
 });

@@ -17,6 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .updateUserForm {
@@ -27,6 +28,7 @@
   align-content: space-around;
   position: relative;
   background: white;
+  z-index: 3;
 }
 
 .updateInputs input{
