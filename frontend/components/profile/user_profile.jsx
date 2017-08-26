@@ -27,7 +27,7 @@ class UserProfile extends React.Component {
 
     if (!user) return null;
 
-    const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ?   <Link to={`/users/${user.id}/update`} id="updateLink" >Update</Link> :
+    const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/users/${user.id}/update`} id="updateLink" >Update</Link> :
     <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
       return (

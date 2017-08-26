@@ -21,6 +21,7 @@ class UpdateForm extends React.Component {
     e.preventDefault();
     const user = {
       id: this.props.currentUser.id,
+      username: 
     };
     this.props.updateUser(user);
   }
