@@ -27,6 +27,9 @@ class UserProfile extends React.Component {
 
     if (!user) return null;
 
+    const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ?   <Link to={`/users/${user.id}/update`} id="updateLink" >Update</Link> :
+    <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
+
       return (
         <div className="greeting">
           <div className="userProfileNav">
@@ -40,7 +43,7 @@ class UserProfile extends React.Component {
                 </ul>
             </header>
             <div className="searchDrop">
-              <Link to={`/users/${user.id}/update`} id="updateLink" >Update</Link>
+            {link}
               <div className="searchDiv">
                 <h4>Search will go here</h4>
               </div>
