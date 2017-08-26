@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 
+import { fetchSingleDessert, fetchAllDesserts, createDessert } from './util/dessert_api_util';
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
@@ -12,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
+
 
   window.getState = store.getState;
   window.dispatch = store.dispatch
