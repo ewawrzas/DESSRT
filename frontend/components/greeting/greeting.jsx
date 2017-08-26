@@ -4,7 +4,7 @@ import { Route, NavLink, Link } from 'react-router-dom';
 import UserItem from '../profile/user_item'
 import UpdateFormContainer from '../profile/update_form_container';
 import UserProfileContainer from '../profile/user_profile_container';
-
+import DessertIndexContainer from '../desserts/dessert_index_container';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class Greeting extends React.Component {
             </div>
               <ul id="homeNavLinks">
                 <button id="logout" onClick={this.handleClick}>Logout</button>
-                <button id="addDessert">Add Dessert will go here</button>
+                <Link to="/desserts" id="dessertLink">Add Dessert</Link>
               </ul>
           </header>
           <div className="searchDrop">
