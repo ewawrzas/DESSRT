@@ -26,37 +26,42 @@ class UserProfile extends React.Component {
     const { user } = this.props;
 
     if (!user) return null;
-debugger
-    const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/users/${user.id}/update`} id="updateLink" >Update</Link> :
+
+    const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/users/${user.id}/update`}id="updateLink" >Update</Link> :
     <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
       const image = (this.props.location.pathname === `/users/${this.props.currentUser.id}` ||
       `/users/${this.props.currentUser.id}/update`) ? "userProfileContent1" : "userProfileContent2"
-debugger
+
       return (
         <div className="greeting">
           <div className="userProfileNav">
+
             <header className="navBar">
               <div className="userProfileLogo">
-                <h1>DESSRT</h1>
+                <Link to="/home"><h1>DESSRT</h1></Link>
               </div>
-                <ul id="homeNavLinks">
-                  <button id="logout" onClick={this.handleClick}>Logout</button>
-                  <button id="addDessert">Add Dessert will go here</button>
-                </ul>
+              <ul id="homeNavLinks">
+                <button id="logout" onClick={this.handleClick}>Logout</button>
+                <button id="addDessert">Add Dessert</button>
+              </ul>
             </header>
-            <div className="searchDrop">
-            {link}
+            <div id="profileLinks">
+              <div id="logoNavLinks">
+                {link}
+              </div>
+
               <div className="searchDiv">
                 <h4>Search will go here</h4>
               </div>
             </div>
           </div>
+
           <div className="homePage">
             <div className={image}>
-              <h1>{this.props.user.username}</h1>
+              <h1 id="name">{this.props.user.username}</h1>
             </div>
-            <h2>{this.props.user.username} Recent Activity</h2>
+            <h2 id="feedIntro">{`${this.props.user.username}'s`} Recent Activity</h2>
             <Route path={`/users/${this.props.currentUser.id}/update`} component={updateFormContainer} />
           </div>
       </div>
