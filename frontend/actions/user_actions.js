@@ -37,7 +37,8 @@ export const fetchSingleUser = id => dispatch => (
 
 export const updateUser = user => dispatch => (
   APIUtil.updateUser(user).then(user => ( dispatch(receiveCurrentUser(user))
-), err => (
+  ),
+  err => (
   dispatch(receiveErrors(err.responseJSON))
   ))
 );
