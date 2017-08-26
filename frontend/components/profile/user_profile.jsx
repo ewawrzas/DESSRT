@@ -30,6 +30,8 @@ class UserProfile extends React.Component {
     const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/users/${user.id}/update`} id="updateLink" >Update</Link> :
     <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
+      const image = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? "userProfileContent1" : "userProfileContent2"
+
       return (
         <div className="greeting">
           <div className="userProfileNav">
@@ -50,7 +52,7 @@ class UserProfile extends React.Component {
             </div>
           </div>
           <div className="homePage">
-            <div className="userProfileContent">
+            <div className={image}>
               <h1>{this.props.user.username}</h1>
             </div>
             <h2>{this.props.user.username} Recent Activity</h2>

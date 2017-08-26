@@ -6,8 +6,19 @@
   justify-content: space-between;
 }
 
-.userProfileContent {
+.userProfileContent1 {
   background-image: image-url('goldencupcakes.jpg');
+  height: 250px;
+  width: auto;
+  display: flex;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: flex-end;
+}
+
+.userProfileContent2 {
+  background-image: image-url('macaroons2.png');
   height: 250px;
   width: auto;
   display: flex;
