@@ -4,7 +4,7 @@ import { fetchSingleUser, updateUser } from '../../actions/user_actions';
 
 const mapStateToProps = (state) => {
   return {
-    currentUser: state.session.currentUser,
+    currentUser: state.session.currentUser
   }
 }
 
@@ -15,4 +15,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(UpdateForm);
+export default connect(mapStateToProps, mapDispatchToProps)(UpdateForm);

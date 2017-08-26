@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { merge }from 'lodash'
-import { Link } from 'react-router-dom';
 
 class UpdateForm extends React.Component {
   constructor(props) {
@@ -33,12 +32,12 @@ class UpdateForm extends React.Component {
   }
 
   render() {
-
+debugger
     return (
       <div className="modal">
         <div className="updateUser">
 
-          <form className="updateUserForm" onSubmit={this.handleSubmit}>
+          <form onSubmit={ this.handleSubmit } className="updateUserForm">
             <p>Update Your Username and Password</p>
 
           <div className="updateInputs">

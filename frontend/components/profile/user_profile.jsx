@@ -26,13 +26,13 @@ class UserProfile extends React.Component {
     const { user } = this.props;
 
     if (!user) return null;
-
+debugger
     const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/users/${user.id}/update`} id="updateLink" >Update</Link> :
     <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
       const image = (this.props.location.pathname === `/users/${this.props.currentUser.id}` ||
       `/users/${this.props.currentUser.id}/update`) ? "userProfileContent1" : "userProfileContent2"
-
+debugger
       return (
         <div className="greeting">
           <div className="userProfileNav">
@@ -57,7 +57,7 @@ class UserProfile extends React.Component {
               <h1>{this.props.user.username}</h1>
             </div>
             <h2>{this.props.user.username} Recent Activity</h2>
-            <Route path={`/users/${user.id}/update`} component={updateFormContainer} />
+            <Route path={`/users/${this.props.currentUser.id}/update`} component={updateFormContainer} />
           </div>
       </div>
       );
