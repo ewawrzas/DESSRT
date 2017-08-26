@@ -6,29 +6,29 @@ import { merge }from 'lodash'
 class UpdateForm extends React.Component {
   constructor(props) {
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       username: "",
       password: ""
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.updateUser(this.state)
-      .then(data => this.props.history.push(`/users/${data.user.id}`));
-  }
+  };
 
   handleChange(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    const user = {
+      id: this.props.currentUser.id,
+    };
+    this.props.updateUser(user);
+  }
+
   render() {
 
-    const modal = (this.props.location.pathname === "/users/:userId/update") ? "active" : "inactive"
-
     return (
-      <div className={ modal }>
+      <div className="modal">
         <div className="updateUser">
           <form className="updateUserForm" onSubmit={this.handleSubmit}>
             <p>Update Your Username and Password</p>

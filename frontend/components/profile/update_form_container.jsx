@@ -3,14 +3,15 @@ import UpdateForm from './update_form';
 import { fetchSingleUser, updateUser } from '../../actions/user_actions';
 
 const mapStateToProps = (state) => {
-  const user = state.session.currentUser;
-  return { user };
+  return {
+    currentUser: state.session.currentUser,
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchSingleUser: (userId) => dispatch(fetchSingleUser(userId)),
-    updateUser: (user) => dispatch(updateUser(user)),
+    updateUser: (user) => dispatch(updateUser(user))
   };
 };
 
