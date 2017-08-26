@@ -1,9 +1,10 @@
-export const fetchSingleDessert = (id) => (
- $.ajax({
+export const fetchSingleDessert = (id) => {
+  debugger
+  return $.ajax({
     url: `api/desserts/${id}`,
     method: 'GET'
-  })
-);
+  });
+}
 
 export const createDessert = (dessert) => {
   return $.ajax({

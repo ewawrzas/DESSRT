@@ -7,7 +7,7 @@ import LandingPage from './landing'
 import UpdateFormContainer from './profile/update_form_container';
 import UserProfileContainer from './profile/user_profile_container';
 import DessertIndexContainer from './desserts/dessert_index_container';
-
+import DessertProfileContainer from './desserts/dessert_profile';
 
 const App = () => (
   <div>
@@ -18,6 +18,7 @@ const App = () => (
       <ProtectedRoute path="/home" exact component={GreetingContainer} />
       <ProtectedRoute path="/users/:userId" component={UserProfileContainer} />
       <ProtectedRoute path="/users/:userId/update" component={UpdateFormContainer} />
+      <ProtectedRoute path="/desserts/:dessertId" component={DessertProfileContainer} />
       <ProtectedRoute path="/desserts" component={DessertIndexContainer} />
       <Route path="/" exact component={LandingPage} />
     </Switch>

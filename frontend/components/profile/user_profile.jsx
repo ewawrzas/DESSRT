@@ -35,7 +35,7 @@ class UserProfile extends React.Component {
 
       return (
         <div className="greeting">
-          <div className="userProfileNav">
+          <div className="homeNav">
 
             <header className="navBar">
               <div className="userProfileLogo">
@@ -43,20 +43,18 @@ class UserProfile extends React.Component {
               </div>
               <ul id="homeNavLinks">
                 <button id="logout" onClick={this.handleClick}>Logout</button>
-                <button id="addDessert">Add Dessert</button>
+                <Link to="/desserts" id="dessertLink">Add Dessert</Link>
               </ul>
             </header>
-            <div id="profileLinks">
-              <div id="logoNavLinks">
-                {link}
-              </div>
 
+            <div className="searchDrop">
+                {link}
               <div className="searchDiv">
                 <h4>Search will go here</h4>
               </div>
             </div>
           </div>
-
+          
           <div className="homePage">
             <div className={image}>
               <h1 id="name">{this.props.user.username}</h1>

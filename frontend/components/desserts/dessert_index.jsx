@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, NavLink, Link } from 'react-router-dom';
 
 import DessertItem from '../desserts/dessert_item'
-
+import DessertProfileContainer from '../desserts/dessert_profile_container';
 import UserProfileContainer from '../profile/user_profile_container';
 
 
@@ -49,8 +49,8 @@ class DessertIndex extends React.Component {
             <ul>
               {this.props.desserts.map(dessert => <DessertItem key={dessert.id} dessert={dessert} />)}
             </ul>
-
-
+            <Route path ="/users/:userId" component={UserProfileContainer} />
+              <Route path="/desserts/:dessertId" component={DessertProfileContainer} />
         </div>
     </div>
     );

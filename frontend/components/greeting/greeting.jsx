@@ -26,6 +26,7 @@ class Greeting extends React.Component {
     return (
       <div className="greeting">
         <div className="homeNav">
+
           <header className="navBar">
             <div className="homeLogo">
               <h1>DESSRT</h1>
@@ -35,14 +36,16 @@ class Greeting extends React.Component {
                 <Link to="/desserts" id="dessertLink">Add Dessert</Link>
               </ul>
           </header>
+
           <div className="searchDrop">
-
-              <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
-
+            <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
             <div className="searchDiv">
               <h4>Search will go here</h4>
             </div>
           </div>
+
+
+
         </div>
         <div className="homePage">
           <div className="homeContent">
