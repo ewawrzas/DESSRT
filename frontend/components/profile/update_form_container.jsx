@@ -15,4 +15,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UpdateForm);
+export default connect(null, mapDispatchToProps)(UpdateForm);
