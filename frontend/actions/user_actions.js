@@ -1,4 +1,6 @@
 import * as APIUtil from '../util/user_api_util'
+import { receiveCurrentUser } from './session_actions'
+
 
 export const RECEIVE_SINGLE_USER = 'RECEIVE_SINGLE_USER';
 export const RECEIVE_ALL_USERS = 'RECEIVE_ALL_USERS';
@@ -34,7 +36,7 @@ export const fetchSingleUser = id => dispatch => (
 );
 
 export const updateUser = user => dispatch => (
-  APIUtil.updateUser(user).then(user => ( dispatch(receiveSingleUser(user))
+  APIUtil.updateUser(user).then(user => ( dispatch(receiveCurrentUser(user))
 ), err => (
   dispatch(receiveErrors(err.responseJSON))
   ))

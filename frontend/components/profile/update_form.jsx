@@ -43,7 +43,7 @@ class UpdateForm extends React.Component {
         <div className="modal">
           <div className="updateUser">
 
-            <form onSubmit={ this.handleSubmit } className="updateUserForm">
+            <form onSubmit={ this.handleSubmit } className="updateUserForm" >
               <p>Update Your Username and Password</p>
 
             <div className="updateInputs">
