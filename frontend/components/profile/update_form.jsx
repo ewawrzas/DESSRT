@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { merge }from 'lodash'
+import { Link } from 'react-router-dom';
 
 class UpdateForm extends React.Component {
   constructor(props) {
@@ -23,7 +24,12 @@ class UpdateForm extends React.Component {
     e.preventDefault();
     debugger
     const user = merge({}, this.state);
-    this.props.updateUser(user);
+    this.props.updateUser(user).then(
+      () => this.setState({
+        username: "",
+        password: ""
+      })
+    );
   }
 
   render() {
