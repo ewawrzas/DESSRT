@@ -66,6 +66,7 @@ class UpdateForm extends React.Component {
                 </div>
               </div>
               <button id="updateUserBtn">Submit</button>
+              <Link id="backBtn" to="/home">Go Back</Link>
             </form>
           </div>
         </div>

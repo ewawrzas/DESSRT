@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   z-index: 2;
   cursor: pointer;
 }
@@ -37,6 +37,15 @@
   background-position: left;
   background-repeat: no-repeat;
   padding: 2px 0 2px 20px;
+}
+
+#backBtn {
+  padding-top: 5px;
+  color: grey;
+}
+
+#backBtn:hover {
+  color: pink;
 }
 
 #passwordChange {

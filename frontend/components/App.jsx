@@ -7,7 +7,7 @@ import LandingPage from './landing'
 import UpdateFormContainer from './profile/update_form_container';
 import UserProfileContainer from './profile/user_profile_container';
 import DessertIndexContainer from './desserts/dessert_index_container';
-import DessertProfileContainer from './desserts/dessert_profile';
+import DessertProfileContainer from './desserts/dessert_profile_container';
 
 const App = () => (
   <div>

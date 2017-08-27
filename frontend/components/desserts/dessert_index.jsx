@@ -24,33 +24,34 @@ class DessertIndex extends React.Component {
 
     return (
       <div className="dessertIndex">
+
         <div className="homeNav">
           <header className="navBar">
             <div className="homeLogo">
-              <h1>DESSRT</h1>
+              <Link to="/home"><h1>DESSRT</h1></Link>
             </div>
-              <ul id="homeNavLinks">
-                <button id="logout" onClick={this.handleClick}>Logout</button>
-                <button id="addDessert">Add Dessert will go here</button>
-              </ul>
+            <ul id="homeNavLinks">
+              <button id="logout" onClick={this.handleClick}>Logout</button>
+              <button id="addDessert">Add Dessert</button>
+            </ul>
           </header>
+
           <div className="searchDrop">
-
               <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
-
             <div className="searchDiv">
               <h4>Search will go here</h4>
             </div>
           </div>
+
         </div>
 
         <div className="dessertsHome">
           <h2 id="feed">All the Desserts</h2>
-            <ul>
-              {this.props.desserts.map(dessert => <DessertItem key={dessert.id} dessert={dessert} />)}
-            </ul>
-            <Route path ="/users/:userId" component={UserProfileContainer} />
-              <Route path="/desserts/:dessertId" component={DessertProfileContainer} />
+          <ul>
+            {this.props.desserts.map(dessert => <DessertItem key={dessert.id} dessert={dessert} />)}
+          </ul>
+          <Route path ="/users/:userId" component={UserProfileContainer} />
+          <Route path="/desserts/:dessertId" component={DessertProfileContainer} />
         </div>
     </div>
     );

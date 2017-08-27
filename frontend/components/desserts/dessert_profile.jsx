@@ -13,6 +13,7 @@ class DessertProfile extends React.Component {
   }
 
   componentDidMount() {
+    debugger
     this.props.fetchSingleDessert(this.props.match.params.dessertId);
   }
 
@@ -55,7 +56,7 @@ class DessertProfile extends React.Component {
             </div>
             <h2 id="feedIntro">Recent Activity</h2>
 
-            <Route path={`/desserts/${this.props.dessert.id}`} component={DessertProfileContainer} />
+
           </div>
       </div>
       );

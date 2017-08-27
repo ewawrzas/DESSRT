@@ -4,6 +4,7 @@ import DessertProfile from './dessert_profile'
 import { fetchSingleDessert } from '../../actions/dessert_actions';
 
 const mapStateToProps = (state, ownProps) => {
+  debugger;
   return {
     currentUser: state.session.currentUser,
     dessert: state.entities.desserts[ownProps.match.params.dessertId]
@@ -11,6 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
+  debugger
   return {
     fetchSingleDessert: (id) => dispatch(fetchSingleDessert(id)),
     logout: () => dispatch(logout()),
