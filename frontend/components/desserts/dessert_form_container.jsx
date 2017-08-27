@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
+
 import DessertForm from './dessert_form';
 import { createDessert } from '../../actions/dessert_actions';
 
-const mapStateToProps = ({errors}) => {
+const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: state.session.currentUser,
-    errors
+    ownProps
   }
 }
 

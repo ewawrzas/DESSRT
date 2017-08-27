@@ -3,6 +3,9 @@ import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 import { merge }from 'lodash'
 
+const DESSERT_TYPES = ['custard/pudding', "frozen", 'cake', 'cookie', 'pie', 'chocolate/candy', 'pastry', 'miscellaneous']
+const DESSERT_ORIGINS = ["homemade", "store bought", "restaurant/cafe", "other"]
+
 class DessertForm extends React.Component {
   constructor(props) {
     super(props);

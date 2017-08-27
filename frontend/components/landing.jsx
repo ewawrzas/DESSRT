@@ -13,9 +13,12 @@ class LandingPage extends React.Component {
                 <li id="landingSignIn"><Link to="/login">{'SIGN IN'}</Link></li>
               </ul>
           </header>
+
           <div className="logo">
-            <h1>DESSRT</h1>
-            <h4>EAT SOCIALLY</h4>
+            <div className="logoBacking">
+              <h1>DESSRT</h1>
+              <h4>EAT SOCIALLY</h4>
+            </div>
           </div>
         </div>
       </div>

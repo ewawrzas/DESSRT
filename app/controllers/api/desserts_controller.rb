@@ -1,14 +1,8 @@
 class Api::DessertsController < ApplicationController
 
   def create
-    @dessert = Dessert.new(dessert_params)
-
-    if @dessert.save
-      render "api/desserts/show"
-    else
-      render json: @dessert.errors.full_messages, status: 422
-    end
-
+    @dessert = Dessert.create!(dessert_params)
+    render :show
   end
 
   def show

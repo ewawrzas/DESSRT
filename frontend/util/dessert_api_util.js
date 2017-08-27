@@ -1,16 +1,15 @@
 export const fetchSingleDessert = (id) => {
-  
   return $.ajax({
     url: `api/desserts/${id}`,
     method: 'GET'
   });
 }
 
-export const createDessert = (dessert) => {
+export const createDessert = (data) => {
   return $.ajax({
     method: 'POST',
-    url: `api/desserts/${dessert.id}`,
-    data: { dessert }
+    url: 'api/desserts',
+    data
   });
 }
 

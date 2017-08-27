@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Route, NavLink, Link } from 'react-router-dom';
 
-import DessertItem from '../desserts/dessert_item'
-import DessertProfileContainer from '../desserts/dessert_profile_container';
+import DessertItem from './dessert_item'
+import DessertProfileContainer from './dessert_profile_container';
+import DessertFormContainer from './dessert_form_container';
 import UserProfileContainer from '../profile/user_profile_container';
+import DessertForm from './dessert_form';
 
+const DESSERT_TYPES = ['custard/pudding', "frozen", 'cake', 'cookie', 'pie', 'chocolate/candy', 'pastry', 'miscellaneous']
+const DESSERT_ORIGINS = ["homemade", "store bought", "restaurant/cafe", "other"]
 
 class DessertIndex extends React.Component {
   constructor(props) {
@@ -32,7 +36,7 @@ class DessertIndex extends React.Component {
             </div>
             <ul id="homeNavLinks">
               <button id="logout" onClick={this.handleClick}>Logout</button>
-              <button id="addDessert">Add Dessert</button>
+              <Link to="/desserts/new" id="addDessert">Add Dessert</Link>
             </ul>
           </header>
 
@@ -51,8 +55,10 @@ class DessertIndex extends React.Component {
             {this.props.desserts.map(dessert => <DessertItem key={dessert.id} dessert={dessert} />)}
           </ul>
           <Route path ="/users/:userId" component={UserProfileContainer} />
+          <Route path="/desserts/new" component={DessertFormContainer} />
           <Route path="/desserts/:dessertId" component={DessertProfileContainer} />
         </div>
+        <DessertForm />
     </div>
     );
   }
