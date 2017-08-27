@@ -47,16 +47,18 @@ class DessertIndex extends React.Component {
           </div>
 
         </div>
-
+        <div className="dessertsDiv">
+        <DessertFormContainer />
         <div className="dessertsHome">
           <h2 id="feed">All the Desserts</h2>
-          <ul>
-            {this.props.desserts.map(dessert => <DessertItem key={dessert.id} dessert={dessert} />)}
-          </ul>
+            <ul>
+              {this.props.desserts.map(dessert => <DessertItem key={dessert.id} dessert={dessert} />)}
+            </ul>
           <Route path ="/users/:userId" component={UserProfileContainer} />
           <Route path="/desserts/:dessertId" component={DessertProfileContainer} />
         </div>
-        <DessertFormContainer />
+
+        </div>
     </div>
     );
   }

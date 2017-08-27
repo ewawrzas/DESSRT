@@ -1,5 +1,13 @@
 .createDessertForm {
   display: flex;
   justify-content: flex-start;
-  
+  padding-bottom: 25px;
+}
+
+.dessertsDiv {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 25px;
 }
