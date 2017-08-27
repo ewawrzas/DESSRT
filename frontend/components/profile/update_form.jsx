@@ -27,7 +27,7 @@ class UpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
+    
     const user = merge({}, this.state);
     this.props.updateUser(user).then(
       () => this.setState({

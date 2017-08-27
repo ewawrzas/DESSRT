@@ -1,5 +1,5 @@
 export const fetchSingleDessert = (id) => {
-  debugger
+  
   return $.ajax({
     url: `api/desserts/${id}`,
     method: 'GET'

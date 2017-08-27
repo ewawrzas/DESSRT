@@ -13,7 +13,7 @@ class DessertProfile extends React.Component {
   }
 
   componentDidMount() {
-    debugger
+
     this.props.fetchSingleDessert(this.props.match.params.dessertId);
   }
 
@@ -30,7 +30,7 @@ class DessertProfile extends React.Component {
 
       return (
         <div className="dessertProfile">
-          <div className="dessertProfileNav">
+          <div className="homeNav">
 
             <header className="navBar">
               <div className="homeLogo">
@@ -38,7 +38,7 @@ class DessertProfile extends React.Component {
               </div>
               <ul id="homeNavLinks">
                 <button id="logout" onClick={this.handleClick}>Logout</button>
-                <button id="addDessert">Add Dessert</button>
+                <Link to="/desserts/new" id="addDessert">Add Dessert</Link>
               </ul>
             </header>
 
