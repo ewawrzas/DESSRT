@@ -12,10 +12,6 @@ a, h1, h4, button, input, html, body, figure, div, link {
   background: transparent;
 }
 
-ul {
-  list-style: none;
-}
-
 img {
   display: block;
   width: 100%;
@@ -23,6 +19,11 @@ img {
 }
 
 button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select {
   -webkit-appearance: none;
   -moz-appearance: none;
 }

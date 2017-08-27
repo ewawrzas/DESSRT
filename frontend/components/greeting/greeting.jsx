@@ -24,7 +24,7 @@ class Greeting extends React.Component {
 
     return (
       <div className="greeting">
-        
+
         <div className="homeNav">
           <header className="navBar">
             <div className="homeLogo">
@@ -49,7 +49,7 @@ class Greeting extends React.Component {
             <p id="user">{this.props.currentUser.username}</p>
           </div>
           <h2 id="feed">Recent Global Activity</h2>
-          <ul>
+          <ul className="userList">
             {this.props.users.map(user => <UserItem key={user.id} user={user} />)}
           </ul>
           <Route path ="/users/:userId" component={UserProfileContainer} />

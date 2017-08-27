@@ -23,21 +23,15 @@ class DessertForm extends React.Component {
 
 
   handleChange(field) {
+    debugger
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
   handleSubmit(e) {
+    debugger
     e.preventDefault();
-
-    const dessert = merge({}, this.state);
-    this.props.createDessert(dessert).then(
-      () => this.setState({
-        name: "",
-        description: "",
-        dessert_type: "",
-        dessert_origin: ""
-      })
-    );
+    this.props.createDessert(this.state)
+      .then(data => this.props.history.push(`/desserts/${data.desserts.id}`));
   }
 
   errors() {
@@ -57,54 +51,59 @@ class DessertForm extends React.Component {
             <form onSubmit={ this.handleSubmit } className="createDessertForm" >
 
               <h3>Add a New Dessert</h3>
-              <p>Guidelines</p>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+              <p>Dessert Creation Guidelines</p>
+              <ul className="guidelines">
+                <li>{`Please make your dessert name the proper case`}</li>
+                <li>{`Give your homemade desserts an original name. Using a commercial name will cause confusion`}</li>
+                <li>{`Please do not add non-dessert food items to DESSRT`}</li>
+                <li>{`Please note that not following these guidelines may result in revoking your Dessert Creation privileges`}</li>
               </ul>
 
-              <div className="updateInputs">
-                <input
-                  type="text"
-                  id="nameChange"
-                  placeholder="Name"
-                  onChange={ this.handleChange('name') }
-                  value={ this.state.name }
-                  />
+              <div className="createInputs">
+                <label>DESSERT NAME</label>
+                <div className="dessertNameInput">
+                  <input
+                    type="text"
+                    id="nameChange"
+                    onChange={ this.handleChange('name') }
+                    value={ this.state.name }
+                    />
+                </div>
 
-                <input
+                <label>DESCRIPTION</label>
+                <textarea
                   type="text"
                   id="descriptionChange"
-                  placeholder="Description"
                   onChange={ this.handleChange('description') }
                   value={ this.state.description }
                   />
 
-                <input
-                  type="url"
-                  id="desImage"
-                  placeholder="Image Url"
-                  onChange={ this.handleChange('image_url') }
-                  value={ this.state.image_url }
-                  />
+                <label>IMAGE URL</label>
+                <div className="dessertImageInput">
+                  <input
+                    type="url"
+                    id="desImage"
+                    onChange={ this.handleChange('image_url') }
+                    value={ this.state.image_url }
+                    />
+                </div>
 
+                <label>DESSERT TYPE</label>
                 <select
+                  id="typeSelect"
                   value={ this.state.dessert_type }
                   onChange={ this.handleChange('dessert_type') }
-                  defaultValue="Select Dessert Type"
                   >
                   {DESSERT_TYPES.map((type, i) => {
                     return <option value={type} key={i}>{type}</option>;
                   })}
                 </select>
 
+                <label>ORIGIN</label>
                 <select
+                  id="originSelect"
                   value={ this.state.dessert_origin }
                   onChange={ this.handleChange('dessert_origin') }
-                  defaultValue="Where did you get this dessert?"
                   >
                   {DESSERT_ORIGINS.map((origin, i) => {
                     return <option value={origin} key={i}>{origin}</option>;
@@ -113,9 +112,9 @@ class DessertForm extends React.Component {
               </div>
 
               <button id="CreateDessertBtn">Create Dessert</button>
-              <Link id="backBtn" to="/home">Go Back</Link>
-                
+
             </form>
+            <Link id="backBtn" to="/home">Go Back</Link>
 
           </div>
       )
