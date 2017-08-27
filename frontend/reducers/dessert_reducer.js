@@ -7,7 +7,7 @@ const dessertReducer = (state = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_SINGLE_DESSERT:
-    debugger
+    
       const newDessert = action.payload;
       const merged = merge({}, state, { [newDessert.id]: newDessert });
       return merged;
