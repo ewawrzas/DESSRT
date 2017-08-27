@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 import { merge }from 'lodash'
 
-const DESSERT_TYPES = ['custard/pudding', "frozen", 'cake', 'cookie', 'pie', 'chocolate/candy', 'pastry', 'miscellaneous']
-const DESSERT_ORIGINS = ["homemade", "store bought", "restaurant/cafe", "other"]
+const DESSERT_TYPES = ["What is the dessert type?", 'custard/pudding', "frozen", 'cake', 'cookie', 'pie', 'chocolate/candy', 'pastry', 'miscellaneous']
+const DESSERT_ORIGINS = ["Where did the dessert come from?", "homemade", "store bought", "restaurant/cafe", "other"]
 
 class DessertForm extends React.Component {
   constructor(props) {
@@ -21,7 +21,9 @@ class DessertForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   };
 
-
+  handleClick() {
+    this.props.logout();
+  }
 
   handleChange(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value });
@@ -64,7 +66,7 @@ class DessertForm extends React.Component {
               </div>
             </div>
           </div>
-          
+
           <div className="dessertsDiv">
           <div className="createDessert">
             <form onSubmit={ this.handleSubmit } className="createDessertForm" >
@@ -107,7 +109,7 @@ class DessertForm extends React.Component {
                     />
                 </div>
 
-                <label>DESSERT TYPE</label>
+
                 <select
                   id="typeSelect"
                   value={ this.state.dessert_type }
@@ -118,7 +120,7 @@ class DessertForm extends React.Component {
                   })}
                 </select>
 
-                <label>ORIGIN</label>
+
                 <select
                   id="originSelect"
                   value={ this.state.dessert_origin }

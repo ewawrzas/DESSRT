@@ -55,7 +55,7 @@ class Greeting extends React.Component {
           <Route path ="/users/:userId" component={UserProfileContainer} />
           <Route path="/users/:userId/update" component={UpdateFormContainer} />
         </div>
-
+        <DessertIndexContainer />
       </div>
     );
   }

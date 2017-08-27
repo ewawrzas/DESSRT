@@ -13,7 +13,6 @@ class DessertProfile extends React.Component {
   }
 
   componentDidMount() {
-
     this.props.fetchSingleDessert(this.props.match.params.dessertId);
   }
 
@@ -51,8 +50,21 @@ class DessertProfile extends React.Component {
           </div>
 
           <div className="dessertPage">
-            <div className="dessert">
-              <h1 id="name">{this.props.dessert.name}</h1>
+            <div id="dessert">
+              <div className="dessertInfo">
+                <h1 id="dessertName">{dessert.name}</h1>
+                <p id="dessertDescription">{dessert.description}</p>
+                <p id="dessertType">{dessert.dessert_type}</p>
+                <p id="dessertOrigin">{dessert.dessert_origin}</p>
+              </div>
+
+              <div className="dessertImages">
+                <img id="desProfilePic" src={dessert.image_url} />
+                <img id="desProfilePic" src={dessert.image_url} />
+                <img id="desProfilePic" src={dessert.image_url} />
+                <img id="desProfilePic" src={dessert.image_url} />
+                <img id="desProfilePic" src={dessert.image_url} />
+              </div>
             </div>
             <h2 id="feedIntro">Recent Activity</h2>
 

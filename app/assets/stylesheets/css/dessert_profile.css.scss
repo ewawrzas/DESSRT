@@ -1,3 +1,40 @@
 #name {
   padding-top: 15px;
 }
+
+#desProfilePic {
+  height: 135px;
+  width: 135px;
+  display: flex;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: flex-end;
+  margin: 5px;
+}
+
+#dessert {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.dessertProfile {
+  background-color: #f2f2f2;
+}
+
+.dessertInfo {
+  margin-left: 5px;
+  padding: 16px;
+  background: white;
+  display: flex;
+  width: 682px;
+}
+
+.dessertImages {
+  display: flex;
+  align-items: space-around;
+  justify-content: flex-start;
+}
