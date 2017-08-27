@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import DessertForm from './dessert_form';
-import { fetchSingleDessert, createDessert } from '../../actions/dessert_actions';
+import { createDessert } from '../../actions/dessert_actions';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({errors}) => {
   return {
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    errors
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchSingleDessert: (dessertId) => dispatch(fetchSingleDessert(dessertId)),
     createDessert: (dessert) => dispatch(createDessert(dessert))
   };
 };
