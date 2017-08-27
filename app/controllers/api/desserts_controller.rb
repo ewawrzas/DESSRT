@@ -1,6 +1,7 @@
 class Api::DessertsController < ApplicationController
 
   def create
+    debugger
     @dessert = Dessert.new(dessert_params)
     debugger
 

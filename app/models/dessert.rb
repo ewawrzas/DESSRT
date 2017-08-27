@@ -5,6 +5,6 @@ DESSERT_ORIGINS = ["homemade", "store bought", "restaurant/cafe", "other"].sort.
 
   validates :name, presence: true, uniqueness: true
   # validates :description, :dessert_type, :dessert_origin, presence: true
-  validates :dessert_type, :inclusion => { :in => DESSERT_TYPES }
-  validates :dessert_origin, :inclusion => { :in => DESSERT_ORIGINS }
+  # validates :dessert_type, :inclusion => { :in => DESSERT_TYPES }
+  # validates :dessert_origin, :inclusion => { :in => DESSERT_ORIGINS }
 end

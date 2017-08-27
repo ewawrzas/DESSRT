@@ -31,7 +31,7 @@ class DessertForm extends React.Component {
     e.preventDefault();
     const dessert = Object.assign({}, this.state)
     this.props.createDessert({dessert})
-      .then(data => this.props.history.push(`/desserts/${data.desserts.id}`));
+      .then(dessert => this.props.history.push(`/desserts/${dessert.id}`));
   }
 
   errors() {
