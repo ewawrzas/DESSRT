@@ -6,21 +6,20 @@ class LandingPage extends React.Component {
   render () {
     return (
       <div className="landing">
+
         <div className="landingContent">
           <header className="landingNavBar">
-              <ul id="landingLinks">
-                <li id="landingSignUp"><Link to="/signup">CREATE AN ACCOUNT</Link></li>
-                <li id="landingSignIn"><Link to="/login">{'SIGN IN'}</Link></li>
-              </ul>
+            <ul id="landingLinks">
+              <li id="landingSignUp"><Link to="/signup">CREATE AN ACCOUNT</Link></li>
+              <li id="landingSignIn"><Link to="/login">{'SIGN IN'}</Link></li>
+            </ul>
           </header>
-
           <div className="logo">
-            <div className="logoBacking">
-              <h1>DESSRT</h1>
-              <h4>EAT SOCIALLY</h4>
-            </div>
+            <h1>DESSRT</h1>
+            <h4>EAT SOCIALLY</h4>
           </div>
         </div>
+
       </div>
     );
   }

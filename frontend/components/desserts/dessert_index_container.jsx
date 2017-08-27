@@ -5,10 +5,11 @@ import { fetchAllDesserts } from '../../actions/dessert_actions';
 import DessertIndex from './dessert_index'
 import { selectAllDesserts } from '../../reducers/selectors';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: state.session.currentUser,
-    desserts: selectAllDesserts(state)
+    desserts: selectAllDesserts(state),
+    ownProps
   };
 };
 

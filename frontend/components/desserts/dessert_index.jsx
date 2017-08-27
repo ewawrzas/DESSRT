@@ -16,6 +16,12 @@ class DessertIndex extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.dessertId !== nextProps.match.params.dessertId) {
+      this.props.fetchSingleDessert(nextProps.match.params.dessertId);
+    }
+  }
+
   handleClick() {
     this.props.logout();
   }
@@ -25,9 +31,8 @@ class DessertIndex extends React.Component {
   }
 
   render () {
-
     return (
-      <div className="dessertIndex">
+      <div>
 
         <div className="homeNav">
           <header className="navBar">
@@ -38,28 +43,28 @@ class DessertIndex extends React.Component {
               <button id="logout" onClick={this.handleClick}>Logout</button>
             </ul>
           </header>
-
           <div className="searchDrop">
               <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
             <div className="searchDiv">
               <h4>Search will go here</h4>
             </div>
           </div>
-
         </div>
+
         <div className="dessertsDiv">
-        <DessertFormContainer />
-        <div className="dessertsHome">
-          <h2 id="feed">All the Desserts</h2>
-            <ul>
-              {this.props.desserts.map(dessert => <DessertItem key={dessert.id} dessert={dessert} />)}
-            </ul>
-          <Route path ="/users/:userId" component={UserProfileContainer} />
-          <Route path="/desserts/:dessertId" component={DessertProfileContainer} />
+          <DessertFormContainer />
+          <div className="dessertsHome">
+            <h2 id="feed">All the Desserts</h2>
+              <ul>
+                {this.props.desserts.map(dessert => <DessertItem key={dessert.id} dessert={dessert} />)}
+              </ul>
+            <Route path ="/users/:userId" component={UserProfileContainer} />
+            <Route path="/desserts/:dessertId" component={DessertProfileContainer} />
+          </div>
         </div>
 
-        </div>
-    </div>
+      </div>
+
     );
   }
 
