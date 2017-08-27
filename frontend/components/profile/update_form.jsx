@@ -27,13 +27,13 @@ class UpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     const user = merge({}, this.state);
     this.props.updateUser(user).then(
       () => this.setState({
         username: "",
         password: ""
       })
+    ).then(user => this.props.history.push(`/users/${this.props.currentUser.id}`)
     );
   }
 

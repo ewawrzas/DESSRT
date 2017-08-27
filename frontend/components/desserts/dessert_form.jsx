@@ -64,8 +64,8 @@ class DessertForm extends React.Component {
               </div>
             </div>
           </div>
-
-
+          
+          <div className="dessertsDiv">
           <div className="createDessert">
             <form onSubmit={ this.handleSubmit } className="createDessertForm" >
 
@@ -134,7 +134,7 @@ class DessertForm extends React.Component {
 
             </form>
             </div>
-        
+          </div>
         </div>
       )
   }
