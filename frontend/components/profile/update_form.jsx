@@ -37,7 +37,25 @@ class UpdateForm extends React.Component {
     );
   }
 
+  renderErrors() {
+    if (!this.props.errors){
+       return null;
+    } else {
+      return(
+        <div className="errList">
+          {this.props.errors.map((error, i) => (
+            <p id="errors" key={`error-${i}`}>
+              {error}
+            </p>
+          ))}
+        </div>
+      );
+    }
+  };
+
   render() {
+    const { user } = this.props
+
 
       return (
         <div className="modal">
@@ -64,9 +82,11 @@ class UpdateForm extends React.Component {
                     />
                 </div>
               </div>
-
+              <div className="errDiv">
+                { this.renderErrors() }
+              </div>
               <button id="updateUserBtn">Submit</button>
-              <Link id="backBtn" to="/home">Go Back</Link>
+              <Link id="backBtn" to="/home"}>Go Back</Link>
             </form>
 
           </div>

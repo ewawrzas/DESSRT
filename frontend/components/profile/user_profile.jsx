@@ -44,7 +44,7 @@ class UserProfile extends React.Component {
               </div>
               <ul id="homeNavLinks">
                 <button id="logout" onClick={this.handleClick}>Logout</button>
-                <Link to="/desserts" exact id="dessertLink">Desserts</Link>
+                <Link to="/desserts" id="dessertLink">Desserts</Link>
               </ul>
             </header>
             <div className="searchDrop">
@@ -62,7 +62,7 @@ class UserProfile extends React.Component {
             <h2 id="feedIntro">{`${this.props.user.username}'s`} Recent Activity</h2>
             <Route path={`/users/${this.props.currentUser.id}/update`} component={updateFormContainer} />
           </div>
-          
+
         </div>
       );
     }
