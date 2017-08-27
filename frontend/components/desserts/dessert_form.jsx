@@ -50,8 +50,8 @@ class DessertForm extends React.Component {
 
             <form onSubmit={ this.handleSubmit } className="createDessertForm" >
 
-              <h3>Add a New Dessert</h3>
-              <p>Dessert Creation Guidelines</p>
+              <h2 id="addHeading">Add a New Dessert</h2>
+              <h3 id="guidelinesHeading">Dessert Creation Guidelines</h3>
               <ul className="guidelines">
                 <li>{`Please make your dessert name the proper case`}</li>
                 <li>{`Give your homemade desserts an original name. Using a commercial name will cause confusion`}</li>
@@ -111,10 +111,9 @@ class DessertForm extends React.Component {
                 </select>
               </div>
 
-              <button id="CreateDessertBtn">Create Dessert</button>
+              <button id="createDessertBtn">Create Dessert</button>
 
             </form>
-            <Link id="backBtn" to="/home">Go Back</Link>
 
           </div>
       )
