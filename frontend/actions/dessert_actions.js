@@ -33,10 +33,10 @@ export const fetchSingleDessert = id => dispatch => (
 );
 
 export const createDessert = dessert => dispatch => (
-  DessertAPIUtil.createDessert(dessert).then(dessert => ( dispatch(receiveSingleDessert(dessert))
-), err => (
-  dispatch(receiveErrors(err.responseJSON))
-  ))
+  DessertAPIUtil.createDessert(dessert).then(dessert => {
+    dispatch(receiveSingleDessert(dessert));
+    return dessert;
+  }).fail(err => dispatch(receiveErrors(err.responseJSON)))
 );
 
 export const fetchAllDesserts = () => dispatch => (

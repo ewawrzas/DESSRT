@@ -20,7 +20,7 @@ const App = () => (
       <ProtectedRoute path="/users/:userId" component={UserProfileContainer} />
       <ProtectedRoute path="/users/:userId/update" component={UpdateFormContainer} />
       <ProtectedRoute path="/desserts/:dessertId" component={DessertProfileContainer} />
-      <ProtectedRoute path="/desserts" exact component={DessertIndexContainer} />
+      <ProtectedRoute path="/desserts" exact component={DessertFormContainer} />
       <Route path="/" exact component={LandingPage} />
     </Switch>
   </div>

@@ -16,11 +16,7 @@ class DessertIndex extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.dessertId !== nextProps.match.params.dessertId) {
-      this.props.fetchSingleDessert(nextProps.match.params.dessertId);
-    }
-  }
+
 
   handleClick() {
     this.props.logout();

@@ -22,15 +22,15 @@ class DessertForm extends React.Component {
   };
 
 
+
   handleChange(field) {
-    
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
   handleSubmit(e) {
-    
     e.preventDefault();
-    this.props.createDessert(this.state)
+    const dessert = Object.assign({}, this.state)
+    this.props.createDessert({dessert})
       .then(data => this.props.history.push(`/desserts/${data.desserts.id}`));
   }
 
