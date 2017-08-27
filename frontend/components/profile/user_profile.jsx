@@ -36,8 +36,8 @@ class UserProfile extends React.Component {
 
       return (
         <div className="greeting">
-          <div className="homeNav">
 
+          <div className="homeNav">
             <header className="navBar">
               <div className="userProfileLogo">
                 <Link to="/home"><h1>DESSRT</h1></Link>
@@ -47,7 +47,6 @@ class UserProfile extends React.Component {
                 <Link to="/desserts" exact id="dessertLink">Desserts</Link>
               </ul>
             </header>
-
             <div className="searchDrop">
                 {link}
               <div className="searchDiv">
@@ -63,7 +62,8 @@ class UserProfile extends React.Component {
             <h2 id="feedIntro">{`${this.props.user.username}'s`} Recent Activity</h2>
             <Route path={`/users/${this.props.currentUser.id}/update`} component={updateFormContainer} />
           </div>
-      </div>
+          
+        </div>
       );
     }
 

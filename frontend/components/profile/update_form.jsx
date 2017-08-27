@@ -27,7 +27,7 @@ class UpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
+
     const user = merge({}, this.state);
     this.props.updateUser(user).then(
       () => this.setState({
@@ -46,7 +46,7 @@ class UpdateForm extends React.Component {
             <form onSubmit={ this.handleSubmit } className="updateUserForm" >
               <p>Update Your Username and Password</p>
 
-            <div className="updateInputs">
+              <div className="updateInputs">
                 <div className="inputPad1">
                   <input
                     type="text"
@@ -55,7 +55,6 @@ class UpdateForm extends React.Component {
                     value={ this.state.username }
                     />
                 </div>
-
                 <div className="inputPad2">
                   <input
                     type="password"
@@ -65,9 +64,11 @@ class UpdateForm extends React.Component {
                     />
                 </div>
               </div>
+
               <button id="updateUserBtn">Submit</button>
               <Link id="backBtn" to="/home">Go Back</Link>
             </form>
+
           </div>
         </div>
       )
