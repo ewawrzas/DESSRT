@@ -38,7 +38,7 @@ class DessertProfile extends React.Component {
               </div>
               <ul id="homeNavLinks">
                 <button id="logout" onClick={this.handleClick}>Logout</button>
-                <Link to="/desserts/new" id="addDessert">Add Dessert</Link>
+                <Link to="/desserts" id="addDessert">Desserts</Link>
               </ul>
             </header>
 

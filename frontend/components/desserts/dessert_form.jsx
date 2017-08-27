@@ -52,11 +52,18 @@ class DessertForm extends React.Component {
 
   render() {
       return (
-        <div className="modal">
-          <div className="updateUser">
+          <div className="createDessert">
 
-            <form onSubmit={ this.handleSubmit } className="updateUserForm" >
-              <p>Update Your Username and Password</p>
+            <form onSubmit={ this.handleSubmit } className="createDessertForm" >
+              <h3>Add a New Dessert</h3>
+              <p>Guidelines</p>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
 
             <div className="updateInputs">
               <input
@@ -108,7 +115,6 @@ class DessertForm extends React.Component {
               <Link id="backBtn" to="/home">Go Back</Link>
             </form>
           </div>
-        </div>
       )
   }
 }

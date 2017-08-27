@@ -36,7 +36,6 @@ class DessertIndex extends React.Component {
             </div>
             <ul id="homeNavLinks">
               <button id="logout" onClick={this.handleClick}>Logout</button>
-              <Link to="/desserts/new" id="addDessert">Add Dessert</Link>
             </ul>
           </header>
 
@@ -55,10 +54,9 @@ class DessertIndex extends React.Component {
             {this.props.desserts.map(dessert => <DessertItem key={dessert.id} dessert={dessert} />)}
           </ul>
           <Route path ="/users/:userId" component={UserProfileContainer} />
-          <Route path="/desserts/new" component={DessertFormContainer} />
           <Route path="/desserts/:dessertId" component={DessertProfileContainer} />
         </div>
-        <DessertForm />
+        <DessertFormContainer />
     </div>
     );
   }

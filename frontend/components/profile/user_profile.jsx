@@ -44,8 +44,7 @@ class UserProfile extends React.Component {
               </div>
               <ul id="homeNavLinks">
                 <button id="logout" onClick={this.handleClick}>Logout</button>
-                <Link to="/desserts" exact id="dessertLink">Desserts Feed</Link>
-                <Link to="/desserts/new" id="addDessert">Add Dessert</Link>
+                <Link to="/desserts" exact id="dessertLink">Desserts</Link>
               </ul>
             </header>
 
