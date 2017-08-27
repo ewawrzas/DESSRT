@@ -1,9 +1,9 @@
 class Api::DessertsController < ApplicationController
 
   def create
-    debugger
+
     @dessert = Dessert.new(dessert_params)
-    debugger
+
 
     if @dessert.save
       render :show

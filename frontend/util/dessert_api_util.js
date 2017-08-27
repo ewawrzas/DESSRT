@@ -6,7 +6,7 @@ export const fetchSingleDessert = (id) => {
 }
 
 export const createDessert = (dessert) => {
-  debugger
+
   return $.ajax({
     method: 'POST',
     url: 'api/desserts',

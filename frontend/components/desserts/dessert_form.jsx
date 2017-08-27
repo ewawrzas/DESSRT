@@ -46,8 +46,27 @@ class DessertForm extends React.Component {
 
   render() {
       return (
-          <div className="createDessert">
 
+        <div>
+          <div className="homeNav">
+            <header className="navBar">
+              <div className="homeLogo">
+                <Link to="/home"><h1>DESSRT</h1></Link>
+              </div>
+              <ul id="homeNavLinks">
+                <button id="logout" onClick={this.handleClick}>Logout</button>
+              </ul>
+            </header>
+            <div className="searchDrop">
+              <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
+              <div className="searchDiv">
+                <h4>Search will go here</h4>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="createDessert">
             <form onSubmit={ this.handleSubmit } className="createDessertForm" >
 
               <h2 id="addHeading">Add a New Dessert</h2>
@@ -114,8 +133,9 @@ class DessertForm extends React.Component {
               <button id="createDessertBtn">Create Dessert</button>
 
             </form>
-
-          </div>
+            </div>
+        
+        </div>
       )
   }
 }
