@@ -6,20 +6,23 @@ from '../../actions/checkin_actions';
 
 import { selectAllCheckins } from '../../reducers/selectors';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+  debugger
   return {
     currentUser: state.session.currentUser,
     checkins: selectAllCheckins(state),
-    errors: state.errors
+    errors: state.errors,
+    ownProps
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
+  debugger
   return {
     fetchAllCheckins: () => dispatch(fetchAllCheckins()),
     fetchSingleCheckin: (id) => dispatch(fetchSingleCheckin(id)),
-    createCheckin: (checkin) => dispatch(createCheckin(checkin))
-    updateCheckin: (checkin) => dispatch(updateCheckin(checkin))
+    createCheckin: (checkin) => dispatch(createCheckin(checkin)),
+    updateCheckin: (checkin) => dispatch(updateCheckin(checkin)),
     deleteCheckin: (checkin) => dispatch(deleteCheckin(checkin))
   };
 };

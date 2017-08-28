@@ -5,6 +5,8 @@ import UserItem from '../profile/user_item'
 import UpdateFormContainer from '../profile/update_form_container';
 import UserProfileContainer from '../profile/user_profile_container';
 import DessertIndexContainer from '../desserts/dessert_index_container';
+import CheckinIndexContainer from '../checkins/checkin_index_container';
+
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -15,6 +17,7 @@ class Greeting extends React.Component {
   handleClick() {
     this.props.logout();
   }
+
 
   componentDidMount() {
     this.props.fetchAllUsers();
@@ -55,7 +58,8 @@ class Greeting extends React.Component {
           <Route path ="/users/:userId" component={UserProfileContainer} />
           <Route path="/users/:userId/update" component={UpdateFormContainer} />
         </div>
-        <DessertIndexContainer />
+      
+        <CheckinIndexContainer />
       </div>
     );
   }

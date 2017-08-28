@@ -14,6 +14,7 @@ const checkinReducer = (state = {}, action) => {
       const merged = merge({}, state, { [newCheckin.id]: newCheckin });
       return merged;
     case RECEIVE_ALL_CHECKINS:
+    debugger
       return merge({}, state, action.checkins);
     case REMOVE_CHECKIN:
       nextState = merge({}, state);

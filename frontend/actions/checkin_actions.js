@@ -11,9 +11,9 @@ export const receiveSingleCheckin = payload => ({
   payload
 });
 
-export const receiveAllCheckins = desserts => ({
+export const receiveAllCheckins = checkins => ({
   type: RECEIVE_ALL_CHECKINS,
-  desserts
+  checkins
 });
 
 export const removeCheckin = checkin => ({

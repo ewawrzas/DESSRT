@@ -13,12 +13,13 @@ export const createCheckin = (checkin) => {
   });
 }
 
-export const fetchAllCheckins = () => (
-  $.ajax({
+export const fetchAllCheckins = () => {
+  debugger
+  return $.ajax({
     method: 'GET',
-    url: 'api/checkins'
-  })
-)
+    url: 'api/checkins',
+  });
+}
 
 export const updateCheckin = (checkin) => {
   return $.ajax({
