@@ -1,7 +1,7 @@
 class Dessert < ApplicationRecord
 
 DESSERT_TYPES = ['custard', "frozen", 'cake', 'cookie', 'pie', 'chocolate', 'pastry', 'miscellaneous'].sort.freeze
-DESSERT_ORIGINS = ["homemade", "store bought", "restaurant/cafe", "other"].sort.freeze
+DESSERT_ORIGINS = ["homemade", "store", "cafe", "other"].sort.freeze
 
   validates :name, presence: true, uniqueness: true
   validates :description, :dessert_type, :dessert_origin, presence: true

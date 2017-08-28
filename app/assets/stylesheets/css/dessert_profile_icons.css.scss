@@ -109,3 +109,45 @@
   padding: 2px 12px 10px 4px;
   color: grey;
 }
+
+#store{
+  height: 80px;
+  width: 110px;
+  text-align: right;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: bold;
+  background-image: image-url('003-shopping-cart.png');
+  background-repeat: no-repeat;
+  background-size: 45px;
+  padding: 2px 12px 10px 4px;
+  color: grey;
+}
+
+#homemade{
+  height: 80px;
+  width: 110px;
+  text-align: right;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: bold;
+  background-image: image-url('001electric-mixer.png');
+  background-repeat: no-repeat;
+  background-size: 45px;
+  padding: 2px 12px 10px 4px;
+  color: grey;
+}
+
+#cafe{
+  height: 80px;
+  width: 110px;
+  text-align: right;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: bold;
+  background-image: image-url('002-coffee-cup.png');
+  background-repeat: no-repeat;
+  background-size: 45px;
+  padding: 2px 12px 10px 4px;
+  color: grey;
+}

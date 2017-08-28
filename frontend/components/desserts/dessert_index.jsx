@@ -8,7 +8,7 @@ import UserProfileContainer from '../profile/user_profile_container';
 import DessertForm from './dessert_form';
 
 const DESSERT_TYPES = ['custard', "frozen", 'cake', 'cookie', 'pie', 'chocolate', 'pastry', 'miscellaneous']
-const DESSERT_ORIGINS = ["homemade", "store bought", "restaurant/cafe", "other"]
+const DESSERT_ORIGINS = ["homemade", "store", "cafe", "other"]
 
 class DessertIndex extends React.Component {
   constructor(props) {

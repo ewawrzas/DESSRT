@@ -27,7 +27,6 @@ class DessertProfile extends React.Component {
 
     if (!dessert) return null;
 
-
       return (
         <div className="dessertProfile">
           <div className="homeNav">
