@@ -15,10 +15,10 @@
 
 #checkInLink {
   width: 70px;
-  height: 80px;
-  background-image: image-url('003-spoon.png');
+  height: 90px;
+  background-image: image-url('spcheckin.png');
   background-repeat: no-repeat;
-  background-size: 55px;
+  background-size: 75px;
   background-position: bottom;
   color: grey;
   text-decoration: none;
@@ -37,7 +37,7 @@
 
 #desProfilePic {
   height: 135px;
-  width: 135px;
+  width: auto;
   display: flex;
   background-position: top;
   background-repeat: no-repeat;
@@ -72,6 +72,7 @@
   display: flex;
   align-items: space-around;
   justify-content: flex-start;
+  width: 723px;
 }
 
 .dessertIcons {

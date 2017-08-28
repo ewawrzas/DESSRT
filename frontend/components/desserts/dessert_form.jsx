@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 import { merge }from 'lodash'
 
-const DESSERT_TYPES = ["What is the dessert type?", 'custard', "frozen", 'cake', 'cookie', 'pie', 'chocolate', 'pastry', 'miscellaneous']
-const DESSERT_ORIGINS = ["Where did the dessert come from?", "homemade", "store", "cafe", "other"]
+const DESSERT_TYPES = ["What is the dessert type?", 'custard', "frozen", 'cake', 'cookie', 'pie', 'chocolate', 'pastry', 'candy', 'miscellaneous']
+const DESSERT_ORIGINS = ["Where did the dessert come from?", "homemade", "store", "cafe", 'restaurant', "other"]
 
 class DessertForm extends React.Component {
   constructor(props) {
