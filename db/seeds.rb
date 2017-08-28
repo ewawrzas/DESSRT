@@ -6,9 +6,34 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Dessert.delete_all
 
-Dessert.create!(
+
+print "☠️  Destroying users... "
+User.destroy_all
+puts "✅"
+
+print "📝  Seeding users... "
+sam = User.create!(username: 'sammy', password: 'starwars')
+jan = User.create!(username: 'jan', password: 'starwars')
+rick = User.create!(username: 'rick', password: 'starwars')
+ella = User.create!(username: 'ella', password: 'starwars')
+roger = User.create!(username: 'roger', password: 'starwars')
+demo = User.create!(username: 'demo', password: '111111')
+
+puts "✅"
+
+users = [sam, jan, rick, ella, roger, demo]
+
+
+print "☠️  Destroying desserts... "
+Dessert.destroy_all
+puts "✅"
+
+print "📝  Seeding desserts... "
+
+
+
+des1=  Dessert.create!(
 name: "Cake",
 description: "Chocolate",
 image_url: "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?w=940&h=650&auto=compress&cs=tinysrgb",
@@ -16,7 +41,7 @@ dessert_type: "cake",
 dessert_origin: "store"
 )
 
-Dessert.create!(
+des2= Dessert.create!(
 name: "Waffles",
 description: "With raspberries",
 image_url: "https://images.pexels.com/photos/221063/pexels-photo-221063.jpeg?w=940&h=650&auto=compress&cs=tinysrgb",
@@ -24,7 +49,7 @@ dessert_type: "miscellaneous",
 dessert_origin: "store"
 )
 
-Dessert.create!(
+des3 = Dessert.create!(
 name: "Cupcake",
 description: "Tiny with teal frosting",
 image_url: "https://images.pexels.com/photos/112392/pexels-photo-112392.jpeg?w=940&h=650&auto=compress&cs=tinysrgb",
@@ -32,7 +57,7 @@ dessert_type: "cake",
 dessert_origin: "store"
 )
 
-Dessert.create!(
+des4 = Dessert.create!(
 name: "Pie",
 description: "Fruit",
 image_url: "https://images.pexels.com/photos/79479/cake-pie-tart-fruits-79479.jpeg?w=940&h=650&auto=compress&cs=tinysrgb",
@@ -40,10 +65,32 @@ dessert_type: "pie",
 dessert_origin: "store"
 )
 
-Dessert.create!(
+des5 = Dessert.create!(
 name: "Cake Pops",
 description: "Chocolate",
 image_url: "https://images.pexels.com/photos/33715/cake-pops-pastries-cake-sweet.jpg?w=940&h=650&auto=compress&cs=tinysrgb",
 dessert_type: "cake",
 dessert_origin: "store"
 )
+
+desserts = ['Cake', 'Waffles', 'Cupcake', 'Pie', 'Cake Pops']
+
+puts "✅"
+
+print "☠️  Destroying checkins... "
+Checkin.destroy_all
+puts "✅"
+
+print "📝  Seeding checkins... "
+
+  users.each do |user|
+
+    checkin = Checkin.create!(
+      user_id: user.id,
+      comment: Faker::HitchhikersGuideToTheGalaxy.marvin_quote,
+      rating: 2,
+      dessert_id: des1.id
+      )
+  end
+
+puts "✅"
