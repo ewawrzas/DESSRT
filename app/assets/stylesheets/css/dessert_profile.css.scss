@@ -2,6 +2,26 @@
   padding-top: 15px;
 }
 
+#dessertDescription {
+  padding-top: 10px;
+  border-top: 1px lightgrey solid;
+  order: 2;
+  color: #a9a9a9;
+  font-weight: bold;
+}
+
+#checkInLink {
+  align-self: flex-end;
+  width: 80px;
+  height: 80px;
+  background-color: pink;
+  text-align: center;
+  color: grey;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+}
+
 #desProfilePic {
   height: 135px;
   width: 135px;
@@ -11,6 +31,7 @@
   background-size: cover;
   align-items: flex-end;
   margin: 5px;
+  overflow: hidden;
 }
 
 #dessert {
@@ -31,6 +52,7 @@
   background: white;
   display: flex;
   width: 682px;
+  flex-direction: column;
 }
 
 .dessertImages {

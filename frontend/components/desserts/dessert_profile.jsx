@@ -27,6 +27,7 @@ class DessertProfile extends React.Component {
 
     if (!dessert) return null;
 
+
       return (
         <div className="dessertProfile">
           <div className="homeNav">
@@ -53,9 +54,10 @@ class DessertProfile extends React.Component {
             <div id="dessert">
               <div className="dessertInfo">
                 <h1 id="dessertName">{dessert.name}</h1>
+                <p id={dessert.dessert_type}>{dessert.dessert_type}</p>
+                <p id={dessert.dessert_origin}>{dessert.dessert_origin}</p>
                 <p id="dessertDescription">{dessert.description}</p>
-                <p id="dessertType">{dessert.dessert_type}</p>
-                <p id="dessertOrigin">{dessert.dessert_origin}</p>
+                <Link to="/home" id="checkInLink">Checkin</Link>
               </div>
 
               <div className="dessertImages">
