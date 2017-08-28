@@ -1,7 +1,8 @@
 class Api::CheckinsController < ApplicationController
+  before_action :require_logged_in
 
   def create
-    @checkin = current_user.chechins.new(checkin_params)
+    @checkin = current_user.checkins.new(checkin_params)
 
     if @checkin.save
       render "api/checkins/show"
@@ -25,6 +26,11 @@ class Api::CheckinsController < ApplicationController
     end
   end
 
+  def destroy
+    @checkin = current_user.checkins.find(params[:id])
+    @checkin.destroy
+    render json: @checkin
+  end
 
 
   private
