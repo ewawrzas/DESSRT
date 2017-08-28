@@ -6,7 +6,7 @@ import AuthForm from './auth_form';
 const mapStateToProps = (state) => {
   let loggedIn = Boolean(state.currentUser);
   const errors = state.session.errors;
-  const demoUser = {username: "Demo", password: "111111"}
+  const demoUser = {username: "demo", password: "111111"}
   return {loggedIn, errors, demoUser};
 };
 
