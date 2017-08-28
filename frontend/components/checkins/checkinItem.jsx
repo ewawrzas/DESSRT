@@ -6,8 +6,9 @@ const CheckinItem = ({ checkin }) => (
     <span>{checkin.user}</span>
     <span>{checkin.dessert}</span>
     <span>{checkin.comment}</span>
-    <span>{checkin.rating}</span>
-    <img src={checkin.image_url}/>
+
+    <span>Rating:{checkin.rating}</span>
+    <img id="checkinImg" src={checkin.image_url}/>
   </li>
 );
 

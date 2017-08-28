@@ -87,7 +87,7 @@ print "📝  Seeding checkins... "
 
     checkin = Checkin.create!(
       user_id: user.id,
-      comment: Faker::HitchhikersGuideToTheGalaxy.marvin_quote,
+      comment: "Dessert (/dɪˈzɜːrt/) is a confectionery course that concludes a main meal. The course usually consists of sweet foods and beverages, such as dessert wine or liqueurs, but may include coffee, cheeses, nuts, or other savory items. In some parts of the world, such as much of central and western Africa, and most parts of China, there is no tradition of a dessert course to conclude a meal.",
       rating: 2,
       dessert_id: des1.id,
       image_url: "https://images.pexels.com/photos/33715/cake-pops-pastries-cake-sweet.jpg?w=940&h=650&auto=compress&cs=tinysrgb"

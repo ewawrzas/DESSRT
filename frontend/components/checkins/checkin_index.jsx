@@ -16,13 +16,13 @@ class CheckinIndex extends React.Component {
 
   render () {
     const { checkins } = this.props
-    debugger
+
     return (
       <div>
 
           <div className="checkinsIdx">
             <h2 id="feed">All the Checkins</h2>
-              <ul>
+              <ul className="checkinList">
                {checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} />)}
              </ul>
 
