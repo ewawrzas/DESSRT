@@ -4,4 +4,24 @@ import CheckinIndex from './checkin_index';
 import { fetchSingleCheckin, createCheckin, fetchAllCheckins, updateCheckin, deleteCheckin }
 from '../../actions/checkin_actions';
 
-import { selectAllCheckins, selectSingleCheckin } from '../../reducers/selectors';
+import { selectAllCheckins } from '../../reducers/selectors';
+
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state.session.currentUser,
+    checkins: selectAllCheckins(state),
+    errors: state.errors
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchAllCheckins: () => dispatch(fetchAllCheckins()),
+    fetchSingleCheckin: (id) => dispatch(fetchSingleCheckin(id)),
+    createCheckin: (checkin) => dispatch(createCheckin(checkin))
+    updateCheckin: (checkin) => dispatch(updateCheckin(checkin))
+    deleteCheckin: (checkin) => dispatch(deleteCheckin(checkin))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CheckinIndex);

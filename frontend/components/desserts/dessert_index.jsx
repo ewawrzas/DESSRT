@@ -14,9 +14,6 @@ class DessertIndex extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.props.logout();
-  }
 
   handleClick() {
     this.props.logout();
