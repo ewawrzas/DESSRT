@@ -1,5 +1,5 @@
 .checkinList {
-  margin: 0 0 0 26px;
+  margin: 25px 0 0 26px;
   padding: 16px 16px 0 16px;
   background: white;
   width: 682px;
@@ -13,7 +13,7 @@
   max-height: 200px;
   max-width: 300px;
   align-self: center;
-  padding: 15px;
+  padding: 25px;
 }
 
 .checkinItem {
@@ -29,6 +29,7 @@
 .checkinComment {
   display: flex;
   flex-direction: column;
+  align-items: space-between;
   padding: 10px;
   border: 0.5px solid #ffccd5;
   justify-content: space-between;
@@ -49,5 +50,5 @@
 }
 
 #feed {
-
+  align-self: left;
 }

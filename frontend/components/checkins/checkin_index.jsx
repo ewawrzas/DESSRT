@@ -22,7 +22,7 @@ class CheckinIndex extends React.Component {
 
           <div className="checkinsIdx">
               <div className="checkinList">
-                <h2 id="feed">Recent Global Activity</h2>
+                <h2 id="feed">Checkin Feed Coming Soon!</h2>
                 {checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} />)}
               </div>
             </div>

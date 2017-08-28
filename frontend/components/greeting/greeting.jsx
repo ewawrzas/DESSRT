@@ -52,7 +52,7 @@ class Greeting extends React.Component {
             <p id="user">{this.props.currentUser.username}</p>
           </div>
           <CheckinIndexContainer />
-          <h2 id="feed">Users</h2>
+          <h2 id="feed">Users-testing links only</h2>
           <ul className="userList">
             {this.props.users.map(user => <UserItem key={user.id} user={user} />)}
           </ul>
