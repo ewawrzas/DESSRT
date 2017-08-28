@@ -1,5 +1,6 @@
 #name {
   padding-top: 15px;
+
 }
 
 #dessertDescription {
@@ -20,6 +21,8 @@
   text-decoration: none;
   font-size: 16px;
   font-weight: 300;
+  position: relative;
+  right: 10px;
 }
 
 #desProfilePic {
@@ -59,4 +62,20 @@
   display: flex;
   align-items: space-around;
   justify-content: flex-start;
+}
+
+.dessertIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  position: relative;
+  bottom: 15px;
+}
+
+.dessertHeader {
+  display: flex;
+  justify-content: space-between;
 }

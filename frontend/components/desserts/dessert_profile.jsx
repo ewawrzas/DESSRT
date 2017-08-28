@@ -52,9 +52,13 @@ class DessertProfile extends React.Component {
           <div className="dessertPage">
             <div id="dessert">
               <div className="dessertInfo">
-                <h1 id="dessertName">{dessert.name}</h1>
-                <p id={dessert.dessert_type}>{dessert.dessert_type}</p>
-                <p id={dessert.dessert_origin}>{dessert.dessert_origin}</p>
+                <div className="dessertHeader">
+                  <h1 id="dessertName">{dessert.name}</h1>
+                  <div className="dessertIcons">
+                    <p id={dessert.dessert_type}>{dessert.dessert_type}</p>
+                    <p id={dessert.dessert_origin}>{dessert.dessert_origin}</p>
+                  </div>
+                </div>
                 <p id="dessertDescription">{dessert.description}</p>
                 <Link to="/home" id="checkInLink">Checkin</Link>
               </div>
