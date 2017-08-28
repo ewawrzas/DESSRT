@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const CheckinItem = ({ checkins }) => (
+const CheckinItem = ({ checkin }) => (
   <li className="checkinIndexItem">
     <span>{checkin.user}</span>
     <span>{checkin.dessert}</span>

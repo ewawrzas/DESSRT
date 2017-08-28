@@ -13,7 +13,7 @@ class Api::CheckinsController < ApplicationController
 
   def index
     @checkins = Checkin.all.order(updated_at: "DESC").includes(:user)
-    debugger
+    
     render :index
   end
 

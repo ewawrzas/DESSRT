@@ -14,7 +14,7 @@ export const createCheckin = (checkin) => {
 }
 
 export const fetchAllCheckins = () => {
-  debugger
+  
   return $.ajax({
     method: 'GET',
     url: 'api/checkins',
