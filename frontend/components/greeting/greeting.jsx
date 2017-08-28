@@ -51,7 +51,6 @@ class Greeting extends React.Component {
           <div className="homeContent">
             <p id="user">{this.props.currentUser.username}</p>
           </div>
-          <h2 id="feed">Recent Global Activity</h2>
           <CheckinIndexContainer />
           <h2 id="feed">Users</h2>
           <ul className="userList">

@@ -1,31 +1,53 @@
 .checkinList {
-  margin: 5px;
+  margin: 0 0 0 26px;
+  padding: 16px 16px 0 16px;
+  background: white;
+  width: 682px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #checkinImg{
+  display: inline-block;
   max-height: 200px;
   max-width: 300px;
+  align-self: center;
+  padding: 15px;
 }
 
 .checkinItem {
-  margin-left: 10px;
-  padding: 16px;
-  background: white;
+  padding: 16px 16px 16px;
   display: flex;
-  width: 682px;
+  width: 630px;
   height: 100%;
   flex-direction: column;
   align-content: center;
+  border-top: 1px lightgrey solid;
 }
 
 .checkinComment {
   display: flex;
   flex-direction: column;
-  padding: 10px 0 10px 0;
+  padding: 10px;
+  border: 0.5px solid #ffccd5;
+  justify-content: space-between;
+  color: grey;
+  font-size: 18px;
+  width: 540px;
+  align-self: center;
 }
 
 #checkinTitle {
-  align-self: flex-start;
+  text-align: left;
   display: block;
-  padding: 10px;
+  padding: 7px;
+  margin-bottom: 10px;
+  font-size: 19.5px;
+  position: relative;
+  left: 30px;
+}
+
+#feed {
+
 }
