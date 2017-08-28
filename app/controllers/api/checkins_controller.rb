@@ -32,6 +32,9 @@ class Api::CheckinsController < ApplicationController
     render json: @checkin
   end
 
+  def show
+    @checkin = Checkin.find(params[:id])
+  end
 
   private
 

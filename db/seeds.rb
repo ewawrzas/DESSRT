@@ -89,7 +89,8 @@ print "📝  Seeding checkins... "
       user_id: user.id,
       comment: Faker::HitchhikersGuideToTheGalaxy.marvin_quote,
       rating: 2,
-      dessert_id: des1.id
+      dessert_id: des1.id,
+      image_url: "https://images.pexels.com/photos/33715/cake-pops-pastries-cake-sweet.jpg?w=940&h=650&auto=compress&cs=tinysrgb"
       )
   end
 
