@@ -1,23 +1,10 @@
 import * as CheckinAPIUtil from '../util/checkin_api_util'
+import { receiveErrors, removeErrors } from './session_actions'
 
 export const RECEIVE_SINGLE_CHECKIN = 'RECEIVE_SINGLE_CHECKIN';
 export const RECEIVE_ALL_CHECKINS = 'RECEIVE_ALL_CHECKINS';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
-export const REMOVE_ERRORS = 'REMOVE_ERRORS';
 export const REMOVE_CHECKIN = 'REMOVE_CHECKIN';
 
-export const receiveErrors = (errors) => {
-  return {
-    type: RECEIVE_ERRORS,
-    errors,
-  };
-};
-
-export const removeErrors = (errors) => {
-  return {
-    type: REMOVE_ERRORS
-  };
-};
 
 export const receiveSingleCheckin = payload => ({
   type: RECEIVE_SINGLE_CHECKIN,

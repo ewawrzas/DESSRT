@@ -1,22 +1,9 @@
 import * as DessertAPIUtil from '../util/dessert_api_util'
+import { receiveErrors, removeErrors } from './session_actions'
 
 export const RECEIVE_SINGLE_DESSERT = 'RECEIVE_SINGLE_DESSERT';
 export const RECEIVE_ALL_DESSERTS = 'RECEIVE_ALL_DESSERTS';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
-export const REMOVE_ERRORS = 'REMOVE_ERRORS';
 
-export const receiveErrors = (errors) => {
-  return {
-    type: RECEIVE_ERRORS,
-    errors,
-  };
-};
-
-export const removeErrors = (errors) => {
-  return {
-    type: REMOVE_ERRORS
-  };
-};
 
 export const receiveSingleDessert = payload => ({
   type: RECEIVE_SINGLE_DESSERT,
