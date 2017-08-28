@@ -5,24 +5,34 @@
 
 #dessertDescription {
   padding-top: 10px;
-  border-top: 1px lightgrey solid;
   order: 2;
   color: #a9a9a9;
   font-weight: 300;
+  align-self: flex-start;
+  display: flex;
+  max-width: 575px;
 }
 
 #checkInLink {
-  align-self: flex-end;
-  width: 80px;
+  width: 70px;
   height: 80px;
-  background-color: pink;
-  text-align: center;
+  background-image: image-url('003-spoon.png');
+  background-repeat: no-repeat;
+  background-size: 55px;
+  background-position: bottom;
   color: grey;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: bold;
+  order: 3;
   position: relative;
   right: 10px;
+  align-self: flex-end;
+}
+
+#checkInLink:hover {
+  opacity: .6;
 }
 
 #desProfilePic {
@@ -78,4 +88,13 @@
 .dessertHeader {
   display: flex;
   justify-content: space-between;
+}
+
+.dessertHeaderBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px lightgrey solid;
+  position: relative;
+  bottom: 50px;
 }

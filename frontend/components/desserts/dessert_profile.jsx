@@ -37,7 +37,7 @@ class DessertProfile extends React.Component {
               </div>
               <ul id="homeNavLinks">
                 <button id="logout" onClick={this.handleClick}>Logout</button>
-                <Link to="/desserts" id="addDessert">Desserts</Link>
+                <Link to="/desserts" id="addDessert">Add Dessert</Link>
               </ul>
             </header>
 
@@ -59,8 +59,10 @@ class DessertProfile extends React.Component {
                     <p id={dessert.dessert_origin}>{dessert.dessert_origin}</p>
                   </div>
                 </div>
-                <p id="dessertDescription">{dessert.description}</p>
-                <Link to="/home" id="checkInLink">Checkin</Link>
+                <div className="dessertHeaderBottom">
+                  <p id="dessertDescription">{dessert.description}</p>
+                  <Link to="/home" id="checkInLink">Checkin</Link>
+                </div>
               </div>
 
               <div className="dessertImages">

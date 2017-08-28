@@ -32,7 +32,7 @@ class Greeting extends React.Component {
             </div>
             <ul id="homeNavLinks">
               <button id="logout" onClick={this.handleClick}>Logout</button>
-              <Link to="/desserts" id="dessertLink">Add Dessert</Link>
+              <Link to="/desserts" id="addDessert">Add Dessert</Link>
             </ul>
           </header>
 

@@ -17,7 +17,7 @@ class DessertForm extends React.Component {
       dessert_origin: "",
       image_url: ""
     };
-
+    this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
 
