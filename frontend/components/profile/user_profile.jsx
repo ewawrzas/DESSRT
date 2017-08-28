@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink, Link } from 'react-router-dom';
 import updateFormContainer from '../profile/update_form_container';
+import CheckinIndexContainer from '../checkins/checkin_index_container';
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -60,6 +61,7 @@ class UserProfile extends React.Component {
               <h1 id="name">{this.props.user.username}</h1>
             </div>
             <h2 id="feedIntro">{`${this.props.user.username}'s`} Recent Activity</h2>
+            <CheckinIndexContainer />
             <Route path={`/users/${this.props.currentUser.id}/update`} component={updateFormContainer} />
           </div>
 

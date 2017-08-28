@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink, Link } from 'react-router-dom';
 import updateFormContainer from '../profile/update_form_container';
+import CheckinIndexContainer from '../checkins/checkin_index_container';
 
 class DessertProfile extends React.Component {
   constructor(props) {
@@ -74,7 +75,7 @@ class DessertProfile extends React.Component {
               </div>
             </div>
             <h2 id="feedIntro">Recent Activity</h2>
-
+            <CheckinIndexContainer />
 
           </div>
       </div>
