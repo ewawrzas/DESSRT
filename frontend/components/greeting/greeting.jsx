@@ -52,14 +52,16 @@ class Greeting extends React.Component {
             <p id="user">{this.props.currentUser.username}</p>
           </div>
           <h2 id="feed">Recent Global Activity</h2>
+          <CheckinIndexContainer />
+          <h2 id="feed">Users</h2>
           <ul className="userList">
             {this.props.users.map(user => <UserItem key={user.id} user={user} />)}
           </ul>
           <Route path ="/users/:userId" component={UserProfileContainer} />
           <Route path="/users/:userId/update" component={UpdateFormContainer} />
         </div>
-      
-        <CheckinIndexContainer />
+
+
       </div>
     );
   }

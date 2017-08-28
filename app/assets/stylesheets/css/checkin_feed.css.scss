@@ -1,9 +1,31 @@
-.checkinIndexItem {
-  max-width: 600px;
-  max-height: 400px;
+.checkinList {
+  margin: 5px;
 }
 
 #checkinImg{
   max-height: 200px;
-  width: auto;
+  max-width: 300px;
+}
+
+.checkinItem {
+  margin-left: 10px;
+  padding: 16px;
+  background: white;
+  display: flex;
+  width: 682px;
+  height: 100%;
+  flex-direction: column;
+  align-content: center;
+}
+
+.checkinComment {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px 0;
+}
+
+#checkinTitle {
+  align-self: flex-start;
+  display: block;
+  padding: 10px;
 }

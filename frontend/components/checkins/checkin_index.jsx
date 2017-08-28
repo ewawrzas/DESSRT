@@ -21,10 +21,9 @@ class CheckinIndex extends React.Component {
       <div>
 
           <div className="checkinsIdx">
-            <h2 id="feed">All the Checkins</h2>
-              <ul className="checkinList">
+              <div className="checkinList">
                {checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} />)}
-             </ul>
+             </div>
 
           </div>
 
