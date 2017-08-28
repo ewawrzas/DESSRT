@@ -28,7 +28,7 @@
 
 #restaurant{
   height: 80px;
-  width: 100px;
+  width: 139px;
   text-align: right;
   font-size: 20px;
   font-variant: small-caps;
@@ -167,13 +167,27 @@
 }
 
 #candy{
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 98px;
   text-align: right;
   font-size: 20px;
   font-variant: small-caps;
   font-weight: bold;
   background-image: image-url('toffee.png');
+  background-repeat: no-repeat;
+  background-size: 45px;
+  padding: 2px 12px 10px 4px;
+  color: #4d4d4d;
+}
+
+#other {
+  height: 60px;
+  width: 90px;
+  text-align: right;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: bold;
+  background-image: image-url('001-fruit.png');
   background-repeat: no-repeat;
   background-size: 45px;
   padding: 2px 12px 10px 4px;
