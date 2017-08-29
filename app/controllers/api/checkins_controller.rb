@@ -12,8 +12,8 @@ class Api::CheckinsController < ApplicationController
   end
 
   def index
-    @checkins = Checkin.all.order(updated_at: "DESC").includes(:user)
-    
+    @checkins = Checkin.all.order(created_at: "ASC").includes(:user)
+
     render :index
   end
 

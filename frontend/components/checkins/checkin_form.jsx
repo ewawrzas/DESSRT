@@ -23,13 +23,13 @@ class CheckinForm extends React.Component {
   }
 
   handleChange(field) {
-    debugger
+
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
 
   handleSubmit(e) {
-    debugger
+
     e.preventDefault();
 
     const checkin = merge({}, this.state, {
