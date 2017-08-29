@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, NavLink, Link } from 'react-router-dom';
-import updateFormContainer from '../profile/update_form_container';
+import CheckinFormContainer from '../checkins/checkin_form_container';
 import CheckinIndexContainer from '../checkins/checkin_index_container';
 
 class DessertProfile extends React.Component {
@@ -62,7 +62,7 @@ class DessertProfile extends React.Component {
                 </div>
                 <div className="dessertHeaderBottom">
                   <p id="dessertDescription">{dessert.description}</p>
-                  <Link to="/home" id="checkInLink">Checkin</Link>
+                  <Link to={`/desserts/${dessert.id}/checkin`} id="checkInLink">Checkin</Link>
                 </div>
               </div>
 
@@ -74,9 +74,9 @@ class DessertProfile extends React.Component {
                 <img id="desProfilePic" src={dessert.image_url} />
               </div>
             </div>
-          
-            <CheckinIndexContainer />
 
+            <CheckinIndexContainer />
+            <Route path={`/desserts/${dessert.id}/checkin`} component={CheckinFormContainer} />
           </div>
       </div>
       );
