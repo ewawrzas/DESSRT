@@ -57,17 +57,18 @@ class CheckinForm extends React.Component {
 
               <h3 id="checkInHeading">Check-In</h3>
 
-              <div className="createInputs">
+              <div className="checkinInputs">
 
-                <label>WHAT DID YOU THINK</label>
+
                 <textarea
                   type="text"
-                  id="descriptionChange"
+                  id="commentText"
+                  placeholder='What did you think?'
                   onChange={ this.handleChange('comment') }
                   value={ this.state.comment }
                   />
 
-                <label>IMAGE URL</label>
+
                 <div className="checkinImageInput">
                   <input
                     type="url"
@@ -89,10 +90,10 @@ class CheckinForm extends React.Component {
                 </div>
 
 
-              </div>
 
 
-              <button id="createDessertBtn">Confirm</button>
+              <button id="confirmCheckinBtn">Confirm</button>
+            </div>
 
             </form>
           </div>

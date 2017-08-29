@@ -1,16 +1,22 @@
 .createCheckinForm {
   width: 500px;
-  height: 280px;
+  height: 250px;
   background-color: white;
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
   align-content: flex-start;
 }
 
-.checkInHeading {
+#checkInHeading {
+  padding: 5px 0px 5px 10px;
   margin: 0;
   align-self: left;
+  width: 98%;
+  background-color: #ffccd5;
+  color: #a6a6a6;
+  font-weight: bold;
 }
 
 #rating {
@@ -19,15 +25,17 @@
   -moz-appearance: none;
   outline: none;
   background-color: lightgrey;
-  height: 4px;
+  height: 8px;
   -webkit-transition: .2s;
+  border-radius: 2px;
   transition: opacity .2s;
+  width: 70%
 }
 
 .ratingSlider {
   width: 60%;
-  padding: 15px 0px 20px 0px;
-  align-self: left;
+  padding: 15px 0px 0px 0px;
+
 }
 
 #rating:hover {
@@ -44,11 +52,48 @@
   height: 32px;
   background-position: top left;
   cursor: pointer;
-  opacity: 1;
+  background-blend-mode: hue;
 
 }
 
 .checkinImageInput {
-  height: 50px;
-  width: 50px;
+  height: 45%;
+  width: 20%;
+  background-color: #a6a6a6;
+  border-radius: 5px;
+}
+
+#confirmCheckinBtn {
+  background-color: #a6a6a6;
+  border: none;
+  color: white;
+  width: 30%;
+  height: 20%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+  border-radius: 5px 5px 5px 5px;
+  margin-left: 2px;
+}
+
+.checkinInputs {
+  display: flex;
+  direction: row;
+  flex-wrap: wrap;
+  margin: 15px;
+  align-content: space-around;
+  justify-content: space-around;
+  height: 100%;
+}
+
+#commentText {
+  width: 75%;
+  height: 40%;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid lightgrey;
+  padding: 5px 2px 5px 5px;
+  font-size: 16px;
 }
