@@ -1,7 +1,5 @@
 #name {
   padding-top: 15px;
-  max-height: 40px;
-  display: flex;
 }
 
 #dessertDescription {
@@ -92,6 +90,7 @@
 .dessertHeader {
   display: flex;
   justify-content: space-between;
+  max-height: 70px;
 }
 
 .dessertHeaderBottom {
