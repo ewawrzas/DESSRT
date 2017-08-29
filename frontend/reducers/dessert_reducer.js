@@ -4,10 +4,8 @@ import { RECEIVE_SINGLE_DESSERT, RECEIVE_ALL_DESSERTS, RECEIVE_ERRORS, REMOVE_ER
 
 const dessertReducer = (state = {}, action) => {
   Object.freeze(state);
-
   switch(action.type) {
     case RECEIVE_SINGLE_DESSERT:
-    
       const newDessert = action.payload;
       const merged = merge({}, state, { [newDessert.id]: newDessert });
       return merged;

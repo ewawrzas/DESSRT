@@ -10,11 +10,12 @@ const checkinReducer = (state = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_SINGLE_CHECKIN:
+    debugger
       const newCheckin = action.payload;
       const merged = merge({}, state, { [newCheckin.id]: newCheckin });
       return merged;
     case RECEIVE_ALL_CHECKINS:
-    
+
       return merge({}, state, action.checkins);
     case REMOVE_CHECKIN:
       nextState = merge({}, state);

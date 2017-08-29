@@ -8,32 +8,42 @@ class CheckinForm extends React.Component {
     super(props);
 
     this.state = {
-      rating: 0,
+      rating: 5,
       comment: "",
       image_url: ""
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.showRating = this.showRating.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   };
+
 
   handleClick() {
     this.props.logout();
   }
 
   handleChange(field) {
+    debugger
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
-  // showRating(rating) {
-  //   return (e) => this.setState({ [rating]: e.currentTarget.value });
-  // }
-
 
   handleSubmit(e) {
+    debugger
     e.preventDefault();
-    const checkin = Object.assign({}, this.state)
-    this.props.createCheckin({checkin});
+
+    const checkin = merge({}, this.state, {
+      dessert_id: this.props.match.params.dessertId
+    })
+    this.props.createCheckin({checkin}).then(
+      () => this.setState({
+        rating: 0,
+        comment: "",
+        image_url: "",
+        dessert_id: ""
+      })
+    ).then(dessert => this.props.history.push(`/desserts/${this.props.match.params.dessertId}`)
+    );
   }
 
   errors() {
@@ -91,10 +101,9 @@ class CheckinForm extends React.Component {
                 </div>
 
 
-
-
               <button id="confirmCheckinBtn">Confirm</button>
             </div>
+
 
             </form>
           </div>

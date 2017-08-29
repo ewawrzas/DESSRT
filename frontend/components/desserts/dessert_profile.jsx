@@ -76,7 +76,7 @@ class DessertProfile extends React.Component {
             </div>
 
             <CheckinIndexContainer />
-            <Route path={`/desserts/${dessert.id}/checkin`} component={CheckinFormContainer} />
+            <Route path={'/desserts/:dessertId/checkin'} component={CheckinFormContainer} />
           </div>
       </div>
       );

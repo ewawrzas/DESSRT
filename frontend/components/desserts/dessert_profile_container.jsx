@@ -4,10 +4,12 @@ import DessertProfile from './dessert_profile'
 import { fetchSingleDessert } from '../../actions/dessert_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  ;
+  const dessert = state.entities.desserts[ownProps.match.params.dessertId];
+  const dessertId = parseInt(ownProps.match.params.dessertId);
   return {
     currentUser: state.session.currentUser,
-    dessert: state.entities.desserts[ownProps.match.params.dessertId]
+    dessert: dessert,
+    dessertId: dessertId
   };
 };
 
