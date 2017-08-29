@@ -1,6 +1,7 @@
 #name {
   padding-top: 15px;
-
+  max-height: 40px;
+  display: flex;
 }
 
 #dessertDescription {
@@ -11,6 +12,7 @@
   align-self: flex-start;
   display: flex;
   max-width: 575px;
+  margin: 0;
 }
 
 #checkInLink {
@@ -98,5 +100,5 @@
   justify-content: space-between;
   border-top: 1px lightgrey solid;
   position: relative;
-  
+
 }

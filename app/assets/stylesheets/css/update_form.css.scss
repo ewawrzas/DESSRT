@@ -22,10 +22,12 @@
 
 .updateUserForm {
   width: 350px;
-  height: 280px;
+  height: 300px;
   border: grey;
   display: flex;
-  align-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background: white;
   z-index: 3;
@@ -61,7 +63,7 @@
   background-color: #f2f2f2;
   border: 0.5px solid white;
   color: #ff99bb;
-  padding: 5px 8px;
+  padding: 5px 62px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -69,4 +71,9 @@
   font-weight: bold;
   position: relative;
   border-radius: 5px 5px 5px 5px;
+}
+
+#updateUserBtn:hover {
+  opacity: .7;
+  cursor: pointer;
 }

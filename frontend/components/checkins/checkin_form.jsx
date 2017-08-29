@@ -8,12 +8,13 @@ class CheckinForm extends React.Component {
     super(props);
 
     this.state = {
-      raing: 5,
+      rating: 0,
       comment: "",
       image_url: ""
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.showRating = this.showRating.bind(this);
   };
 
   handleClick() {
@@ -23,6 +24,11 @@ class CheckinForm extends React.Component {
   handleChange(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
+
+  // showRating(rating) {
+  //   return (e) => this.setState({ [rating]: e.currentTarget.value });
+  // }
+
 
   handleSubmit(e) {
     e.preventDefault();
@@ -62,7 +68,7 @@ class CheckinForm extends React.Component {
                   />
 
                 <label>IMAGE URL</label>
-                <div className="dessertImageInput">
+                <div className="checkinImageInput">
                   <input
                     type="url"
                     id="desImage"
@@ -71,18 +77,20 @@ class CheckinForm extends React.Component {
                     />
                 </div>
 
-                <select
-                  id="typeSelect"
-                  value={ this.state.rating }
-                  onChange={ this.handleChange('rating') }
-                  >
-                  {[1, 2, 3, 4, 5].map((type, i) => {
-                    return <option value={type} key={i}>{type}</option>;
-                  })}
-                </select>
+                <div className="ratingSlider">
+                  <input
+                    type="range"
+                    max="5"
+                    min="0"
+                    id="rating"
+                    value={ this.state.rating }
+                    onChange={ this.handleChange('rating') }
+                    />
+                </div>
 
 
               </div>
+
 
               <button id="createDessertBtn">Confirm</button>
 

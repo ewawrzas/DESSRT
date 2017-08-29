@@ -24,13 +24,7 @@ h4 {
   color: #737373;
 }
 
-input {
-  display: flex;
-  align-self: center;
-  align-items: flex-start;
-  padding: 2px 2px 2px 15px;
-  margin: 5px 5px 5px 5px;
-}
+
 
 .img1 {
   background-image: image-url('blurrypinkcupcakes.jpg');
@@ -56,9 +50,10 @@ input {
   align-items: center;
 }
 
-form {
+.signInForm {
   display: flex;
   align-items: center;
+  align-content: center;
   flex-direction: column;
   justify-content: center;
 }
@@ -116,6 +111,11 @@ form {
   background-image: image-url('001-profile.png');
   background-position: left;
   background-repeat: no-repeat;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  padding: 2px 2px 2px 18px;
+
 }
 
 .password {
@@ -124,6 +124,11 @@ form {
   background-image: image-url('002-padlock.png');
   background-position: left;
   background-repeat: no-repeat;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  padding: 2px 2px 2px 17px;
+
 }
 
 .errDiv {

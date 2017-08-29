@@ -58,7 +58,7 @@ class AuthForm extends React.Component {
       <div className={dessertContainer} >
         <br/>
         <div className="authInfo">
-          <form onSubmit={this.handleSubmit}>
+          <form className="signInForm" onSubmit={this.handleSubmit}>
             <h1>DESSRT</h1>
             <h4>EAT SOCIALLY</h4>
             <h2>{formName}</h2>
