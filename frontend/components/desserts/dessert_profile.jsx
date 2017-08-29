@@ -74,7 +74,7 @@ class DessertProfile extends React.Component {
                 <img id="desProfilePic" src={dessert.image_url} />
               </div>
             </div>
-            <h2 id="feedIntro">Recent Activity</h2>
+          
             <CheckinIndexContainer />
 
           </div>
