@@ -54,9 +54,10 @@ class CheckinForm extends React.Component {
           <div className="updateUser">
 
             <form onSubmit={ this.handleSubmit } className="createCheckinForm" >
-
-              <h3 id="checkInHeading">Check-In</h3>
-
+              <div id="checkInHeading">
+                <h3 >Check-In</h3>
+                <Link id="checkInExit" to="/home">X</Link>
+              </div>
               <div className="checkinInputs">
 
 
