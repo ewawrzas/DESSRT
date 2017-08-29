@@ -45,11 +45,11 @@ class CheckinForm extends React.Component {
 
         <div className="modal">
 
+          <div className="updateUser">
 
-          <div className="createDessert">
-            <form onSubmit={ this.handleSubmit } className="createDessertForm" >
+            <form onSubmit={ this.handleSubmit } className="createCheckinForm" >
 
-              <h2 id="addHeading">Check-In</h2>
+              <h3 id="checkInHeading">Check-In</h3>
 
               <div className="createInputs">
 
@@ -87,7 +87,7 @@ class CheckinForm extends React.Component {
               <button id="createDessertBtn">Confirm</button>
 
             </form>
-            </div>
+          </div>
 
         </div>
       )
