@@ -1,5 +1,5 @@
 .checkinList {
-  margin: 25px 0 0 26px;
+  margin: 20px 0 0 26px;
   padding: 16px 16px 0 16px;
   background: white;
   width: 682px;
@@ -14,6 +14,11 @@
   max-width: 300px;
   align-self: center;
   padding: 25px;
+}
+
+#feedUserLink {
+  font-weight: bolder;
+  color: #ff8095;
 }
 
 .checkinItem {
