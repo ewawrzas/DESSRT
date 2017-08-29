@@ -6,8 +6,10 @@
 .createDessertForm {
   margin-top: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   justify-content: space-around;
+  align-items: center;
   padding-bottom: 25px;
   height: 700px;
   width: 500px;

@@ -11,6 +11,11 @@
   cursor: pointer;
 }
 
+#updateTitle {
+  color: grey;
+
+}
+
 .updateUser {
   width: auto;
   height: 600px;
@@ -35,10 +40,10 @@
 
 .updateInputs input{
   border: 1px solid lightgrey;
-  margin: 7px 2px 10px 5px;
+  margin: 0px 2px 10px 5px;
   background-position: left;
   background-repeat: no-repeat;
-  padding: 2px 0 2px 20px;
+  padding: 4px 0 4px 20px;
 }
 
 #backBtn {
@@ -57,6 +62,7 @@
 
 #usernameChange {
   background-image: image-url('001-profile.png');
+  margin-top: 20px;
 }
 
 #updateUserBtn {

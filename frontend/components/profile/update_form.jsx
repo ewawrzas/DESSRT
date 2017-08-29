@@ -62,7 +62,7 @@ class UpdateForm extends React.Component {
           <div className="updateUser">
 
             <form onSubmit={ this.handleSubmit } className="updateUserForm" >
-              <p>Update Your Username and Password</p>
+              <p id="updateTitle">Update Your Username and Password</p>
 
               <div className="updateInputs">
                 <div className="inputPad1">
