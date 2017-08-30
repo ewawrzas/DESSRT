@@ -1,5 +1,22 @@
-#name {
-  padding-top: 15px;
+#dessertName {
+  font-weight: 400;
+  position: relative;
+  left: 10px;
+}
+
+.desImgDiv {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: auto;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 130px;
+  max-height: 130px;
+}
+
+#desAvatar {
+  overflow: hidden;
 }
 
 #dessertDescription {
@@ -47,6 +64,10 @@
   overflow: hidden;
 }
 
+#desProfilePic:empty {
+  display: none;
+}
+
 #dessert {
   display: flex;
   flex-direction: column;
@@ -70,7 +91,6 @@
 }
 
 .dessertImages {
-  // margin-left: 13px;
   display: flex;
   align-items: space-around;
   justify-content: flex-start;
@@ -80,18 +100,21 @@
 .dessertIcons {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  align-self: flex-start;
   align-items: flex-start;
   margin-right: 10px;
   padding-bottom: 15px;
-  position: relative;
-  bottom: 15px;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .dessertHeader {
   display: flex;
-  justify-content: space-between;
-  max-height: 70px;
+
 }
 
 .dessertHeaderBottom {
