@@ -16,8 +16,13 @@ class UpdateForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.updateFile = this.updateFile.bind(this)
+    this.updateFile = this.updateFile.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   };
+
+  handleClick() {
+    this.props.logout();
+  }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
@@ -44,14 +49,14 @@ class UpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
+
 
     const formData = new FormData();
     formData.append("user[username]", this.state.username);
     formData.append("user[password]", this.state.password);
     formData.append("user[image]", this.state.imageFile);
 
-    debugger
+
     this.props.updateUser(formData).then(
       () => this.setState({
         username: "",

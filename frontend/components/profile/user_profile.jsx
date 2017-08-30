@@ -56,11 +56,13 @@ class UserProfile extends React.Component {
             </div>
           </div>
 
-          <div className="homePage">
+          <div className="profilePage">
             <div className={image}>
+              <div className="userImgDiv">
+                <img id="userAvatar" src={this.props.user.image} />
+              </div>
               <h1 id="name">{this.props.user.username}</h1>
             </div>
-            <h2 id="feedIntro">{`${this.props.user.username}'s`} Recent Activity</h2>
             <CheckinIndexContainer />
             <Route path={`/account`} component={updateFormContainer} />
           </div>

@@ -5,15 +5,36 @@
   align-items: center;
 }
 
+.userImgDiv {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px solid pink;
+  border-radius: 100%;
+  margin: 10px;
+  padding: 3px;
+  height: 59px;
+  width: 60px;
+}
+
+.profilePage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .userProfileContent1 {
   background-image: image-url('goldencupcakes.jpg');
   height: 250px;
-  width: auto;
+  width: 90%;
   display: flex;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   align-items: flex-end;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  opacity: .9;
 }
 
 .userProfileContent2 {
@@ -29,10 +50,10 @@
 
 #user {
   color: white;
-  padding-left: 25px;
   font-size: 33px;
   font-weight: 400;
   opacity: 1;
+
 }
 
 .userProfileLogo {
@@ -51,6 +72,8 @@
 #name {
   padding-left: 20px;
   padding-bottom: 15px;
+  position: relative;
+  bottom: 15px;
   color: white;
 }
 
@@ -86,14 +109,12 @@
 #updateLink{
   color: grey;
   padding: 7px 4px;
-  // padding-left: 30px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   font-weight: 300;
   margin-left: 80px;
   margin-right: 0;
-  // background-image: image-url("logo.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -103,15 +124,7 @@
   display: flex;
   margin-left: 150px;
 }
-// #updateLink {
-//   background-image: image-url("001-fruit.png");
-//   padding-left: 22px;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   padding-right: 15px;
-//   display: flex;
-//   align-items: center;
-// }
+
 
 #addDessert:hover {
   opacity: .6;
