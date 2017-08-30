@@ -28,6 +28,19 @@
   top: 40px;
 }
 
+.checkinImgDiv {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 10px;
+  padding: 3px;
+  align-self: center;
+}
+
+.checkinImgDiv:empty {
+  display: none;
+}
+
 #checkinImg{
   display: inline-block;
   max-height: 200px;
@@ -42,18 +55,17 @@
 }
 
 #checkinTitle {
-    font-color: grey;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+  font-color: grey;
+  margin: 0;
+  padding: 0;
 }
 
 .checkinItem {
   padding: 16px 16px 16px;
   display: flex;
   width: 630px;
-  height: 100%;
   flex-direction: column;
+  justify-content: center;
   border-top: 1px lightgrey solid;
 }
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170829205830) do
+ActiveRecord::Schema.define(version: 20170830205942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,10 @@ ActiveRecord::Schema.define(version: 20170829205830) do
     t.datetime "updated_at", null: false
     t.string "dessert_type"
     t.string "dessert_origin"
+    t.string "avatar_image_file_name"
+    t.string "avatar_image_content_type"
+    t.integer "avatar_image_file_size"
+    t.datetime "avatar_image_updated_at"
     t.index ["name"], name: "index_desserts_on_name", unique: true
   end
 

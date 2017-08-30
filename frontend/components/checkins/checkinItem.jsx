@@ -19,7 +19,9 @@ const CheckinItem = ({ checkin }) => {
       <span>{checkin.comment}</span>
       <span id={starRating}>Rating</span>
     </div>
-    <img id="checkinImg" src={checkin.image_url}/>
+    <div className="checkinImgDiv">
+      <img id="checkinImg" src={checkin.image_url}/>
+    </div>
   </div>
 );
 }
