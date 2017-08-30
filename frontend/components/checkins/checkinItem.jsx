@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 const CheckinItem = ({ checkin }) => {
   const starRating = `rating${checkin.rating}`;
-  const userLink = <Link to={`/users/${checkin.user_id}`}><span id="feedUserLink">{checkin.user}</span></Link>;
-  const dessertLink = <Link to={`/desserts/${checkin.dessert_id}`}><span id="feedUserLink">{checkin.dessert}</span></Link>;
-debugger
+  const userLink = <Link to={`/users/${checkin.user_id}`} onClick={ () => window.scroll(0, 0) } ><span id="feedUserLink">{checkin.user}</span></Link>;
+  const dessertLink = <Link to={`/desserts/${checkin.dessert_id}`} onClick={ () => window.scroll(0, 0) } ><span id="feedUserLink">{checkin.dessert}</span></Link>;
+
   return (
   <div className="checkinItem">
-  <span id="checkinTitle">{userLink} is eating {dessertLink}</span>
+  <span className="checkinTitle">{userLink} is eating {dessertLink}</span>
     <div className="checkinComment">
       <span>{checkin.comment}</span>
       <span id={starRating}>Rating</span>

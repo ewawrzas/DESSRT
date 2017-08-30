@@ -1,5 +1,10 @@
+.checkinsIdx {
+  display: flex;
+  justify-content: center;
+}
+
 .checkinList {
-  margin: 20px 0 0 26px;
+  margin: 20px 0 0 0px;
   padding: 16px 16px 0 16px;
   background: white;
   width: 682px;
@@ -19,6 +24,10 @@
 #feedUserLink {
   font-weight: bolder;
   color: #ff8095;
+}
+
+#checkinTitle {
+    font-color: grey;
 }
 
 .checkinItem {
@@ -44,7 +53,7 @@
   align-self: center;
 }
 
-#checkinTitle {
+.checkinTitle {
   text-align: left;
   display: block;
   padding: 7px;

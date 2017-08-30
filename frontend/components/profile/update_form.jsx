@@ -9,10 +9,13 @@ class UpdateForm extends React.Component {
 
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      imageFile: null,
+      imageUrl: null
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateFile = this.updateFile.bind(this)
   };
 
   componentWillReceiveProps(nextProps) {
@@ -21,17 +24,37 @@ class UpdateForm extends React.Component {
     }
   }
 
+  updateFile (e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = function () {
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    }.bind(this);
+
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
+  }
+
+
   handleChange(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
   handleSubmit(e) {
+    debugger
     e.preventDefault();
-    const user = merge({}, this.state);
-    this.props.updateUser(user).then(
+    const formData = new FormData();
+    formData.append("user[username]", this.state.username);
+    formData.append("user[password]", this.state.password);
+    formData.append("user[image]", this.state.imageFile);
+    debugger
+    // const user = merge({}, this.state);
+    this.props.updateUser(formData).then(
       () => this.setState({
         username: "",
-        password: ""
+        password: "",
+        imageFile: ""
       })
     ).then(user => this.props.history.push(`/users/${this.props.currentUser.id}`)
     );
@@ -58,10 +81,10 @@ class UpdateForm extends React.Component {
 
 
       return (
-        <div className="modal">
-          <div className="updateUser">
+        <div className="dessertsDiv">
+          <div className="createDessert">
 
-            <form onSubmit={ this.handleSubmit } className="updateUserForm" >
+            <form onSubmit={ this.handleSubmit } className="createDessertForm" >
               <p id="updateTitle">Update Your Username and Password</p>
 
               <div className="updateInputs">
@@ -81,6 +104,8 @@ class UpdateForm extends React.Component {
                     value={ this.state.password }
                     />
                 </div>
+                <input type="file" onChange={ this.updateFile }/>
+                <img id="avatar" src={this.state.imageUrl} />
               </div>
               <div className="errDiv">
                 { this.renderErrors() }

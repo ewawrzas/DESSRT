@@ -5,7 +5,7 @@ const DessertItem = ({ dessert }) => (
   <li className="dessertItem">
     <Link to={`/desserts/${dessert.id}`}>
       <span>{dessert.name}</span>
-    
+
     </Link>
   </li>
 );

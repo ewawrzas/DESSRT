@@ -62,7 +62,7 @@ class UserProfile extends React.Component {
             </div>
             <h2 id="feedIntro">{`${this.props.user.username}'s`} Recent Activity</h2>
             <CheckinIndexContainer />
-            <Route path={`/users/${this.props.currentUser.id}/update`} component={updateFormContainer} />
+            <Route path={`/users/:userId/update`} component={updateFormContainer} />
           </div>
 
         </div>

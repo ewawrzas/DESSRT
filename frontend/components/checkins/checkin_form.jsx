@@ -23,15 +23,12 @@ class CheckinForm extends React.Component {
   }
 
   handleChange(field) {
-
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
 
   handleSubmit(e) {
-
     e.preventDefault();
-
     const checkin = merge({}, this.state, {
       dessert_id: this.props.match.params.dessertId
     })
@@ -59,7 +56,7 @@ class CheckinForm extends React.Component {
   render() {
       return (
 
-        <div className="modal">
+        <div onClick={ this.handleModal } id="id01" className="modal">
 
           <div className="updateUser">
 
