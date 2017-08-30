@@ -25,11 +25,11 @@ class UserProfile extends React.Component {
 
   render () {
 
-    const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/users/${this.props.user.id}/update`}id="updateLink" >Update</Link> :
+    const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/account`}id="updateLink" >Update</Link> :
     <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
       const image = (this.props.location.pathname === `/users/${this.props.currentUser.id}` ||
-      `/users/${this.props.currentUser.id}/update`) ? "userProfileContent1" : "userProfileContent2"
+      `/users/account`) ? "userProfileContent1" : "userProfileContent2"
 
       const { user } = this.props;
 
@@ -62,7 +62,7 @@ class UserProfile extends React.Component {
             </div>
             <h2 id="feedIntro">{`${this.props.user.username}'s`} Recent Activity</h2>
             <CheckinIndexContainer />
-            <Route path={`/users/:userId/update`} component={updateFormContainer} />
+            <Route path={`/account`} component={updateFormContainer} />
           </div>
 
         </div>
