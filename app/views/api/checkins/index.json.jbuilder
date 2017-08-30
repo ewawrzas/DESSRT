@@ -4,5 +4,6 @@
     json.image_url image_path(checkin.image_url)
     json.user checkin.user.username
     json.dessert checkin.dessert.name
+    json.avatar image_path(checkin.user.image.url)
   end
 end
