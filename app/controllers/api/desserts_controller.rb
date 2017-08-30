@@ -24,7 +24,7 @@ class Api::DessertsController < ApplicationController
   private
 
   def dessert_params
-    params.require(:dessert).permit(:description, :image_url, :name, :dessert_type, :dessert_origin)
+    params.require(:dessert).permit(:description, :image_url, :name, :dessert_type, :dessert_origin, :avatar_image)
   end
 
 end

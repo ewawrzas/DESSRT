@@ -49,13 +49,10 @@ class UpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
-
     const formData = new FormData();
     formData.append("user[username]", this.state.username);
     formData.append("user[password]", this.state.password);
     formData.append("user[image]", this.state.imageFile);
-
 
     this.props.updateUser(formData).then(
       () => this.setState({

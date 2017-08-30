@@ -54,6 +54,9 @@ class DessertProfile extends React.Component {
             <div id="dessert">
               <div className="dessertInfo">
                 <div className="dessertHeader">
+                  <div className="userImgDiv">
+                    <img id="userAvatar" src={dessert.avatar_image} />
+                  </div>
                   <h1 id="dessertName">{dessert.name}</h1>
                   <div className="dessertIcons">
                     <p id={dessert.dessert_type}>{dessert.dessert_type}</p>

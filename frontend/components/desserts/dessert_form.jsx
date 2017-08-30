@@ -15,10 +15,13 @@ class DessertForm extends React.Component {
       description: "",
       dessert_type: "",
       dessert_origin: "",
-      image_url: ""
+      image_url: "",
+      imageFile: null,
+      imageUrl: null
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateFile = this.updateFile.bind(this);
   };
 
   handleClick() {
@@ -29,10 +32,28 @@ class DessertForm extends React.Component {
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
+  updateFile (e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = function () {
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    }.bind(this);
+
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    const dessert = Object.assign({}, this.state)
-    this.props.createDessert({dessert})
+    const formData = new FormData();
+    formData.append("dessert[name]", this.state.name);
+    formData.append("dessert[description]", this.state.description);
+    formData.append("dessert[dessert_type]", this.state.dessert_type);
+    formData.append("dessert[dessert_origin]", this.state.dessert_origin);
+    formData.append("dessert[avatar_image]", this.state.imageFile);
+
+    this.props.createDessert(formData)
       .then(dessert => this.props.history.push(`/desserts/${dessert.id}`));
   }
 
@@ -99,16 +120,15 @@ class DessertForm extends React.Component {
                   value={ this.state.description }
                   />
 
-                <label className="addLabel">IMAGE URL</label>
-                <div className="dessertImageInput">
-                  <input
-                    type="url"
-                    id="desImage"
-                    onChange={ this.handleChange('image_url') }
-                    value={ this.state.image_url }
-                    />
-                </div>
+                  <div id="avatarUpdate">
+                    <span id="avatarTitle">Dessert Picture
+                      <div className="imgDiv">
+                        <img id="avatar" src={this.state.imageUrl} />
+                      </div>
+                    </span>
 
+                    <input className="inputFile" type="file" onChange={ this.updateFile }/>
+                  </div>
 
                 <select
                   id="typeSelect"
