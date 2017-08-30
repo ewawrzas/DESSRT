@@ -136,8 +136,8 @@ class UpdateForm extends React.Component {
                 <div className="errDiv">
                   { this.renderErrors() }
                 </div>
-                <button id="updateUserBtn">Submit</button>
-                <Link id="backBtn" to="/home">Go Back</Link>
+                <button id="updateUserBtn">Update Settings</button>
+
                 </div>
             </form>
 

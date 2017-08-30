@@ -11,7 +11,9 @@
   cursor: pointer;
 }
 
-
+.updateLabel {
+  color: grey;
+}
 
 #avatar {
   background-image: image-url('icons8-Cookie-50.png');
@@ -22,6 +24,7 @@
   width: 50px;
   height: 50px;
   margin: 10px;
+  padding: 3px;
 }
 
 #usernameChange{
@@ -44,7 +47,10 @@
 
 #updateTitle {
   font-weight: bold;
-  align-self: left;
+  align-self: center;
+  width: 80%;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid lightgrey;
 }
 
 .updateUser {
@@ -72,7 +78,7 @@
 
 .updateForm {
   min-width: 600px;
-  min-height: 500px;
+  min-height: 400px;
   height: 90%;
   border: grey;
   display: flex;
@@ -82,7 +88,8 @@
   align-items: center;
   align-content: flex-start;
   background: white;
-  padding: 16px;
+  padding: 25px;
+  margin-top: 25px;
 }
 
   .updateInputs {
@@ -103,21 +110,23 @@
   visibility: hidden;
   width: 0;
   position: relative;
+  right: 40px;
 }
 .inputFile::before {
   content: 'Change Photo';
   display: inline-block;
   background: white;
   border-radius: 3px;
-  padding: 5px 7px 5px 7px;
+  padding: 5px 25px 5px 25px;
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
-
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 12pt;
   color: grey;
+  position: relative;
+  right: 40px;
 }
 .inputFile:hover::before {
   border-color: pink;
@@ -152,26 +161,21 @@
 
 }
 
-#backBtn {
-  padding-top: 5px;
-  color: grey;
-}
-
-#backBtn:hover {
-  color: pink;
-}
 
 #updateUserBtn {
   background-color: #f2f2f2;
   border: 0.5px solid white;
   color: #ff99bb;
-  padding: 5px 62px;
+  padding: 12px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
   position: relative;
+  left: 140px;
+  bottom: 10px;
+  width: 180px;
   border-radius: 5px 5px 5px 5px;
 }
 
