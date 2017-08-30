@@ -21,8 +21,11 @@
   border-radius: 100%;
   margin: 10px;
   padding: 3px;
-  height: 59px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  right: 20px;
+  top: 40px;
 }
 
 #checkinImg{
@@ -51,7 +54,6 @@
   width: 630px;
   height: 100%;
   flex-direction: column;
-  align-content: center;
   border-top: 1px lightgrey solid;
 }
 
@@ -64,7 +66,7 @@
   justify-content: space-between;
   color: grey;
   font-size: 18px;
-  width: 540px;
+  width: 500px;
   align-self: center;
 }
 
