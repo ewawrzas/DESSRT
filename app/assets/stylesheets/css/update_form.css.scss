@@ -11,8 +11,40 @@
   cursor: pointer;
 }
 
+
+
+#avatar {
+  background-image: image-url('icons8-Cookie-50.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid pink;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+#usernameChange{
+  height: 28px;
+  width: 300px;
+  padding-left: 4px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px lightgrey solid;
+}
+
+#pwChange{
+  border-radius: 5px;
+  height: 28px;
+  width: 300px;
+  padding-left: 4px;
+  margin: 10px;
+  border: 1px lightgrey solid;
+}
+
 #updateTitle {
-  color: grey;
+  font-weight: bold;
+  align-self: left;
 }
 
 .updateUser {
@@ -21,29 +53,103 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
 }
 
-.updateUserForm {
-  width: 40%;
-  height: 50%;
+.updateDiv {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f2f2f2;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
 
+
+.updateForm {
+  min-width: 600px;
+  min-height: 500px;
+  height: 90%;
   border: grey;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
-  position: relative;
+  align-content: flex-start;
   background: white;
-  z-index: 3;
+  padding: 16px;
 }
 
-.updateInputs input{
-  border: 1px solid lightgrey;
-  margin: 0px 2px 10px 5px;
-  background-position: left;
-  background-repeat: no-repeat;
-  padding: 4px 0 4px 20px;
+  .updateInputs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+
+.inputFile{
+  width: 150px;
+}
+
+.inputFile::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0;
+  position: relative;
+}
+.inputFile::before {
+  content: 'Change Photo';
+  display: inline-block;
+  background: white;
+  border-radius: 3px;
+  padding: 5px 7px 5px 7px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12pt;
+  color: grey;
+}
+.inputFile:hover::before {
+  border-color: pink;
+}
+.inputFile:active::before {
+  background: pink;
+}
+
+#avatarUpdate {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-self: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.updateFormContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  width: 80%;
+}
+
+#avatarTitle {
+  color: #737373;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+
 }
 
 #backBtn {
@@ -53,16 +159,6 @@
 
 #backBtn:hover {
   color: pink;
-}
-
-#passwordChange {
-  background-image: image-url('002-padlock.png');
-  margin-bottom: 20px;
-}
-
-#usernameChange {
-  background-image: image-url('001-profile.png');
-  margin-top: 20px;
 }
 
 #updateUserBtn {

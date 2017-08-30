@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { withRouter, Link } from 'react-router-dom'
-import { merge }from 'lodash'
+import { connect } from 'react-redux';
+import { withRouter, Link } from 'react-router-dom';
+import { merge }from 'lodash';
+
 
 class UpdateForm extends React.Component {
   constructor(props) {
@@ -42,8 +43,8 @@ class UpdateForm extends React.Component {
   }
 
   handleSubmit(e) {
-    debugger
     e.preventDefault();
+    debugger
     const formData = new FormData();
     formData.append("user[username]", this.state.username);
     formData.append("user[password]", this.state.password);
@@ -77,44 +78,71 @@ class UpdateForm extends React.Component {
   };
 
   render() {
+    const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/users/${this.props.user.id}/update`}id="updateLink" >Update</Link> :
+    <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
     const { user } = this.props
 
-
       return (
+        <div>
+        <div className="homeNav">
+          <header className="navBar">
+            <div className="userProfileLogo">
+              <Link to="/home"><h1>DESSRT</h1></Link>
+            </div>
+            <ul id="homeNavLinks">
+              <button id="logout" onClick={this.handleClick}>Logout</button>
+              <Link to="/desserts" id="addDessert">Add Dessert</Link>
+            </ul>
+          </header>
+          <div className="searchDrop">
+              {link}
+            <div className="searchDiv">
+              <h4>Search will go here</h4>
+            </div>
+          </div>
+        </div>
+
         <div className="dessertsDiv">
-          <div className="createDessert">
+          <div className="updateDiv">
 
-            <form onSubmit={ this.handleSubmit } className="createDessertForm" >
-              <p id="updateTitle">Update Your Username and Password</p>
+            <form onSubmit={ this.handleSubmit } className="updateForm" >
+              <p id="updateTitle">Profile Settings</p>
+              <div className="updateFormContent">
+                <div id="avatarUpdate">
+                  <span id="avatarTitle">Profile Picture
+                  <img id="avatar" src={this.state.imageUrl} /></span>
+                  <input className="inputFile" type="file" onChange={ this.updateFile }/>
+                </div>
+                <div className="updateInputs">
 
-              <div className="updateInputs">
-                <div className="inputPad1">
-                  <input
-                    type="text"
-                    id="usernameChange"
-                    onChange={ this.handleChange('username') }
-                    value={ this.state.username }
-                    />
+                  <span className="updateLabel">Username
+                    <input
+                        type="text"
+                        id="usernameChange"
+                        onChange={ this.handleChange('username') }
+                        value={ this.state.username }
+                        />
+                    </span>
+
+                    <span className="updateLabel">Password
+                      <input
+                        type="password"
+                        id="pwChange"
+                        onChange={ this.handleChange('password') }
+                        value={ this.state.password }
+                        />
+                    </span>
                 </div>
-                <div className="inputPad2">
-                  <input
-                    type="password"
-                    id="passwordChange"
-                    onChange={ this.handleChange('password') }
-                    value={ this.state.password }
-                    />
+                <div className="errDiv">
+                  { this.renderErrors() }
                 </div>
-                <input type="file" onChange={ this.updateFile }/>
-                <img id="avatar" src={this.state.imageUrl} />
-              </div>
-              <div className="errDiv">
-                { this.renderErrors() }
-              </div>
-              <button id="updateUserBtn">Submit</button>
-              <Link id="backBtn" to="/home">Go Back</Link>
+                <button id="updateUserBtn">Submit</button>
+                <Link id="backBtn" to="/home">Go Back</Link>
+                </div>
             </form>
 
           </div>
+        </div>
         </div>
       )
   }

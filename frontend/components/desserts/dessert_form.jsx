@@ -81,7 +81,7 @@ class DessertForm extends React.Component {
               </ul>
 
               <div className="createInputs">
-                <label>DESSERT NAME</label>
+                <label className="addLabel">DESSERT NAME</label>
                 <div className="dessertNameInput">
                   <input
                     type="text"
@@ -91,7 +91,7 @@ class DessertForm extends React.Component {
                     />
                 </div>
 
-                <label>DESCRIPTION</label>
+                <label className="addLabel">DESCRIPTION</label>
                 <textarea
                   type="text"
                   id="descriptionChange"
@@ -99,7 +99,7 @@ class DessertForm extends React.Component {
                   value={ this.state.description }
                   />
 
-                <label>IMAGE URL</label>
+                <label className="addLabel">IMAGE URL</label>
                 <div className="dessertImageInput">
                   <input
                     type="url"
