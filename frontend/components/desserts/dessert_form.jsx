@@ -101,6 +101,8 @@ class DessertForm extends React.Component {
                 <li>{`Please note that not following these guidelines may result in revoking your Dessert Creation privileges`}</li>
               </ul>
 
+
+
               <div className="createInputs">
                 <label className="addLabel">DESSERT NAME</label>
                 <div className="dessertNameInput">
@@ -120,15 +122,6 @@ class DessertForm extends React.Component {
                   value={ this.state.description }
                   />
 
-                  <div id="avatarUpdate">
-                    <span id="avatarTitle">Dessert Picture
-                      <div className="imgDiv">
-                        <img id="avatar" src={this.state.imageUrl} />
-                      </div>
-                    </span>
-
-                    <input className="inputFile" type="file" onChange={ this.updateFile }/>
-                  </div>
 
                 <select
                   id="typeSelect"
@@ -150,6 +143,12 @@ class DessertForm extends React.Component {
                     return <option value={origin} key={i}>{origin}</option>;
                   })}
                 </select>
+
+
+
+                <div id="desAvatarUpdate">
+                  <input className="desInputFile" type="file" onChange={ this.updateFile }/>
+                </div>
               </div>
 
               <button id="createDessertBtn">Create Dessert</button>
