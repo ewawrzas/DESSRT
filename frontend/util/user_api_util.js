@@ -5,14 +5,14 @@ export const fetchSingleUser = (id) => (
   })
 );
 
-export const updateUser = (formData) => {
+export const updateUser = (user) => {
 debugger
   return $.ajax({
     method: 'PATCH',
-    url: `api/users/${formData.user.id}`,
+    url: `api/user`,
     contentType: false,
     processData: false,
-    data: formData
+    data: user
   });
 }
 

@@ -45,12 +45,13 @@ class UpdateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     debugger
+
     const formData = new FormData();
     formData.append("user[username]", this.state.username);
     formData.append("user[password]", this.state.password);
     formData.append("user[image]", this.state.imageFile);
+
     debugger
-    // const user = merge({}, this.state);
     this.props.updateUser(formData).then(
       () => this.setState({
         username: "",
@@ -102,7 +103,7 @@ class UpdateForm extends React.Component {
           </div>
         </div>
 
-        <div className="dessertsDiv">
+        <div className="userAccountDiv">
           <div className="updateDiv">
 
             <form onSubmit={ this.handleSubmit } className="updateForm" >
@@ -110,7 +111,11 @@ class UpdateForm extends React.Component {
               <div className="updateFormContent">
                 <div id="avatarUpdate">
                   <span id="avatarTitle">Profile Picture
-                  <img id="avatar" src={this.state.imageUrl} /></span>
+                    <div className="imgDiv">
+                      <img id="avatar" src={this.state.imageUrl} />
+                    </div>
+                  </span>
+
                   <input className="inputFile" type="file" onChange={ this.updateFile }/>
                 </div>
                 <div className="updateInputs">

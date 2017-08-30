@@ -1,7 +1,7 @@
-a, h1, h4, button, input, html, body, figure, div, link {
+a, h1, h4, button, input, html, body, figure, div, link, span {
   margin: 0;
   padding: 0;
-  border: 0;
+  border: none;
   outline: 0;
   font: inherit;
   color: inherit;

@@ -16,17 +16,26 @@
 }
 
 
-#avatar {
-  background-image: image-url('icons8-Cookie-50.png');
+.imgDiv {
+  overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
   border: 3px solid pink;
   border-radius: 100%;
-  width: 50px;
-  height: 50px;
   margin: 10px;
   padding: 3px;
+  height: 59px;
+  width: 60px;
 }
+
+.userAccountDiv {
+  background-color: #f2f2f2;
+  min-height: 900px;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
 
 #usernameChange{
   height: 28px;
@@ -64,13 +73,8 @@
 }
 
 .updateDiv {
-  position: fixed;
+  height: 100%;
   width: 100%;
-  height: auto;
-  top: 1;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: #f2f2f2;
   display: flex;
   align-content: center;
@@ -119,7 +123,7 @@
   display: inline-block;
   background: white;
   border-radius: 3px;
-  padding: 5px 25px 5px 25px;
+  padding: 5px 180px 5px 25px;
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
@@ -130,12 +134,12 @@
   position: relative;
   right: 40px;
 }
-.inputFile:hover::before {
-  border-color: pink;
-}
-.inputFile:active::before {
-  background: pink;
-}
+// .inputFile:hover::before {
+//   border-color: pink;
+// }
+// .inputFile:active::before {
+//   background: pink;
+// }
 
 #avatarUpdate {
   display: flex;
