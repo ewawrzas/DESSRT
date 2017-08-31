@@ -7,7 +7,7 @@ import CheckinItem from './checkinItem'
 class CheckinIndex extends React.Component {
   constructor(props) {
     super(props);
-    // this.handleClick = this.handleClick.bind(this);
+    
   }
 
   componentDidMount() {
