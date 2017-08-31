@@ -24,7 +24,7 @@ const CheckinItem = ({ checkin }) => {
 
     <div className="checkinComment">
       <span>{checkin.comment}</span>
-      <span id={starRating}>Rating</span>
+      <span id={starRating}></span>
     </div>
     <div className="checkinImgDiv">
       <img id="checkinImg" src={checkin.image_url}/>

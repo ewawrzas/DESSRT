@@ -120,6 +120,16 @@
   align-self: center;
 }
 
+.checkinComment:before {
+  content:"";
+  border-style: solid;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #dd4397 transparent transparent;
+  position: absolute;
+  left: -15px;
+}
+
+
 #feed {
   align-self: left;
 }

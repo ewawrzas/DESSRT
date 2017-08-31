@@ -92,7 +92,7 @@ class DessertProfile extends React.Component {
                       </div>
 
 
-                      <span class="profileStat" id={starRating}>Average Rating</span>
+                      <span class="profileStat" id={starRating}></span>
                   </div>
                 </div>
 
