@@ -29,9 +29,9 @@ export const updateCheckin = (checkin) => {
   });
 }
 
-export const destroyCheckin = () => {
+export const destroyCheckin = (checkin) => {
   return $.ajax({
-    url: `api/checkin/${checkin.id}`,
+    url: `api/checkins/${checkin.id}`,
     method: 'DELETE'
   });
 };

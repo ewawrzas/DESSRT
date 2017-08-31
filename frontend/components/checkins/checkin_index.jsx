@@ -7,7 +7,7 @@ import CheckinItem from './checkinItem'
 class CheckinIndex extends React.Component {
   constructor(props) {
     super(props);
-    
+
   }
 
   componentDidMount() {
@@ -15,14 +15,15 @@ class CheckinIndex extends React.Component {
   }
 
   render () {
-    const { checkins } = this.props
+
+    const { checkins, deleteCheckin } = this.props
 
     return (
       <div>
 
           <div className="checkinsIdx">
               <div className="checkinList">
-                {checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} />)}
+                {checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} deleteCheckin={deleteCheckin} />)}
                 <h2 id="feed">Checkin Feed Coming Soon!</h2>
               </div>
             </div>

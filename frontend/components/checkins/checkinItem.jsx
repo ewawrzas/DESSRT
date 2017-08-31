@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 
 
+
 class CheckinItem extends React.Component {
   constructor(props) {
     super(props);
@@ -15,6 +16,7 @@ class CheckinItem extends React.Component {
   }
 
   render () {
+    debugger
     const { checkin } = this.props
 
     const starRating = `rating${checkin.rating}`;
