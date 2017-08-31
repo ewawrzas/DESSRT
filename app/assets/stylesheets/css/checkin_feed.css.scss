@@ -3,6 +3,11 @@
   justify-content: center;
 }
 
+#text {
+  display: flex;
+  align-items: center;
+}
+
 .checkinList {
   margin: 20px 0 0 0px;
   padding: 16px 16px 0 16px;
@@ -67,6 +72,7 @@
 #feedUserLink {
   font-weight: bolder;
   color: #ff8095;
+  padding: 7px;
 }
 
 #titleText {

@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true}
 
-  has_attached_file :image, default_url: "http://s3.us-east-2.amazonaws.com/dessrt-dev/users/images/000/000/086/original/barbie2.jpg?1504140145"
+  has_attached_file :image, default_url: "http://s3.us-east-2.amazonaws.com/dessrt-dev/users/images/000/000/096/original/the-martha-stewart-show-profile.jpg?1504184480"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   after_initialize :ensure_session_token

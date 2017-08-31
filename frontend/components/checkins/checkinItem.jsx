@@ -15,7 +15,7 @@ const CheckinItem = ({ checkin }) => {
           <div className="feedUserImgDiv">
             <img id="userFeedAvatar" src={checkin.avatar} />
           </div>
-       {userLink} is eating {dessertLink} 
+       <span id='text'>{userLink} <p>is eating </p>{dessertLink} </span>
       </div>
         <div className="checkinDesImgDiv">
           <img id="userFeedAvatar" src={checkin.dessert_avatar} />
