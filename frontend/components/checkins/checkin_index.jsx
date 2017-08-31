@@ -10,12 +10,13 @@ class CheckinIndex extends React.Component {
 
   }
 
-  componentDidMount() {
+  componentWillMount() {
+    debugger
     this.props.fetchAllCheckins();
   }
 
   render () {
-
+    debugger
     const { checkins, deleteCheckin, currentUser } = this.props
 
     return (

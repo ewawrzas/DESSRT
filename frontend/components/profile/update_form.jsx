@@ -24,11 +24,6 @@ class UpdateForm extends React.Component {
     this.props.logout();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.userId !== nextProps.match.params.userId) {
-      this.props.fetchSingleUser(nextProps.match.params.userId);
-    }
-  }
 
   updateFile (e) {
     const file = e.currentTarget.files[0];
