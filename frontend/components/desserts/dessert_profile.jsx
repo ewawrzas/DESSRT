@@ -55,6 +55,7 @@ class DessertProfile extends React.Component {
             <div id="dessert">
               <div className="dessertInfo">
                 <div className="dessertHeader">
+                  <div id="dessertHeaderLeft">
                   <div className="desImgDiv">
                     <img id="desAvatar" src={dessert.avatar_image} />
                   </div>
@@ -65,32 +66,33 @@ class DessertProfile extends React.Component {
                       <p id={dessert.dessert_origin}>{dessert.dessert_origin}</p>
                     </div>
                   </div>
+                </div>
 
                   <div className='dessertStats'>
                     <div id="dessertStatsTable">
-                      <div id="dessertStatsTable">
+
                           <table className="dessertTable">
                             <tr>
-                              <th>Total</th>
+                              <th id="left">Total</th>
                               <th id="right">Users</th>
                             </tr>
                             <tr>
-                              <td className="topData">{dessert.num_checkins}</td>
+                              <td id="left" className="topData">{dessert.num_checkins}</td>
                               <td id="right" className="topData">{dessert.num_users}</td>
                             </tr>
                             <tr>
-                              <th className="bottom">Unique</th>
+                              <th id="left" className="bottom">Unique</th>
                               <th id="right" className="bottom">Added</th>
                             </tr>
                             <tr>
-                              <td>{dessert.num_unique_users}</td>
+                              <td id="left" >{dessert.num_unique_users}</td>
                               <td id="right">{dessert.date_created}</td>
                             </tr>
                           </table>
                       </div>
 
-                    </div>
-                    <span class="profileStat" id={starRating}>Average Rating</span>
+
+                      <span class="profileStat" id={starRating}>Average Rating</span>
                   </div>
                 </div>
 
