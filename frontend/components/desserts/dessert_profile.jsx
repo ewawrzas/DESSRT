@@ -66,10 +66,12 @@ class DessertProfile extends React.Component {
                     </div>
                   </div>
                   <div className='dessertStats'>
-                    <div>Total {dessert.num_checkins}</div>
-                    <div>Users {dessert.num_users}</div>
-                    <div>Unique {dessert.num_unique_users}</div>
-                    <div>Added {dessert.date_created}</div>
+                  <div id="dessertStatsTable">
+                    <span><div>Total {dessert.num_checkins}</div>
+                    <div>Users {dessert.num_users}</div></span>
+                    <span><div>Unique {dessert.num_unique_users}</div>
+                    <div>Added {dessert.date_created}</div></span>
+                  </div>
                     <span id={starRating}>Average Rating</span>
                   </div>
                 </div>

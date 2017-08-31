@@ -1,0 +1,14 @@
+.dessertStats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: space-around;
+  padding: 10px;
+}
+
+#dessertStatsTable {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
