@@ -7,20 +7,31 @@ class UserProfile extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.updateFile = this.updateFile.bind(this)
+    this.updateFile = this.updateFile.bind(this);
+    this.updateImage = this.updateImage.bind(this);
   }
 
   updateFile (e) {
+    debugger
     const file = e.currentTarget.files[0];
-    const fileReader = new FileReader();
-    fileReader.onloadend = function () {
-      this.setState({ imageFile: file, imageUrl: fileReader.result });
-    }.bind(this);
+    // const fileReader = new FileReader();
+    // fileReader.onloadend = function () {
+    //   this.setState({ imageFile: file, imageUrl: fileReader.result });
+    // }.bind(this);
 
     if (file) {
-      fileReader.readAsDataURL(file);
+      // fileReader.readAsDataURL(file);
+      this.updateImage(file);
     }
   }
+
+  updateImage(file) {
+    debugger
+    const imgFile = file
+    const formData = new FormData();
+    formData.append("user[wall_image]", imgFile);
+    this.props.updateUser(formData)
+    };
 
   handleClick() {
     this.props.logout();
@@ -82,9 +93,9 @@ class UserProfile extends React.Component {
                 <h1 id="name">{this.props.user.username}</h1>
               </div>
 
-              <div id="imgIconContainer">
+              <form id="imgIconContainer">
                 <input className={upload} type="file" onChange={ this.updateFile }/>
-              </div>
+              </form>
             </div>
 
             <CheckinIndexContainer />
