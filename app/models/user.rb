@@ -15,6 +15,9 @@ class User < ApplicationRecord
 
   has_many :checkins
 
+  def num_checkins
+    checkins.length
+  end 
 
 
   def self.find_by_credentials(username, password)

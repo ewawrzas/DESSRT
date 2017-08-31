@@ -6,6 +6,7 @@
 #text {
   display: flex;
   align-items: center;
+  color: grey;
 }
 
 .checkinList {
@@ -110,11 +111,11 @@
 .checkinComment {
   display: flex;
   flex-direction: column;
-  align-items: space-between;
-  padding: 10px;
+  align-items: space-around;
+  padding: 20px 12px 20px 12px;
   border: 0.5px solid #ffccd5;
   justify-content: space-between;
-  color: grey;
+  color: #0d0d0d;
   font-size: 18px;
   width: 500px;
   align-self: center;
@@ -129,6 +130,10 @@
   left: -15px;
 }
 
+#checkinCounter {
+  padding: 20px 10px 3px 10px;
+  color: grey;
+}
 
 #feed {
   align-self: left;

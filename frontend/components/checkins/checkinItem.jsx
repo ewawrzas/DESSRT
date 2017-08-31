@@ -25,6 +25,7 @@ const CheckinItem = ({ checkin }) => {
     <div className="checkinComment">
       <span>{checkin.comment}</span>
       <span id={starRating}></span>
+      <span id="checkinCounter">{`${checkin.user} has checked in`}</span>
     </div>
     <div className="checkinImgDiv">
       <img id="checkinImg" src={checkin.image_url}/>
