@@ -70,18 +70,21 @@ class UserProfile extends React.Component {
           </div>
 
           <div className="profilePage">
+
             <div className={image}>
               <img id="wallImg" src={this.props.user.wall_image}/>
               <div id="prof">
                 <div className="userImgDiv">
-                  <img id="userAvatar" src={this.props.user.image} />
+                  <img id="userAvatar" src={this.props.user.image}/>
                 </div>
                 <h1 id="name">{this.props.user.username}</h1>
               </div>
+
               <div id="imgIconContainer">
                 <input className="profileInputFile" type="file" onChange={ this.updateFile }/>
               </div>
             </div>
+
             <CheckinIndexContainer />
             <Route path={`/account`} component={updateFormContainer} />
           </div>

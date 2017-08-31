@@ -14,6 +14,7 @@
   margin: 10px;
   height: 59px;
   width: 60px;
+  margin: 0px 0px 20px 20px;
 }
 
 .profilePage {
@@ -26,7 +27,8 @@
   height: 250px;
   width: 90%;
   display: flex;
-  background-position: top;
+  overflow: hidden;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   align-items: flex-end;
@@ -37,29 +39,24 @@
   opacity: .9;
 }
 
-.userProfileContent1:empty{
-  background-image: image-url('goldencupcakes.jpg');
-}
 
 #wallImg {
-  height: 250px;
-  width: 90%;
+  height: auto;
+  width: 100%;
   overflow: hidden;
-  display: flex;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  align-items: flex-end;
-  justify-content: space-between;
-  flex-direction: row;
   opacity: .9;
-  position: fixed;
-  z-index: -1;
+  display: flex;
+  position: relative;
+  padding: 5px;
 }
 
 #prof {
   display: flex;
   align-items: center;
+  position: absolute;
 }
 
 #user {
@@ -67,7 +64,6 @@
   font-size: 33px;
   font-weight: 400;
   opacity: 1;
-
 }
 
 .userProfileLogo {
@@ -170,8 +166,10 @@
 
 
 .profileInputFile{
+  position: relative;
+  right: 70px;
+  bottom: 20px;
   width: 50px;
-  align-self: flex-end;
   font-size: 2px;
 }
 
@@ -180,6 +178,7 @@
   width: 0;
 }
 .profileInputFile::before {
+  position: relative;
   content: image-url('camera2.png');
   opacity: .5;
   -webkit-user-select: none;
