@@ -12,4 +12,37 @@ DESSERT_ORIGINS = ["homemade", "store", "cafe", "restaurant", "other"].sort.free
   validates_attachment_content_type :avatar_image, content_type: /\Aimage\/.*\Z/
 
   has_many :checkins
+
+  def avg_rating
+    average = []
+    checkins.each do |checkin|
+      average << checkin.rating
+    end
+    average.reduce(:+) / average.length
+  end
+
+  def num_checkins
+    checkins.length
+  end
+
+  def num_users
+    users = []
+    checkins.each do |checkin|
+      users << checkin.user
+    end
+    users.length
+  end
+
+  def num_unique_users
+    users = []
+    checkins.each do |checkin|
+      users << checkin.user
+    end
+    users.uniq.length
+  end
+
+  def date_created
+    created_at.asctime.split[1..2].join(" ") + " 2017"
+  end
+
 end

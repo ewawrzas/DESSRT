@@ -12,6 +12,8 @@ class User < ApplicationRecord
 
   has_many :checkins
 
+
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil if user.nil?

@@ -27,6 +27,7 @@ class DessertProfile extends React.Component {
     const { dessert } = this.props;
     if (!dessert) return null;
 
+    const starRating = `rating${dessert.avg_rating}`;
 
       return (
         <div className="dessertProfile">
@@ -63,6 +64,13 @@ class DessertProfile extends React.Component {
                       <p id={dessert.dessert_type}>{dessert.dessert_type}</p>
                       <p id={dessert.dessert_origin}>{dessert.dessert_origin}</p>
                     </div>
+                  </div>
+                  <div className='dessertStats'>
+                    <div>Total {dessert.num_checkins}</div>
+                    <div>Users {dessert.num_users}</div>
+                    <div>Unique {dessert.num_unique_users}</div>
+                    <div>Added {dessert.date_created}</div>
+                    <span id={starRating}>Average Rating</span>
                   </div>
                 </div>
                 <div className="dessertHeaderBottom">
