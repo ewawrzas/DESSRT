@@ -90,12 +90,14 @@ class DessertProfile extends React.Component {
                             </tr>
                           </table>
                       </div>
-
-
-                      <span class="profileStat" id={starRating}></span>
                   </div>
                 </div>
-
+                <div className="dessertHeaderCenter">
+                  <div id="statsBar">
+                    <div id={`${starRating}1`}></div>
+                    <div>{starRating.slice(6)}</div>
+                  </div>
+                </div>
                 <div className="dessertHeaderBottom">
                   <p id="dessertDescription">{dessert.description}</p>
                   <Link to={`/desserts/${dessert.id}/checkin`} id="checkInLink">Checkin</Link>

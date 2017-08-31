@@ -24,10 +24,7 @@
   padding-bottom: 17px;
 }
 
-.profileStat {
-  align-self: flex-end;
-  height: auto;
-}
+
 
 .bottom {
   border-top: 1px solid lightgrey;
@@ -45,4 +42,18 @@
 
 #left {
   padding-right: 7px;
+}
+
+#statsBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-end;
+  width: 100%;
+  border-top: 1px solid lightgrey;
+}
+
+.dessertHeaderCenter {
+  display: inline-block;
 }

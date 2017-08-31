@@ -12,21 +12,13 @@ class UserProfile extends React.Component {
   }
 
   updateFile (e) {
-    debugger
     const file = e.currentTarget.files[0];
-    // const fileReader = new FileReader();
-    // fileReader.onloadend = function () {
-    //   this.setState({ imageFile: file, imageUrl: fileReader.result });
-    // }.bind(this);
-
     if (file) {
-      // fileReader.readAsDataURL(file);
       this.updateImage(file);
     }
   }
 
   updateImage(file) {
-    debugger
     const imgFile = file
     const formData = new FormData();
     formData.append("user[wall_image]", imgFile);
