@@ -8,6 +8,9 @@ class User < ApplicationRecord
   has_attached_file :image, default_url: "http://s3.us-east-2.amazonaws.com/dessrt-dev/users/images/000/000/096/original/the-martha-stewart-show-profile.jpg?1504184480"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
+  has_attached_file :wall_image, default_url: "https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/000/000/125/original/brooke-lark-261287.jpg"
+  validates_attachment_content_type :wall_image, content_type: /\Aimage\/.*\Z/
+
   after_initialize :ensure_session_token
 
   has_many :checkins

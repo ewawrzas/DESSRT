@@ -13,7 +13,7 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = current_user
-    
+
     if @user
       @user.update(user_params)
       render "api/users/show"
@@ -34,7 +34,7 @@ class Api::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :image)
+    params.require(:user).permit(:username, :password, :image, :wall_image)
   end
 
 end

@@ -7,6 +7,19 @@ class UserProfile extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.updateFile = this.updateFile.bind(this)
+  }
+
+  updateFile (e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = function () {
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    }.bind(this);
+
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
   }
 
   handleClick() {
@@ -58,6 +71,7 @@ class UserProfile extends React.Component {
 
           <div className="profilePage">
             <div className={image}>
+              <img id="wallImg" src={this.props.user.wall_image}/>
               <div id="prof">
                 <div className="userImgDiv">
                   <img id="userAvatar" src={this.props.user.image} />

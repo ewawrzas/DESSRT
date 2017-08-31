@@ -23,7 +23,6 @@
 }
 
 .userProfileContent1 {
-  background-image: image-url('goldencupcakes.jpg');
   height: 250px;
   width: 90%;
   display: flex;
@@ -38,15 +37,24 @@
   opacity: .9;
 }
 
-.userProfileContent2 {
-  background-image: image-url('macaroons2.png');
+.userProfileContent1:empty{
+  background-image: image-url('goldencupcakes.jpg');
+}
+
+#wallImg {
   height: 250px;
-  width: auto;
+  width: 90%;
+  overflow: hidden;
   display: flex;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+  opacity: .9;
+  position: fixed;
+  z-index: -1;
 }
 
 #prof {
