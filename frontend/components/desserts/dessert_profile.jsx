@@ -95,16 +95,16 @@ class DessertProfile extends React.Component {
                 <div className="dessertHeaderCenter">
                   <div id="statsBar">
                     <div id="bar">{dessert.name}</div>
-                    <div id="bar">{dessert.dessert_type}</div>
+                    <div id="bar">Type: {dessert.dessert_type}</div>
                     <div id={`${starRating}1`}></div>
                     <div id="ratingNum">{starRating.slice(6)}</div>
-                    <div id="bar">{dessert.dessert_origin}</div>
+                    <div id="bar">From: {dessert.dessert_origin}</div>
                     <div id="barLast">{dessert.date_created}</div>
                   </div>
                 </div>
                 <div className="dessertHeaderBottom">
                   <p id="dessertDescription">{dessert.description}</p>
-                  <Link to={`/desserts/${dessert.id}/checkin`} id="checkInLink">Checkin</Link>
+                  <Link to={`/desserts/${dessert.id}/checkin`} id="checkInLink"></Link>
                 </div>
               </div>
 
