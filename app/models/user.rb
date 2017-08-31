@@ -5,10 +5,10 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true}
 
-  has_attached_file :image, default_url: "http://s3.us-east-2.amazonaws.com/dessrt-dev/users/images/000/000/096/original/the-martha-stewart-show-profile.jpg?1504184480"
+  has_attached_file :image, default_url: "barbie.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  has_attached_file :wall_image, default_url: "https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/000/000/124/original/blueberries-2278921_640.jpg"
+  has_attached_file :wall_image, default_url: "blueberry.jpg"
   validates_attachment_content_type :wall_image, content_type: /\Aimage\/.*\Z/
 
   after_initialize :ensure_session_token
@@ -17,7 +17,7 @@ class User < ApplicationRecord
 
   def num_checkins
     checkins.length
-  end 
+  end
 
 
   def self.find_by_credentials(username, password)

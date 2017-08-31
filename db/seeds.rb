@@ -13,12 +13,12 @@ User.destroy_all
 puts "✅"
 
 print "📝  Seeding users... "
-sam = User.create!(username: 'sammy', password: 'starwars')
-jan = User.create!(username: 'jan', password: 'starwars')
-rick = User.create!(username: 'rick', password: 'starwars')
-ella = User.create!(username: 'ella', password: 'starwars')
-roger = User.create!(username: 'roger', password: 'starwars')
-demo = User.create!(username: 'demo', password: '111111')
+babs = User.create!(username: 'Babs', password: 'starwars', image: 'barbie.png', wall_image: 'goldencupcakes.png')
+lisa = User.create!(username: 'Lisa', password: 'starwars', image: 'profile1.jpg', wall_image: 'blueberry.jpg')
+rascal = User.create!(username: 'rascal', password: 'starwars', image: 'profile2.jpg', wall_image: 'raspberry.jpg')
+ella = User.create!(username: 'ella', password: 'starwars', image: 'cat.jpg', wall_image: 'brightmacaroons.jpg')
+roger = User.create!(username: 'roger', password: 'starwars', image: 'elvis.jpg', wall_image: 'whitecupcakes.jpg')
+demo = User.create!(username: 'demo', password: '111111', image: 'profile3.jpg', wall_image: 'background1.jpg')
 
 puts "✅"
 
@@ -34,43 +34,43 @@ print "📝  Seeding desserts... "
 
 
 des1=  Dessert.create!(
-name: "Cake",
-description: "Chocolate",
-image_url: "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?w=940&h=650&auto=compress&cs=tinysrgb",
-dessert_type: "cake",
-dessert_origin: "store"
+name: "Fruit Tarts",
+description: "A tart is a baked dish consisting of a filling over a pastry base with an open top not covered with pastry. The pastry is usually shortcrust pastry; the filling may be sweet or savoury, though modern tarts are usually fruit-based, sometimes with custard",
+dessert_type: "pastry",
+dessert_origin: "homemade",
+avatar_image: 'background2'
 )
 
 des2= Dessert.create!(
-name: "Waffles",
-description: "With raspberries",
-image_url: "https://images.pexels.com/photos/221063/pexels-photo-221063.jpeg?w=940&h=650&auto=compress&cs=tinysrgb",
-dessert_type: "miscellaneous",
-dessert_origin: "store"
+name: "Berry Pie",
+description: "A pie is a baked dish which is usually made of a pastry dough casing that covers or completely contains a filling of various sweet or savoury ingredients.",
+dessert_type: "pie",
+dessert_origin: "store",
+avatar_image: 'background3'
 )
 
 des3 = Dessert.create!(
-name: "Cupcake",
-description: "Tiny with teal frosting",
-image_url: "https://images.pexels.com/photos/112392/pexels-photo-112392.jpeg?w=940&h=650&auto=compress&cs=tinysrgb",
-dessert_type: "cake",
-dessert_origin: "store"
+name: "Chocolate Chip Cookie",
+description: "The dough is probably my favorite food. I could eat these all day. A cookie is a baked or cooked good that is small, flat and sweet. It usually contains flour, sugar and some type of oil or fat.",
+dessert_type: "cookie",
+dessert_origin: "cafe",
+avatar_image: 'background6'
 )
 
 des4 = Dessert.create!(
 name: "Pie",
 description: "Fruit",
-image_url: "https://images.pexels.com/photos/79479/cake-pie-tart-fruits-79479.jpeg?w=940&h=650&auto=compress&cs=tinysrgb",
 dessert_type: "pie",
-dessert_origin: "store"
+dessert_origin: "store",
+avatar_image: 'background4'
 )
 
 des5 = Dessert.create!(
 name: "Cake Pops",
 description: "Chocolate",
-image_url: "https://images.pexels.com/photos/33715/cake-pops-pastries-cake-sweet.jpg?w=940&h=650&auto=compress&cs=tinysrgb",
 dessert_type: "cake",
-dessert_origin: "store"
+dessert_origin: "store",
+avatar_image: 'background5'
 )
 
 desserts = ['Cake', 'Waffles', 'Cupcake', 'Pie', 'Cake Pops']
