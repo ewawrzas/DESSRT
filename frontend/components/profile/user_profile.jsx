@@ -41,6 +41,8 @@ class UserProfile extends React.Component {
     const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/account`}id="updateLink" >Account</Link> :
     <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
+    const upload = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? "profileInputFile" : "hiddenUploadIcon"
+
       const image = (this.props.location.pathname === `/users/${this.props.currentUser.id}` ||
       `/users/account`) ? "userProfileContent1" : "userProfileContent2"
 
@@ -81,7 +83,7 @@ class UserProfile extends React.Component {
               </div>
 
               <div id="imgIconContainer">
-                <input className="profileInputFile" type="file" onChange={ this.updateFile }/>
+                <input className={upload} type="file" onChange={ this.updateFile }/>
               </div>
             </div>
 
