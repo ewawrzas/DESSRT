@@ -58,22 +58,22 @@ avatar_image: 'background6'
 )
 
 des4 = Dessert.create!(
-name: "Pie",
-description: "Fruit",
-dessert_type: "pie",
-dessert_origin: "store",
+name: "Ice Cream",
+description: "The best food ever! There are so many varieties and toppings to choose from!",
+dessert_type: "frozen",
+dessert_origin: "restaurant",
 avatar_image: 'background4'
 )
 
 des5 = Dessert.create!(
-name: "Cake Pops",
-description: "Chocolate",
-dessert_type: "cake",
+name: "Chocolates",
+description: "Chocolate has become one of the most popular food types and flavors in the world, and a vast number of foodstuffs involving chocolate have been created, particularly desserts including cakes, pudding, mousse, chocolate brownies, and chocolate chip cookies. ",
+dessert_type: "chocolate",
 dessert_origin: "store",
 avatar_image: 'background5'
 )
 
-desserts = ['Cake', 'Waffles', 'Cupcake', 'Pie', 'Cake Pops']
+
 
 puts "✅"
 
@@ -87,11 +87,11 @@ print "📝  Seeding checkins... "
 
     checkin = Checkin.create!(
       user_id: user.id,
-      comment: "Dessert (/dɪˈzɜːrt/) is a confectionery course that concludes a main meal. The course usually consists of sweet foods and beverages, such as dessert wine or liqueurs, but may include coffee, cheeses, nuts, or other savory items. In some parts of the world, such as much of central and western Africa, and most parts of China, there is no tradition of a dessert course to conclude a meal.",
-      rating: 2,
+      comment: "Enjoying my favorite homemade specialty!"
       dessert_id: des1.id,
       image_url: "https://images.pexels.com/photos/33715/cake-pops-pastries-cake-sweet.jpg?w=940&h=650&auto=compress&cs=tinysrgb"
       )
+
   end
 
 puts "✅"
