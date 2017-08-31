@@ -94,8 +94,12 @@ class DessertProfile extends React.Component {
                 </div>
                 <div className="dessertHeaderCenter">
                   <div id="statsBar">
+                    <div id="bar">{dessert.dessert_type}</div>
+                    <div id="bar">{dessert.dessert_origin}</div>
                     <div id={`${starRating}1`}></div>
-                    <div>{starRating.slice(6)}</div>
+                    <div id="ratingNum">{starRating.slice(6)}</div>
+                    <div id="bar">{dessert.date_created}</div>
+                    <div id="barLast">{dessert.name}</div>
                   </div>
                 </div>
                 <div className="dessertHeaderBottom">
