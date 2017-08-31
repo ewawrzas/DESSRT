@@ -15,15 +15,16 @@
   color: grey;
 }
 
+#userAvatar {
+  display: inline-block;
+  object-fit: cover;
+  width: 90px;
+}
 
-.imgDiv {
+.ImgDiv {
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: center;
   border: 3px solid pink;
   border-radius: 100%;
-  margin: 10px;
-  padding: 3px;
   height: 59px;
   width: 60px;
 }

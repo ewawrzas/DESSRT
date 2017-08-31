@@ -32,20 +32,22 @@
 
 #checkInLink {
   width: 70px;
-  height: 90px;
+  height: 60px;
   background-image: image-url('spcheckin.png');
   background-repeat: no-repeat;
-  background-size: 75px;
+  background-size: 50px;
   background-position: bottom;
   color: grey;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
   font-variant: small-caps;
   font-weight: bold;
   order: 3;
   position: relative;
   right: 10px;
   align-self: flex-end;
+  display: flex;
+  justify-content: center;
 }
 
 #checkInLink:hover {

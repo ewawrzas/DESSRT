@@ -25,8 +25,8 @@ class DessertProfile extends React.Component {
 
   render () {
     const { dessert } = this.props;
-
     if (!dessert) return null;
+
 
       return (
         <div className="dessertProfile">
