@@ -4,4 +4,9 @@ class Checkin < ApplicationRecord
 
   belongs_to :user
   belongs_to :dessert
+
+  def date_created
+    created_at.asctime.split[1..2].join(" ") + " 2017"
+  end
+
 end

@@ -65,16 +65,35 @@ class DessertProfile extends React.Component {
                       <p id={dessert.dessert_origin}>{dessert.dessert_origin}</p>
                     </div>
                   </div>
+
                   <div className='dessertStats'>
-                  <div id="dessertStatsTable">
-                    <span><div>Total {dessert.num_checkins}</div>
-                    <div>Users {dessert.num_users}</div></span>
-                    <span><div>Unique {dessert.num_unique_users}</div>
-                    <div>Added {dessert.date_created}</div></span>
-                  </div>
-                    <span id={starRating}>Average Rating</span>
+                    <div id="dessertStatsTable">
+                      <div id="dessertStatsTable">
+                          <table className="dessertTable">
+                            <tr>
+                              <th>Total</th>
+                              <th id="right">Users</th>
+                            </tr>
+                            <tr>
+                              <td className="topData">{dessert.num_checkins}</td>
+                              <td id="right" className="topData">{dessert.num_users}</td>
+                            </tr>
+                            <tr>
+                              <th className="bottom">Unique</th>
+                              <th id="right" className="bottom">Added</th>
+                            </tr>
+                            <tr>
+                              <td>{dessert.num_unique_users}</td>
+                              <td id="right">{dessert.date_created}</td>
+                            </tr>
+                          </table>
+                      </div>
+
+                    </div>
+                    <span class="profileStat" id={starRating}>Average Rating</span>
                   </div>
                 </div>
+
                 <div className="dessertHeaderBottom">
                   <p id="dessertDescription">{dessert.description}</p>
                   <Link to={`/desserts/${dessert.id}/checkin`} id="checkInLink">Checkin</Link>

@@ -1,14 +1,37 @@
-.dessertStats {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-content: space-around;
-  padding: 10px;
+
+
+.dessertTable {
+  border-collapse: collapse;
+  text-align: left;
+  border-spacing: 10px;
+  width: 100%;
 }
 
+
+
+
 #dessertStatsTable {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+
+  font-size: 14px;
+  font-variant: small-caps;
+  color: #ff8095;
+}
+
+.profileStat {
+  align-self: flex-end;
+  height: auto;
+}
+
+.bottom {
+  border-top: 1px solid lightgrey;
+  padding-top: 5px;
+}
+
+.topData {
+  padding-bottom: 5px;
+}
+
+#right {
+  padding-left: 5px;
+  border-left: 1px solid lightgrey;
 }

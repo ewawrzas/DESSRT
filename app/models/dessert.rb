@@ -15,6 +15,7 @@ DESSERT_ORIGINS = ["homemade", "store", "cafe", "restaurant", "other"].sort.free
 
   def avg_rating
     average = []
+    return 0 if checkins.length == 0
     checkins.each do |checkin|
       average << checkin.rating
     end
