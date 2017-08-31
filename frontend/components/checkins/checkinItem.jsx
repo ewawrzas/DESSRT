@@ -16,7 +16,7 @@ class CheckinItem extends React.Component {
   }
 
   render () {
-    debugger
+
     const { checkin } = this.props
 
     const starRating = `rating${checkin.rating}`;
