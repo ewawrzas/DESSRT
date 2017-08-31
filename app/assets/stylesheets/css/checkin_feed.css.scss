@@ -27,6 +27,7 @@
   margin: 10px;
   height: 40px;
   width: 40px;
+  display: inline-block;
 }
 
 .feedUserImgDiv {
@@ -38,6 +39,7 @@
   margin: 10px;
   height: 40px;
   width: 40px;
+  display: inline-block;
 }
 
 .checkinImgDiv {
@@ -47,6 +49,7 @@
   margin: 10px;
   padding: 3px;
   align-self: center;
+
 }
 
 .checkinImgDiv:empty {
@@ -54,7 +57,7 @@
 }
 
 #checkinImg{
-  display: inline-block;
+  // display: inline-block;
   max-height: 200px;
   max-width: 300px;
   align-self: center;
@@ -66,14 +69,21 @@
   color: #ff8095;
 }
 
-#checkinTitle {
+#titleText {
+  display: flex;
+  align-items: center;
+
+}
+
+.checkinTitle {
   font-color: grey;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: center;
-
+  flex-direction: row;
+  align-items: flex-start;
   align-content: center;
+  justify-content: space-between;
 }
 
 .checkinItemHeader {
@@ -102,16 +112,6 @@
   font-size: 18px;
   width: 500px;
   align-self: center;
-}
-
-.checkinTitle {
-  text-align: left;
-  display: block;
-  padding: 7px;
-  margin-bottom: 10px;
-  font-size: 19.5px;
-  position: relative;
-  left: 30px;
 }
 
 #feed {

@@ -11,10 +11,12 @@ const CheckinItem = ({ checkin }) => {
   <div className="checkinItem">
 
       <div className="checkinTitle">
-        <div className="feedUserImgDiv">
-          <img id="userFeedAvatar" src={checkin.avatar} />
-        </div>
-        {userLink} is eating {dessertLink}
+        <div id="titleText">
+          <div className="feedUserImgDiv">
+            <img id="userFeedAvatar" src={checkin.avatar} />
+          </div>
+       {userLink} is eating {dessertLink} 
+      </div>
         <div className="checkinDesImgDiv">
           <img id="userFeedAvatar" src={checkin.dessert_avatar} />
         </div>
