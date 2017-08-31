@@ -3,6 +3,21 @@
   justify-content: center;
 }
 
+#checkinInfo{
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#deleteCheckin {
+  color: #ff8095;
+}
+
+#dontDelete {
+  display: none;
+}
+
 #madeOnDate {
   font-size: 12px;
   color: grey;

@@ -17,11 +17,12 @@ class CheckinItem extends React.Component {
 
   render () {
 
-    const { checkin } = this.props
+    const { checkin, currentUser } = this.props
 
     const starRating = `rating${checkin.rating}`;
     const userLink = <Link to={`/users/${checkin.user_id}`} onClick={ () => window.scroll(0, 0) } ><span id="feedUserLink">{checkin.user}</span></Link>;
     const dessertLink = <Link to={`/desserts/${checkin.dessert_id}`} onClick={ () => window.scroll(0, 0) } ><span id="feedUserLink">{checkin.dessert}</span></Link>;
+    const canDelete = (checkin.user_id === currentUser.id) ? 'deleteCheckin' : 'dontDelete'
 
     return (
       <div className="checkinItem">
@@ -45,7 +46,7 @@ class CheckinItem extends React.Component {
 
         <div id="checkinInfo">
           <span id="madeOnDate">{checkin.date_created}</span>
-        <button id="deleteCheckin" onClick={this.handleClick}>Delete</button>
+        <button id={canDelete} onClick={this.handleClick}>Delete</button>
         </div>
 
         <div className="checkinImgDiv">
