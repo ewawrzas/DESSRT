@@ -31,6 +31,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
   padding-bottom: 20px;
   padding-left: 20px;
   opacity: .9;
@@ -45,6 +47,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   align-items: flex-end;
+}
+
+#prof {
+  display: flex;
+  align-items: center;
 }
 
 #user {
@@ -151,4 +158,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+
+.profileInputFile{
+  width: 50px;
+  align-self: flex-end;
+  font-size: 2px;
+}
+
+.profileInputFile::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0;
+}
+.profileInputFile::before {
+  content: image-url('camera2.png');
+  opacity: .5;
+  -webkit-user-select: none;
+  cursor: pointer;
 }
