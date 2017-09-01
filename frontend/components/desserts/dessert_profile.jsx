@@ -45,7 +45,7 @@ class DessertProfile extends React.Component {
 
             <div className="searchDrop">
               <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
-              
+
             </div>
           </div>
 
@@ -55,7 +55,7 @@ class DessertProfile extends React.Component {
                 <div className="dessertHeader">
                   <div id="dessertHeaderLeft">
                   <div className="desImgDiv">
-                    <img id="desAvatar" src={dessert.avatar_image} />
+                    <img id="desAvatar" src={dessert.dessert_avatar} />
                   </div>
                   <div className="iconContainer">
                     <h1 id="dessertName">{dessert.name}</h1>
