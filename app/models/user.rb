@@ -5,13 +5,11 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true}
 
-  image_names = ["background1.jpg", "background2.jpg", "background3.jpg", "background4.jpg", "background5.jpg", "background6.jpg", "background7.jpg"]
-  profile_pics = ["profile1.jpeg", "cat.jpg", "elvis.jpeg"]
 
-  has_attached_file :image, default_url: profile_pics.sample
+  has_attached_file :image, default_url: "cat.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  has_attached_file :wall_image, default_url: image_names.sample
+  has_attached_file :wall_image, default_url: "background5.jpg"
   validates_attachment_content_type :wall_image, content_type: /\Aimage\/.*\Z/
 
   after_initialize :ensure_session_token
