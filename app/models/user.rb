@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true}
 
   image_names = ["background1.jpg", "background2.jpg", "background3.jpg", "background4.jpg", "background5.jpg", "background6.jpg", "background7.jpg"]
-  profile_pics = ["profile1.jpeg", "profile2.jpeg", "cat.jpg", "elvis.jpeg"]
+  profile_pics = ["profile1.jpeg", "cat.jpg", "elvis.jpeg"]
 
   has_attached_file :image, default_url: profile_pics.sample
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
