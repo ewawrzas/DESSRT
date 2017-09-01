@@ -76,21 +76,26 @@
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center, center;
+  background-size: cover;
   margin: 10px;
   padding: 3px;
   align-self: center;
+  height: 200px;
+  width: 60%;
 }
+
+
 
 .checkinImgDiv:empty {
   display: none;
 }
 
 #checkinImg{
-  // display: inline-block;
-  max-height: 200px;
-  max-width: 300px;
-  align-self: center;
-  padding: 25px;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 5px;
 }
 
 #feedUserLink {
