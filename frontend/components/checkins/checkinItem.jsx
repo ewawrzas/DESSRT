@@ -10,7 +10,7 @@ class CheckinItem extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  
+
 
   handleClick(e) {
     this.props.deleteCheckin(this.props.checkin);
@@ -18,14 +18,22 @@ class CheckinItem extends React.Component {
 
   render () {
 
+
     const { checkin, currentUser } = this.props
+
+    if (!checkin.user) {
+      return null;
+    }
 
     const starRating = `rating${checkin.rating}`;
     const userLink = <Link to={`/users/${checkin.user_id}`} onClick={ () => window.scroll(0, 0) } ><span id="feedUserLink">{checkin.user}</span></Link>;
     const dessertLink = <Link to={`/desserts/${checkin.dessert_id}`} onClick={ () => window.scroll(0, 0) } ><span id="feedUserLink">{checkin.dessert}</span></Link>;
     const canDelete = (checkin.user_id === currentUser.id) ? 'deleteCheckin' : 'dontDelete'
 
+
+
     return (
+
       <div className="checkinItem">
           <div className="checkinTitle">
             <div id="titleText">

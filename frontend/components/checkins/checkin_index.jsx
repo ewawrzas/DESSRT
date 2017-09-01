@@ -11,6 +11,7 @@ class CheckinIndex extends React.Component {
   }
 
   componentDidMount() {
+    debugger
     this.props.fetchAllCheckins();
   }
 
@@ -24,7 +25,7 @@ class CheckinIndex extends React.Component {
           <div className="checkinsIdx">
               <div className="checkinList">
                 {checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} deleteCheckin={deleteCheckin} currentUser={currentUser} fetchAllCheckins={fetchAllCheckins}/>)}
-                <h2 id="feed">Checkin Feed Coming Soon!</h2>
+                <h2 id="feed">Recent Activity</h2>
               </div>
             </div>
 

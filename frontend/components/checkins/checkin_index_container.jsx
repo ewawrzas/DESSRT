@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CheckinIndex from './checkin_index';
-
+import { removeErrors } from '../../actions/session_actions';
 import { fetchSingleCheckin, createCheckin, fetchAllCheckins, updateCheckin, deleteCheckin }
 from '../../actions/checkin_actions';
 
@@ -11,14 +11,14 @@ const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: state.session.currentUser,
     checkins: selectAllCheckins(state),
-    errors: state.errors,
     ownProps
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
-  
+
   return {
+    removeErrors: () => dispatch(removeErrors()),
     fetchAllCheckins: () => dispatch(fetchAllCheckins()),
     fetchSingleCheckin: (id) => dispatch(fetchSingleCheckin(id)),
     createCheckin: (checkin) => dispatch(createCheckin(checkin)),
