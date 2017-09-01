@@ -38,13 +38,16 @@ export const fetchAllCheckins = () => dispatch => (
 );
 
 export const updateCheckin = checkin => dispatch => (
-  APIUtil.updateCheckin(checkin).then(checkin => ( dispatch(receiveSingleCheckin(checkin))
+  CheckinAPIUtil.updateCheckin(checkin).then(checkin => ( dispatch(receiveSingleCheckin(checkin))
   ),
   err => (
   dispatch(receiveErrors(err.responseJSON))
   ))
 );
 
-export const deleteCheckin = checkin => dispatch => (
-  CheckinAPIUtil.destroyCheckin(checkin).then(checkin => dispatch(removeCheckin))
-);
+export const deleteCheckin = checkin => {
+
+  return (dispatch) => {
+    return CheckinAPIUtil.destroyCheckin(checkin).then(checkin => dispatch(removeCheckin));
+  };
+};

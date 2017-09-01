@@ -28,6 +28,7 @@ class Api::CheckinsController < ApplicationController
   end
 
   def destroy
+
     @checkin = current_user.checkins.find(params[:id])
     @checkin.destroy
     render json: @checkin

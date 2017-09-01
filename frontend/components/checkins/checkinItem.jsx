@@ -2,22 +2,24 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 
-
-
 class CheckinItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 
-
-
-  handleClick(e) {
-    this.props.deleteCheckin(this.props.checkin);
+  componentWillUnmount(checkin) {
+    this.props.removeCheckin(checkin);
   }
 
-  render () {
+  handleClick(e) {
+    this.props.deleteCheckin(this.props.checkin).then(
+      () => this.setState({
+        checkin: ""
+      }));
+  };
 
+  render () {
 
     const { checkin, currentUser } = this.props
 
@@ -29,8 +31,6 @@ class CheckinItem extends React.Component {
     const userLink = <Link to={`/users/${checkin.user_id}`} onClick={ () => window.scroll(0, 0) } ><span id="feedUserLink">{checkin.user}</span></Link>;
     const dessertLink = <Link to={`/desserts/${checkin.dessert_id}`} onClick={ () => window.scroll(0, 0) } ><span id="feedUserLink">{checkin.dessert}</span></Link>;
     const canDelete = (checkin.user_id === currentUser.id) ? 'deleteCheckin' : 'dontDelete'
-
-
 
     return (
 

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import CheckinIndex from './checkin_index';
 import { removeErrors } from '../../actions/session_actions';
-import { fetchSingleCheckin, createCheckin, fetchAllCheckins, updateCheckin, deleteCheckin }
+import { fetchSingleCheckin, createCheckin, fetchAllCheckins, updateCheckin, deleteCheckin, removeCheckin}
 from '../../actions/checkin_actions';
 
 import { selectAllCheckins } from '../../reducers/selectors';
@@ -18,6 +18,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
 
   return {
+    removeCheckin: (checkin) => dispatch(removeCheckin(checkin)),
     removeErrors: () => dispatch(removeErrors()),
     fetchAllCheckins: () => dispatch(fetchAllCheckins()),
     fetchSingleCheckin: (id) => dispatch(fetchSingleCheckin(id)),
