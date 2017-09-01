@@ -8,26 +8,26 @@ Based on the social drinking app Untappd, DESSRT is a full-stack web application
 ## Features and Implementation
 
 ### Add and view desserts
-  Through the dessert form component, users are able to add desserts to the database. Amazon Web Services hosting was used to allow for image uploads and remote asset management. Upon creation, the dessert form redirects to the dessert profile page, which displays the dessert information as well as the checkin feed available from the nested checkin component. Database associations were leveraged to calculate statistics for each dessert, such as average rating, number of checkins and number of unique users.
+  Through the dessert form component, users are able to add new desserts to the database. The desserts table consists of columns for name, type, origin, ratings, and an avatar image. Amazon Web Services hosting was used as a remote asset management system to allow for large image uploads. Upon submission of the dessert form, an API call is made to store the dessert in the database. On success, the dessert form reroutes the user directly to the dessert profile page, which displays the dessert information. Database associations with users and checkins are leveraged to calculate statistics for each dessert, such as average rating, number of checkins and number of unique users, which are displayed on the dessert profile page.
 
-  ![alt text](https://github.com/ewawrzas/DESSRT/blob/master/app/assets/images/Screen%20Shot%202017-09-01%20at%2011.42.39%20AM.png)
+  ![alt text]
 
 ### Checkins
 
-  On the database level, checkins join the users and desserts tables, as users are able to check in to individual desserts via the checkin link on each dessert profile page. Through the checkin form, users can upload an image, write a comment, and rate the dessert. Checkin items are mapped into a checkin feed component which is nested in the home page component as well as both user and dessert profile components. Database level associations are utilized to display the name and profile image of both the user and dessert as links on each checkin. The database association between users and checkins was also leveraged to restrict deleting functionality to the checkin author.
+  On the database level, checkins join the users and desserts tables. Through the checkin form on each dessert view page, users can upload an image, write a comment, and rate the dessert. Checkin items are mapped into a checkin feed component. The checkin feed is nested in the home page component as well as both user and dessert profile components. Database level associations are utilized to display the name and profile image of both the user and dessert as links on each checkin. The database association between users and checkins was also leveraged to restrict deleting functionality to the checkin author.
 
-  ![alt text](https://github.com/ewawrzas/DESSRT/blob/master/app/assets/images/Screen%20Shot%202017-09-01%20at%2011.34.40%20AM.png)
+  ![alt text]
 
-### User profiles
+### Users
 
-  When signed in, users can update their accounts by navigating to the account settings form. 
+  Backend validations require users to be signed in to access the app. Signed in users can update their profiles and view other user profiles.
 
 
 ## Future Directions for the Project
 
 ### Search
 
-  I plan to implement search functionality that will allow users to look for a specific dessert or user.  
+  I plan to implement search functionality that will allow users to look for a specific dessert or user. Search will be nested in the Nav Bar and
 
 ### Friendships
 
