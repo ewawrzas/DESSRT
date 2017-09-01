@@ -58,7 +58,7 @@ class CheckinItem extends React.Component {
         </div>
 
         <div className="checkinImgDiv">
-          <img id="checkinImg" src={checkin.image_url}/>
+          <img id="checkinImg" src={checkin.image}/>
         </div>
       </div>
     );

@@ -75,11 +75,10 @@
 .checkinImgDiv {
   overflow: hidden;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center, center;
   margin: 10px;
   padding: 3px;
   align-self: center;
-
 }
 
 .checkinImgDiv:empty {
