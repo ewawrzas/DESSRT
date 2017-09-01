@@ -43,7 +43,7 @@ class Greeting extends React.Component {
 
           <div className="searchDrop">
             <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
-            
+
           </div>
         </div>
 
@@ -52,13 +52,7 @@ class Greeting extends React.Component {
             <p id="user">{this.props.currentUser.username}</p>
           </div>
           <CheckinIndexContainer />
-          <h2 id="feed">testing links only</h2>
-          <ul className="userList">
-            {this.props.users.map(user => <UserItem key={user.id} user={user} />)}
-          </ul>
-          <ul className="userList">
-            {this.props.desserts.map(dessert => <DessertItem key={dessert.id} dessert={dessert} />)}
-          </ul>
+
           <Route path ="/users/:userId" component={UserProfileContainer} />
           <Route path="/users/:userId/update" component={UpdateFormContainer} />
         </div>

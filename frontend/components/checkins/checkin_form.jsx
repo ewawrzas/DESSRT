@@ -48,8 +48,8 @@ class CheckinForm extends React.Component {
         image: "",
         dessert_id: ""
       })
-    ).then(dessert => this.props.history.push(`/desserts/${this.props.match.params.dessertId}`)
-    );
+    ).then(dessert => this.props.history.push(`/desserts/${this.props.match.params.dessertId}`)), () => this.props.fetchAllCheckins();
+
   }
 
 

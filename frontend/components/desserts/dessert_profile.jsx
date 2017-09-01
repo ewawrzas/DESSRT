@@ -6,6 +6,12 @@ import CheckinIndexContainer from '../checkins/checkin_index_container';
 class DessertProfile extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      avg_rating: null,
+      num_checkins: null,
+      num_users: null,
+      num_unique_users: null
+    }
     this.handleClick = this.handleClick.bind(this);
   }
 

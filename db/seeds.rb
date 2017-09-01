@@ -211,7 +211,7 @@ dessert_origin: "cafe"
 
 desserts = Dessert.all
 
-comments = ["Enjoying my favorite homemade specialty!", "Having a treat!", "Don't judge me!", "Third dessert today!", "It's my birthday! I can eat whatever I want", "I think this is the best food ever!", "Just like my mom used to make", "What a treat!", "yuck", "It looks nice, but tastes like sandpaper.", "Take a picture and throw it away.", "meh"]
+comments = ["A little too tangy for my taste...", "OK but it needs more sugar.", "Great for breakfast, lunch and dinner", "Enjoying my favorite homemade specialty!", "Having a treat!", "Don't judge me!", "Third dessert today!", "It's my birthday! I can eat whatever I want", "I think this is the best food ever!", "Just like my mom used to make", "What a treat!", "yuck", "It looks nice, but tastes like sandpaper.", "Take a picture and throw it away.", "meh"]
 
 puts "✅"
 
