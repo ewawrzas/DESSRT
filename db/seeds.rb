@@ -188,28 +188,30 @@ dessert_type: "pie",
 dessert_origin: "store"
 )
 
-des3 = Dessert.create!(
-name: "Chocolate Chip Cookie",
-description: "The dough is probably my favorite food. I could eat these all day. A cookie is a baked or cooked good that is small, flat and sweet. It usually contains flour, sugar and some type of oil or fat.",
-dessert_type: "cookie",
-dessert_origin: "cafe"
+des18 = Dessert.create!(
+name: "Sorbet",
+description: "Cold fruit based dessert.",
+dessert_type: "frozen",
+dessert_origin: "store"
 )
 
-des4 = Dessert.create!(
-name: "Ice Cream",
-description: "The best food ever! There are so many varieties and toppings to choose from!",
+des19 = Dessert.create!(
+name: "Pound Cake",
+description: "Made with eggs, milk, and butter. Best with some vanilla and almond seasoning.",
 dessert_type: "frozen",
 dessert_origin: "restaurant"
 )
 
 des5 = Dessert.create!(
-name: "Chocolates",
-description: "Chocolate has become one of the most popular food types and flavors in the world, and a vast number of foodstuffs involving chocolate have been created, particularly desserts including cakes, pudding, mousse, chocolate brownies, and chocolate chip cookies. ",
-dessert_type: "chocolate",
-dessert_origin: "store"
+name: "Carrot Cake",
+description: "Cake made of carrots.",
+dessert_type: "cake",
+dessert_origin: "cafe"
 )
 
+desserts = Dessert.all
 
+comments = ["Enjoying my favorite homemade specialty!", "Having a treat!", "Don't judge me!", "Third dessert today!", "It's my birthday! I can eat whatever I want", "I think this is the best food ever!", "Just like my mom used to make", "What a treat!", "yuck", "It looks nice, but tastes like sandpaper.", "Take a picture and throw it away.", "meh"]
 
 puts "✅"
 
@@ -225,10 +227,10 @@ print "📝  Seeding checkins... "
 
     checkin = Checkin.create!(
       user_id: user.id,
-      comment: "Enjoying my favorite homemade specialty!",
-      dessert_id: des1.id,
+      comment: comments.sample,
+      dessert_id: desserts.sample.id,
       image_url: "https://images.pexels.com/photos/33715/cake-pops-pastries-cake-sweet.jpg?w=940&h=650&auto=compress&cs=tinysrgb",
-      rating: 3
+      rating: (1..5).to_a.sample
       )
 
   end
