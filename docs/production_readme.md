@@ -7,27 +7,28 @@ Based on the social drinking app Untappd, DESSRT is a full-stack web application
 
 ## Features and Implementation
 
-### Add and view desserts
-  Through the dessert form component, users are able to add new desserts to the database. The desserts table consists of columns for name, type, origin, ratings, and an avatar image. Amazon Web Services hosting was used as a remote asset management system to allow for large image uploads. Upon submission of the dessert form, an API call is made to store the dessert in the database. On success, the dessert form reroutes the user directly to the dessert profile page, which displays the dessert information. Database associations with users and checkins are leveraged to calculate statistics for each dessert, such as average rating, number of checkins and number of unique users, which are displayed on the dessert profile page.
+### Desserts
+  Through the dessert form component, users are able to add new desserts to the database. The desserts table consists of columns for name, type, origin, ratings, and an avatar image. Amazon Web Services hosting was used as a remote asset management system to allow for large image uploads. Upon submission of the dessert form, an API call is made to store the dessert in the database. On success, the dessert form reroutes the user directly to the dessert profile page, which displays the dessert information. As users checkin to the dessert, database associations with users and checkins are leveraged to calculate statistics for each dessert, such as average rating, number of checkins and number of unique users, which are displayed on the dessert profile page.
 
   ![alt text](https://github.com/ewawrzas/DESSRT/blob/master/app/assets/images/Screen%20Shot%202017-09-01%20at%201.55.03%20PM.png)
 
 ### Checkins
 
-  On the database level, checkins join the users and desserts tables. Through the checkin form on each dessert view page, users can upload an image, write a comment, and rate the dessert. Checkin items are mapped into a checkin feed component. The checkin feed is nested in the home page component as well as both user and dessert profile components. Database level associations are utilized to display the name and profile image of both the user and dessert as links on each checkin. The database association between users and checkins was also leveraged to restrict deleting functionality to the checkin author.
+  On the database level, checkins join the users table and the desserts table. Through the checkin form on each dessert view page, users can upload an image, write a comment, and rate the dessert. Checkin items are mapped into a checkin feed component which is nested in the main presentational components of the app. On each checkin item Database level associations are utilized to display the name and profile image of both the user and dessert as links. The database association between users and checkins is also leveraged to restrict deleting functionality to the checkin author.
 
-  ![alt text]
+  Checkin form displayed as a modal on the dessert profile page:
+  ![alt text](https://github.com/ewawrzas/DESSRT/blob/master/app/assets/images/Screen%20Shot%202017-09-01%20at%202.18.44%20PM.png)
 
 ### Users
 
-  Backend validations require users to be signed in to access the app. Signed in users can update their profiles and view other user profiles.
+  The landing page directs users to either the sign in form or sign up form, both of which are rendered by a single presentational component. User passwords are stored in the database as encrypted hashes produced by BCrypt. Backend validations require users to be signed in to access the app. Signed in users can update their accounts via the account settings form, which dispatches an API call to patch the new user information to the database. Users can view other profiles and   
 
 
 ## Future Directions for the Project
 
 ### Search
 
-  I plan to implement search functionality that will allow users to look for a specific dessert or user. Search will be nested in the Nav Bar and
+  I plan to implement search functionality that will allow users to look for a specific dessert or user. Search will be nested in the Nav Bar and will reroute to a search results page displaying results of the database query. If no results are found there will be a link to the add new dessert form on the results page.
 
 ### Friendships
 
