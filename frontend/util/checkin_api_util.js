@@ -30,7 +30,7 @@ export const updateCheckin = (checkin) => {
 }
 
 export const destroyCheckin = (checkin) => {
-  debugger
+  
   return $.ajax({
     url: `api/checkins/${checkin.id}`,
     method: 'DELETE'

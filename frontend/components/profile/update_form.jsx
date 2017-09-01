@@ -93,10 +93,8 @@ class UpdateForm extends React.Component {
             </ul>
           </header>
           <div className="searchDrop">
+
               {link}
-            <div className="searchDiv">
-              <h4>Search will go here</h4>
-            </div>
           </div>
         </div>
 

@@ -57,6 +57,7 @@ class UserProfile extends React.Component {
         <div className="greeting">
 
           <div className="homeNav">
+
             <header className="navBar">
               <div className="userProfileLogo">
                 <Link to="/home"><h1>DESSRT</h1></Link>
@@ -67,11 +68,12 @@ class UserProfile extends React.Component {
               </ul>
             </header>
             <div className="searchDrop">
+                <div className="feedUserImgDiv">
+                  <img id="userFeedAvatar" src={this.props.user.image}/>
+                </div>
                 {link}
-              <div className="searchDiv">
-                <h4>Search will go here</h4>
-              </div>
             </div>
+
           </div>
 
           <div className="profilePage">
