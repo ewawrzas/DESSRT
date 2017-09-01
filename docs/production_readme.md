@@ -10,7 +10,7 @@ Based on the social drinking app Untappd, DESSRT is a full-stack web application
 ### Add and view desserts
   Through the dessert form component, users are able to add new desserts to the database. The desserts table consists of columns for name, type, origin, ratings, and an avatar image. Amazon Web Services hosting was used as a remote asset management system to allow for large image uploads. Upon submission of the dessert form, an API call is made to store the dessert in the database. On success, the dessert form reroutes the user directly to the dessert profile page, which displays the dessert information. Database associations with users and checkins are leveraged to calculate statistics for each dessert, such as average rating, number of checkins and number of unique users, which are displayed on the dessert profile page.
 
-  ![alt text]
+  ![alt text](https://github.com/ewawrzas/DESSRT/blob/master/app/assets/images/Screen%20Shot%202017-09-01%20at%201.55.03%20PM.png)
 
 ### Checkins
 
