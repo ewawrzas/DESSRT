@@ -32,21 +32,12 @@ class CheckinForm extends React.Component {
     }
   }
 
-
-  handleClick() {
-    this.props.logout();
-  }
-
-  handleChange(field) {
-    return (e) => this.setState({ [field]: e.currentTarget.value });
-  }
-
-
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
+    const dessert_id = this.props.match.params.dessertId;
     formData.append("checkin[comment]", this.state.comment);
-    formData.append("checkin[dessert_id]", this.state.dessert_id);
+    formData.append("checkin[dessert_id]", dessert_id);
     formData.append("checkin[image]", this.state.imageFile);
     formData.append("checkin[rating]", this.state.rating);
 
@@ -60,6 +51,15 @@ class CheckinForm extends React.Component {
     ).then(dessert => this.props.history.push(`/desserts/${this.props.match.params.dessertId}`)
     );
   }
+
+
+    handleClick() {
+      this.props.logout();
+    }
+
+    handleChange(field) {
+      return (e) => this.setState({ [field]: e.currentTarget.value });
+    }
 
   errors() {
    if (this.props.errors) {

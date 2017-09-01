@@ -11,8 +11,6 @@ class CheckinItem extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-
-
   handleClick(e) {
     this.props.deleteCheckin(this.props.checkin).then(
       () => this.setState({

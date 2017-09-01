@@ -15,7 +15,6 @@ const checkinReducer = (state = {}, action) => {
     case RECEIVE_ALL_CHECKINS:
       return merge({}, state, action.checkins);
     case REMOVE_CHECKIN:
-
       nextState = merge({}, state);
       delete nextState[action.checkin.id]
       return nextState

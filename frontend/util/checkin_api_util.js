@@ -16,7 +16,6 @@ export const createCheckin = (checkin) => {
 }
 
 export const fetchAllCheckins = () => {
-
   return $.ajax({
     method: 'GET',
     url: 'api/checkins',
@@ -32,7 +31,6 @@ export const updateCheckin = (checkin) => {
 }
 
 export const destroyCheckin = (checkin) => {
-
   return $.ajax({
     url: `api/checkins/${checkin.id}`,
     method: 'DELETE'

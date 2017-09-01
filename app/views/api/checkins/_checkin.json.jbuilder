@@ -4,4 +4,4 @@ json.user checkin.user.username
 json.dessert checkin.dessert.name
 json.avatar image_path(checkin.user.image.url)
 json.dessert_avatar image_path(checkin.dessert.avatar_image.url)
-json.image image_path(checkin.image.url)
+json.image asset_path(checkin.image.url)

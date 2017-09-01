@@ -8,7 +8,7 @@ DESSERT_ORIGINS = ["homemade", "store", "cafe", "restaurant", "other"].sort.free
   validates :dessert_type, :inclusion => { :in => DESSERT_TYPES }
   validates :dessert_origin, :inclusion => { :in => DESSERT_ORIGINS }
 
-  has_attached_file :avatar_image, default_url: "raspberry.jpg"
+  has_attached_file :avatar_image, default_url: "macaroons.jpg"
   validates_attachment_content_type :avatar_image, content_type: /\Aimage\/.*\Z/
 
   has_many :checkins

@@ -2,8 +2,9 @@ class Api::CheckinsController < ApplicationController
   # before_action :require_logged_in
 
   def create
+    debugger
     @checkin = current_user.checkins.new(checkin_params)
-debugger
+
     if @checkin.save
       render :show
     else
