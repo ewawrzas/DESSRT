@@ -3,9 +3,9 @@ class Api::CheckinsController < ApplicationController
 
   def create
     @checkin = current_user.checkins.new(checkin_params)
-
+debugger
     if @checkin.save
-      render "api/checkins/show"
+      render :show
     else
       render json: @checkin.errors.full_messages, status: 422
     end

@@ -10,12 +10,27 @@ class CheckinForm extends React.Component {
     this.state = {
       rating: 5,
       comment: "",
-      image_url: ""
+      image_url: "",
+      imageFile: null,
+      imageUrl: null
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.updateFile = this.updateFile.bind(this);
   };
+
+  updateFile (e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = function () {
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    }.bind(this);
+
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
+  }
 
 
   handleClick() {
@@ -29,14 +44,17 @@ class CheckinForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const checkin = merge({}, this.state, {
-      dessert_id: this.props.match.params.dessertId
-    })
-    this.props.createCheckin({checkin}).then(
+    const formData = new FormData();
+    formData.append("checkin[comment]", this.state.comment);
+    formData.append("checkin[dessert_id]", this.state.dessert_id);
+    formData.append("checkin[image]", this.state.imageFile);
+    formData.append("checkin[rating]", this.state.rating);
+
+    this.props.createCheckin(formData).then(
       () => this.setState({
         rating: 0,
         comment: "",
-        image_url: "",
+        image: "",
         dessert_id: ""
       })
     ).then(dessert => this.props.history.push(`/desserts/${this.props.match.params.dessertId}`)
@@ -77,13 +95,12 @@ class CheckinForm extends React.Component {
                   />
 
 
-                <div className="checkinImageInput">
-                  <input
-                    type="url"
-                    id="desImage"
-                    onChange={ this.handleChange('image_url') }
-                    value={ this.state.image_url }
-                    />
+                <div className="checkinIconContainer">
+                <input
+                  className="checkinInputFile"
+                  type="file"
+                  onChange={ this.updateFile }
+                  />
                 </div>
 
                 <div className="ratingSlider">

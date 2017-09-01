@@ -108,3 +108,26 @@
   font-size: 16px;
   resize: none;
 }
+
+.checkinIconContainer {
+
+}
+
+.checkinInputFile{
+  position: relative;
+  top: 10px;
+  width: 70px;
+  font-size: 2px;
+}
+
+.checkinInputFile::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0;
+}
+.checkinInputFile::before {
+  position: relative;
+  content: image-url('cam.png');
+  opacity: .5;
+  -webkit-user-select: none;
+  cursor: pointer;
+}

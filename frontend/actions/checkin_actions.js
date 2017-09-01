@@ -46,8 +46,8 @@ export const updateCheckin = checkin => dispatch => (
 );
 
 export const deleteCheckin = checkin => {
-
+  debugger
   return (dispatch) => {
-    return CheckinAPIUtil.destroyCheckin(checkin).then(checkin => dispatch(removeCheckin));
+    return CheckinAPIUtil.destroyCheckin(checkin).then(checkin => dispatch(removeCheckin(checkin)));
   };
 };

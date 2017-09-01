@@ -15,15 +15,17 @@ class CheckinIndex extends React.Component {
   }
 
   render () {
-
-    const { checkins, deleteCheckin, currentUser, removeCheckin } = this.props
+    // if (!checkins) {
+    //   return null
+    // }
+    const { checkins, deleteCheckin, currentUser } = this.props
 
     return (
       <div>
 
           <div className="checkinsIdx">
               <div className="checkinList">
-                {checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} deleteCheckin={deleteCheckin} removeCheckin={removeCheckin} currentUser={currentUser} />)}
+                {checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} deleteCheckin={deleteCheckin} currentUser={currentUser} fetchAllCheckins={fetchAllCheckins} />)}
                 <h2 id="feed">Recent Activity</h2>
               </div>
             </div>

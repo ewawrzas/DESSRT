@@ -5,18 +5,19 @@ import { Link } from 'react-router-dom';
 class CheckinItem extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      checkin: ""
+    }
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentWillUnmount(checkin) {
-    this.props.removeCheckin(checkin);
-  }
+
 
   handleClick(e) {
     this.props.deleteCheckin(this.props.checkin).then(
       () => this.setState({
         checkin: ""
-      }));
+      }), () => this.props.fetchAllCheckins());
   };
 
   render () {

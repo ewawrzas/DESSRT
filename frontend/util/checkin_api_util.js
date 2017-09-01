@@ -9,6 +9,8 @@ export const createCheckin = (checkin) => {
   return $.ajax({
     method: 'POST',
     url: 'api/checkins',
+    contentType: false,
+    processData: false,
     data: checkin
   });
 }
@@ -30,7 +32,7 @@ export const updateCheckin = (checkin) => {
 }
 
 export const destroyCheckin = (checkin) => {
-  
+
   return $.ajax({
     url: `api/checkins/${checkin.id}`,
     method: 'DELETE'

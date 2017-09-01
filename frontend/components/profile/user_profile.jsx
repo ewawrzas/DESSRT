@@ -23,7 +23,7 @@ class UserProfile extends React.Component {
     const formData = new FormData();
     formData.append("user[wall_image]", imgFile);
     this.props.updateUser(formData)
-    };
+  };
 
   handleClick() {
     this.props.logout();
