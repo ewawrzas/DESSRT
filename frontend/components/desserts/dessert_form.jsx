@@ -78,8 +78,9 @@ class DessertForm extends React.Component {
           <div className="navBackground">
             <div className="homeNav">
               <header className="navBar">
-                <div className="homeLogo">
-                  <Link to="/home"><h1>DESSRT</h1></Link>
+                <div className="userProfileLogo">
+                  <Link to="/home"><h1 id="slogan1">DESSRT</h1></Link>
+                  <h5 id="slogan">EAT SOCIALLY</h5>
                 </div>
                 <ul id="homeNavLinks">
                   <button id="logout" onClick={this.handleClick}>Logout</button>
