@@ -57,15 +57,18 @@ class DessertForm extends React.Component {
       .then(dessert => this.props.history.push(`/desserts/${dessert.id}`));
   }
 
-  errors() {
-   if (this.props.errors) {
+  renderErrors() {
+   if (!this.props.errors) {
+     return null
+   } else {
      return (
        this.props.errors.map(error => {
          return (<li className="error" key={error}>{error}</li>);
        })
      );
    }
-  }
+}
+  
 
   render() {
       return (
@@ -82,7 +85,7 @@ class DessertForm extends React.Component {
             </header>
             <div className="searchDrop">
               <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
-            
+
             </div>
           </div>
 
@@ -147,6 +150,10 @@ class DessertForm extends React.Component {
                 <div id="desAvatarUpdate">
                   <input className="desInputFile" type="file" onChange={ this.updateFile }/>
                 </div>
+              </div>
+
+              <div className="errDiv">
+                { this.renderErrors() }
               </div>
 
               <button id="createDessertBtn">Create Dessert</button>
