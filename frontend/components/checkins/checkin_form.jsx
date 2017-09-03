@@ -61,15 +61,21 @@ class CheckinForm extends React.Component {
       return (e) => this.setState({ [field]: e.currentTarget.value });
     }
 
-  errors() {
-   if (this.props.errors) {
-     return (
-       this.props.errors.map(error => {
-         return (<li className="error" key={error}>{error}</li>);
-       })
-     );
-   }
-  }
+    renderErrors() {
+      if (!this.props.errors){
+         return null;
+      } else {
+        return(
+          <div className="errList">
+            {this.props.errors.map((error, i) => (
+              <p id="errors" key={`error-${i}`}>
+                {error}
+              </p>
+            ))}
+          </div>
+        );
+      }
+    };
 
   render() {
       return (

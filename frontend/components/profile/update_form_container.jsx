@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import UpdateForm from './update_form';
-import { fetchSingleUser, updateUser, removeErrors } from '../../actions/user_actions';
-import { logout } from '../../actions/session_actions'
+import { fetchSingleUser, updateUser } from '../../actions/user_actions';
+import { logout,removeErrors } from '../../actions/session_actions'
 
 const mapStateToProps = (state) => {
   return {
