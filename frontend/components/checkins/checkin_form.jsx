@@ -89,6 +89,10 @@ class CheckinForm extends React.Component {
                 <h3 >Check-In</h3>
                 <Link id="checkInExit" to="/home">X</Link>
               </div>
+              
+              <div className="checkinErrDiv">
+                { this.renderErrors() }
+              </div>
 
               <div className="checkinInputs">
 

@@ -1,12 +1,19 @@
 .createCheckinForm {
   width: 500px;
-  height: 250px;
+  height: 270px;
   background-color: white;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: flex-start;
+}
+
+.checkinErrDiv {
+  min-height: 15px;
+  padding: 0;
+  margin: 0;
+  align-self: center;
 }
 
 #checkInHeading {
@@ -84,7 +91,6 @@
   font-weight: bold;
   display: inline-block;
   font-size: 20px;
-  position: relative;
   border-radius: 5px 5px 5px 5px;
   margin-left: 2px;
 }
@@ -93,7 +99,7 @@
   display: flex;
   direction: row;
   flex-wrap: wrap;
-  margin: 15px;
+  margin: 0px, 15px, 15px, 15px;
   align-content: space-around;
   justify-content: space-around;
   height: 100%;
@@ -109,9 +115,6 @@
   resize: none;
 }
 
-.checkinIconContainer {
-
-}
 
 .checkinInputFile{
   position: relative;
