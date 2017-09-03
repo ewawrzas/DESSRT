@@ -34,17 +34,18 @@ class CheckinItem extends React.Component {
     return (
 
       <div className="checkinItem">
-          <div className="checkinTitle">
-            <div id="titleText">
-              <div className="feedUserImgDiv">
-                <img id="userFeedAvatar" src={checkin.avatar} />
-              </div>
-              <span id='text'>{userLink} <p>is eating </p> {dessertLink} </span>
+
+        <div className="checkinTitle">
+          <div id="titleText">
+            <div className="feedUserImgDiv">
+              <img id="userFeedAvatar" src={checkin.avatar} />
             </div>
-            <div className="checkinDesImgDiv">
-              <img id="userFeedAvatar" src={checkin.dessert_avatar} />
-            </div>
+            <span id='text'>{userLink} <p>is eating </p> {dessertLink} </span>
           </div>
+          <div className="checkinDesImgDiv">
+            <img id="userFeedAvatar" src={checkin.dessert_avatar} />
+          </div>
+        </div>
 
         <div className="checkinComment">
           <span>{checkin.comment}</span>
@@ -60,6 +61,7 @@ class CheckinItem extends React.Component {
         <div className="checkinImgDiv">
           <img id="checkinImg" src={checkin.image}/>
         </div>
+        
       </div>
     );
   }

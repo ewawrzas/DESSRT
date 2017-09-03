@@ -74,17 +74,17 @@ class CheckinForm extends React.Component {
   render() {
       return (
 
-        <div onClick={ this.handleModal } id="id01" className="modal">
+        <div id="id01" className="modal">
 
           <div className="updateUser">
-
             <form onSubmit={ this.handleSubmit } className="createCheckinForm" >
+
               <div id="checkInHeading">
                 <h3 >Check-In</h3>
                 <Link id="checkInExit" to="/home">X</Link>
               </div>
-              <div className="checkinInputs">
 
+              <div className="checkinInputs">
 
                 <textarea
                   type="text"
@@ -93,7 +93,6 @@ class CheckinForm extends React.Component {
                   onChange={ this.handleChange('comment') }
                   value={ this.state.comment }
                   />
-
 
                 <div className="checkinIconContainer">
                 <input
@@ -114,10 +113,8 @@ class CheckinForm extends React.Component {
                     />
                 </div>
 
-
-              <button id="confirmCheckinBtn">Confirm</button>
-            </div>
-
+                <button id="confirmCheckinBtn">Confirm</button>
+              </div>
 
             </form>
           </div>

@@ -61,7 +61,8 @@ class UserProfile extends React.Component {
 
             <header className="navBar">
               <div className="userProfileLogo">
-                <Link to="/home"><h1>DESSRT</h1></Link>
+                <Link to="/home"><h1 id="slogan1">DESSRT</h1></Link>
+                <h5 id="slogan">EAT SOCIALLY</h5>
               </div>
               <ul id="homeNavLinks">
                 <button id="logout" onClick={this.handleClick}>Logout</button>
