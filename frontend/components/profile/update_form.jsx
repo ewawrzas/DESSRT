@@ -85,6 +85,7 @@ class UpdateForm extends React.Component {
 
       return (
         <div>
+          <div className="navBackground">
         <div className="homeNav">
           <header className="navBar">
             <div className="userProfileLogo">
@@ -96,8 +97,11 @@ class UpdateForm extends React.Component {
             </ul>
           </header>
           <div className="searchDrop">
-
+            <div className="feedUserImgDiv">
+              <img id="userFeedAvatar" src={this.props.currentUser.image}/>
+            </div>
               {link}
+          </div>
           </div>
         </div>
 

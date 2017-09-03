@@ -29,7 +29,7 @@ class Greeting extends React.Component {
 
     return (
       <div className="greeting">
-
+        <div className="navBackground">
         <div className="homeNav">
           <header className="navBar">
             <div className="homeLogo">
@@ -42,9 +42,13 @@ class Greeting extends React.Component {
           </header>
 
           <div className="searchDrop">
+            <div className="feedUserImgDiv">
+              <img id="userFeedAvatar" src={this.props.currentUser.image}/>
+            </div>
             <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
           </div>
+        </div>
         </div>
 
         <div className="homePage">

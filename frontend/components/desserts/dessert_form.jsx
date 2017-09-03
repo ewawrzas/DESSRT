@@ -74,6 +74,7 @@ class DessertForm extends React.Component {
       return (
 
         <div>
+          <div className="navBackground">
           <div className="homeNav">
             <header className="navBar">
               <div className="homeLogo">
@@ -84,10 +85,14 @@ class DessertForm extends React.Component {
               </ul>
             </header>
             <div className="searchDrop">
+              <div className="feedUserImgDiv">
+                <img id="userFeedAvatar" src={this.props.currentUser.image}/>
+              </div>
               <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
             </div>
           </div>
+        </div>
 
           <div className="dessertsDiv">
           <div className="createDessert">

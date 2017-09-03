@@ -37,6 +37,7 @@ class DessertProfile extends React.Component {
 
       return (
         <div className="dessertProfile">
+          <div className="navBackground">
           <div className="homeNav">
 
             <header className="navBar">
@@ -50,9 +51,13 @@ class DessertProfile extends React.Component {
             </header>
 
             <div className="searchDrop">
+              <div className="feedUserImgDiv">
+                <img id="userFeedAvatar" src={this.props.currentUser.image}/>
+              </div>
               <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
             </div>
+          </div>
           </div>
 
           <div className="dessertPage">
