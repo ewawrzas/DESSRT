@@ -23,8 +23,10 @@ class AuthForm extends React.Component {
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
-  handleDemo() {
+  handleDemo(e) {
+    e.preventDefault();
     this.props.demoLogin(this.props.demoUser);
+    this.setState({username: "", password: ""})
   }
 
 
