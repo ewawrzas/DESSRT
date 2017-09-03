@@ -68,7 +68,7 @@ class DessertForm extends React.Component {
      );
    }
 }
-  
+
 
   render() {
       return (
@@ -152,7 +152,7 @@ class DessertForm extends React.Component {
                 </div>
               </div>
 
-              <div className="errDiv">
+              <div className="errorDiv">
                 { this.renderErrors() }
               </div>
 

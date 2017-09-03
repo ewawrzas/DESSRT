@@ -3,6 +3,18 @@
   min-height: 900px;
 }
 
+.errorDiv {
+  display: flex;
+  align-items: center;
+  color: grey;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 10px;
+  max-height: 35px;
+}
+
 .desInputFile{
   width: 150px;
 }

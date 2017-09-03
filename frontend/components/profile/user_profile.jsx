@@ -56,6 +56,7 @@ class UserProfile extends React.Component {
       return (
         <div className="greeting">
 
+          <div className="navBackground">
           <div className="homeNav">
 
             <header className="navBar">
@@ -75,6 +76,7 @@ class UserProfile extends React.Component {
             </div>
 
           </div>
+        </div>
 
           <div className="profilePage">
 

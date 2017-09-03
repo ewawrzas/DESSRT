@@ -3,8 +3,7 @@ class Api::DessertsController < ApplicationController
   def create
 
     @dessert = Dessert.new(dessert_params)
-
-
+debugger
     if @dessert.save
       render :show
     else

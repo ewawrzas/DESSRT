@@ -4,6 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 85%;
+  align-self: center;
+}
+
+.navBackground {
+  width: 100%;
+  background-color: #ffe6ea;
+  display: flex;
+  justify-content: center;
 }
 
 .greeting {
@@ -15,13 +24,6 @@
 }
 
 #userLink {
-  // background-image: image-url("001-fruit.png");
-  // padding-left: 22px;
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  // padding-right: 15px;
-  // display: flex;
-  // align-items: center;
   color: grey;
   padding: 7px 4px;
   text-align: center;
