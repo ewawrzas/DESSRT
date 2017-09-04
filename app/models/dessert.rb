@@ -10,7 +10,7 @@ image_names = ["background1.jpg", "background2.jpg", "background3.jpg", "backgro
   validates :dessert_type, :inclusion => { :in => DESSERT_TYPES }
   validates :dessert_origin, :inclusion => { :in => DESSERT_ORIGINS }
 
-  has_attached_file :avatar_image, default_url: image_names.sample
+  has_attached_file :avatar_image, styles: { medium: "135x" }, default_url: image_names.sample
   validates_attachment_content_type :avatar_image, content_type: /\Aimage\/.*\Z/
 
   has_many :checkins
