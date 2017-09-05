@@ -84,8 +84,6 @@
   width: 60%;
 }
 
-
-
 .checkinImgDiv:empty {
   display: none;
 }
@@ -96,6 +94,10 @@
   overflow: hidden;
   position: relative;
   padding: 5px;
+}
+
+#checkinImg:empty {
+  display: none;
 }
 
 #feedUserLink {
@@ -134,6 +136,7 @@
   flex-direction: column;
   justify-content: center;
   border-top: 1px lightgrey solid;
+  margin-bottom: 12px;
 }
 
 .checkinComment {
@@ -147,6 +150,7 @@
   font-size: 18px;
   width: 500px;
   align-self: center;
+  margin-bottom: 12px;
 }
 
 .checkinComment:before {
