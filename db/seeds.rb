@@ -89,126 +89,112 @@ des3 = Dessert.create!(
 name: "Chocolate Chip Cookie",
 description: "The dough is probably my favorite food. I could eat these all day. A cookie is a baked or cooked good that is small, flat and sweet. It usually contains flour, sugar and some type of oil or fat.",
 dessert_type: "cookie",
-dessert_origin: "cafe"
+dessert_origin: "cafe",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/background6.jpg'
 )
 
 des4 = Dessert.create!(
 name: "Ice Cream",
 description: "The best food ever! There are so many varieties and toppings to choose from!",
 dessert_type: "frozen",
-dessert_origin: "restaurant"
+dessert_origin: "restaurant",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/background4.jpg'
 )
 
 des5 = Dessert.create!(
 name: "Chocolates",
 description: "Chocolate has become one of the most popular food types and flavors in the world, and a vast number of foodstuffs involving chocolate have been created, particularly desserts including cakes, pudding, mousse, chocolate brownies, and chocolate chip cookies. ",
 dessert_type: "chocolate",
-dessert_origin: "store"
+dessert_origin: "store",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/background5.jpg'
 )
 
 des6=  Dessert.create!(
-name: "Gingerbread",
-description: "The world’s largest gingerbread house topped out at 2,520 square feet and contained 35.8 million calories.",
+name: "Meringue Cookies",
+description: "The world’s best cookie. According to my grandma.",
 dessert_type: "cookie",
-dessert_origin: "homemade"
+dessert_origin: "homemade",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/toa-heftiba-288450.jpg'
 )
 
 des7= Dessert.create!(
-name: "Chocolate Pie",
-description: "As of 2010, Armenia holds the title for the world’s biggest chocolate bar, which weighed over 9,000 pounds.",
-dessert_type: "chocolate",
-dessert_origin: "store"
-)
-
-des8 = Dessert.create!(
-name: "Candy Corn",
-description: "Yellow orange and white. Great for Halloween! It's almost as good for you as real corn.",
-dessert_type: "cookie",
-dessert_origin: "cafe"
+name: "Pudding Pops",
+description: "Cold and chocolate!",
+dessert_type: "frozen",
+dessert_origin: "homemade",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/background7.jpg'
 )
 
 des9 = Dessert.create!(
-name: "Ice Cream Sandwich",
-description: "Not like a regular sandwich. This one has ice cream in it and the bread is made of choclate.",
-dessert_type: "frozen",
-dessert_origin: "store"
+name: "Macaroons",
+description: "Small round cookies with cream in the center.",
+dessert_type: "cookie",
+dessert_origin: "store",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/background8.jpg'
 )
 
 des10 = Dessert.create!(
 name: "Angel Food Cake",
 description: "Fresh Ponchatoulla strawberries and melon slices are the topping to this heavenly dessert.",
 dessert_type: "cake",
-dessert_origin: "restaurant"
+dessert_origin: "restaurant",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/toa-heftiba-134256.jpg'
 )
 
 des11=  Dessert.create!(
-name: "Apple Cobbler",
-description: "Apples, cinnamon, butter and nutmeg make this cobbler stick to ya ribs!!",
+name: "Blueberry Cobbler",
+description: "Blueberries, cinnamon, butter and nutmeg make this cobbler stick to ya ribs!!",
 dessert_type: "pastry",
-dessert_origin: "homemade"
+dessert_origin: "homemade",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/blueberry.jpg'
 )
 
 des12= Dessert.create!(
-name: "Biscotti",
-description: "The Italians do dessert right! This is a hard cookie, flavored with almonds and plenty of sugar!",
-dessert_type: "cookie",
-dessert_origin: "cafe"
-)
-
-des13 = Dessert.create!(
-name: "Pecan Pie",
-description: "Mammoth toasted pecan halves layered ia an intoxicating filling mellowed with the rich, smooth flavor of Jim Beam Bourbon.... then nestled in our buttery crust..",
-dessert_type: "pie",
-dessert_origin: "restaurant"
+name: "Lemon Bar",
+description: "Sugary lemon flavored dessert bar.",
+dessert_type: "pastry",
+dessert_origin: "cafe",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/toa-heftiba-222353.jpg'
 )
 
 des14 = Dessert.create!(
 name: "Brownie",
 description: "Full of fudge and butter!",
 dessert_type: "miscellaneous",
-dessert_origin: "restaurant"
-)
-
-des15 = Dessert.create!(
-name: "Crepes",
-description: "Best with nutella and strawberries!",
-dessert_type: "miscellaneous",
-dessert_origin: "restaurant"
+dessert_origin: "restaurant",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/background9.jpg'
 )
 
 des16=  Dessert.create!(
-name: "Blueberry Cake",
-description: "August is blueberry season!",
+name: "Raspberry Cake",
+description: "August is raspberry season!",
 dessert_type: "cake",
-dessert_origin: "homemade"
-)
-
-des17= Dessert.create!(
-name: "Donut",
-description: "Plain, chocolate, jellyfilled, glazed.",
-dessert_type: "pie",
-dessert_origin: "store"
+dessert_origin: "homemade",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/raspberry.jpg'
 )
 
 des18 = Dessert.create!(
-name: "Sorbet",
+name: "Fruity Ice Cream",
 description: "Cold fruit based dessert.",
 dessert_type: "frozen",
-dessert_origin: "store"
+dessert_origin: "store",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/background4.jpg'
 )
 
 des19 = Dessert.create!(
-name: "Pound Cake",
+name: "Birthday Cake",
 description: "Made with eggs, milk, and butter. Best with some vanilla and almond seasoning.",
-dessert_type: "frozen",
-dessert_origin: "restaurant"
+dessert_type: "cake",
+dessert_origin: "restaurant",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/cake.jpg'
 )
 
 des20 = Dessert.create!(
-name: "Carrot Cake",
-description: "Cake made of carrots.",
+name: "Cupcake",
+description: "Like small cakes. Good for birthdays.",
 dessert_type: "cake",
-dessert_origin: "cafe"
+dessert_origin: "cafe",
+avatar_image: 'https://s3.us-east-2.amazonaws.com/dessrt-dev/desserts/avatar_images/whitecupcakes.jpg'
 )
 
 desserts = Dessert.all
