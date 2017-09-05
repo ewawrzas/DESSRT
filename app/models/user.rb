@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_attached_file :image, default_url: "cat.jpg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  has_attached_file :wall_image, styles: { large: '1600x' }, default_url: "background5.jpg"
+  has_attached_file :wall_image, styles: { large: '1800x' }, default_url: "background5.jpg"
   validates_attachment_content_type :wall_image, content_type: /\Aimage\/.*\Z/
 
   after_initialize :ensure_session_token
