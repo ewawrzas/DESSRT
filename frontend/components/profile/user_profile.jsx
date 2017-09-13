@@ -41,7 +41,6 @@ class UserProfile extends React.Component {
   }
 
   render () {
-
     const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/account`}id="updateLink" >Account</Link> :
     <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
@@ -103,7 +102,7 @@ class UserProfile extends React.Component {
                 </div>
               </div>
 
-          
+
             <Route path={`/account`} component={updateFormContainer} />
           </div>
 

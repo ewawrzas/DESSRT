@@ -18,10 +18,14 @@
   font-size: 20px;
 }
 
+#landingLinks {
+  padding-left: 0;
+}
+
 .landingNavBar {
   display: flex;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   padding-top: 15px;
 }
 
