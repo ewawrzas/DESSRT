@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
   // const dessertId = parseInt(ownProps.match.params.dessertId);
   // const user = state.entities.users[ownProps.match.params.userId];
   // const userId = parseInt(ownProps.match.params.userId);
-
+debugger
   return {
     currentUser: state.session.currentUser,
     checkins: selectAllCheckins(state)
@@ -22,8 +22,9 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-
+const mapDispatchToProps = (dispatch, ownProps) => {
+  debugger
+// const currentPage = ownProps.location.pathname === '/desserts/' ? 'signup' : 'login';
   return {
     removeCheckin: (checkin) => dispatch(removeCheckin(checkin)),
     removeErrors: () => dispatch(removeErrors()),

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, NavLink, Link } from 'react-router-dom';
 import updateFormContainer from '../profile/update_form_container';
 import CheckinIndexContainer from '../checkins/checkin_index_container';
+import CheckinItem from '../checkins/checkinItem'
 
 class UserProfile extends React.Component {
   constructor(props) {
@@ -49,7 +50,7 @@ class UserProfile extends React.Component {
       const image = (this.props.location.pathname === `/users/${this.props.currentUser.id}` ||
       `/users/account`) ? "userProfileContent1" : "userProfileContent2"
 
-      const { user } = this.props;
+      const { user, currentUser } = this.props;
 
       if (!user) return null;
 
@@ -95,7 +96,14 @@ class UserProfile extends React.Component {
               </form>
             </div>
 
-            <CheckinIndexContainer />
+            <div className="checkinsIdx">
+                <div className="checkinList">
+                  {this.props.user.checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} deleteCheckin={deleteCheckin} currentUser={currentUser} fetchAllCheckins={fetchAllCheckins} />)}
+                  <h2 id="feed">Recent Activity</h2>
+                </div>
+              </div>
+
+          
             <Route path={`/account`} component={updateFormContainer} />
           </div>
 
