@@ -33,6 +33,13 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
 
 /*.group:after {
   content: "";

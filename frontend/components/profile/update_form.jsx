@@ -10,7 +10,7 @@ class UpdateForm extends React.Component {
 
     this.state = {
       username: "",
-      password: "",
+      // password: "",
       imageFile: null,
       imageUrl: null
     };
@@ -46,13 +46,13 @@ class UpdateForm extends React.Component {
     e.preventDefault();
     const formData = new FormData();
     formData.append("user[username]", this.state.username);
-    formData.append("user[password]", this.state.password);
+    // formData.append("user[password]", this.state.password);
     formData.append("user[image]", this.state.imageFile);
 
     this.props.updateUser(formData).then(
       () => this.setState({
         username: "",
-        password: "",
+        // password: "",
         imageFile: ""
       })
     ).then(user => this.props.history.push(`/users/${this.props.currentUser.id}`)
@@ -132,15 +132,8 @@ class UpdateForm extends React.Component {
                         />
                     </span>
 
-                    <span className="updateLabel">Password
-                      <input
-                        type="password"
-                        id="pwChange"
-                        onChange={ this.handleChange('password') }
-                        value={ this.state.password }
-                        />
-                    </span>
-                </div>
+                  
+                  </div>
                 <div className="userErrDiv">
                   { this.renderErrors() }
                 </div>
