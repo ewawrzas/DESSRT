@@ -5,6 +5,13 @@
   color: black;
 }
 
+.dessertPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .desImgDiv {
   overflow: hidden;
   background-repeat: no-repeat;
@@ -73,7 +80,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 10px;
   margin-top: 5px;
 }
 
@@ -86,7 +92,7 @@
   padding: 16px;
   background: white;
   display: flex;
-  width: 682px;
+  width: 700px;
   flex-direction: column;
   align-content: space-between;
 }

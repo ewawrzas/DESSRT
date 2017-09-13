@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route, NavLink, Link } from 'react-router-dom';
 import CheckinFormContainer from '../checkins/checkin_form_container';
 import CheckinIndexContainer from '../checkins/checkin_index_container';
+import CheckinItem from '../checkins/checkinItem';
+
 
 class DessertProfile extends React.Component {
   constructor(props) {
@@ -30,6 +32,7 @@ class DessertProfile extends React.Component {
   }
 
   render () {
+    debugger
     const { dessert } = this.props;
     if (!dessert) return null;
 
@@ -121,7 +124,13 @@ class DessertProfile extends React.Component {
               </div>
             </div>
 
-            <CheckinIndexContainer />
+            <div className="checkinsIdx">
+                <div className="checkinList">
+                  {dessert.checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} deleteCheckin={deleteCheckin} currentUser={this.props.currentUser} fetchAllCheckins={fetchAllCheckins} />)}
+                  <h2 id="feed">Recent Activity</h2>
+                </div>
+              </div>
+
             <Route path={'/desserts/:dessertId/checkin'} component={CheckinFormContainer} />
           </div>
         </div>

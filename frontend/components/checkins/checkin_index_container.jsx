@@ -7,12 +7,6 @@ from '../../actions/checkin_actions';
 import { selectAllCheckins, selectUserCheckins, selectDessertCheckins } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
-  // const dessert = state.entities.desserts[ownProps.match.params.dessertId];
-  // const dessertId = parseInt(ownProps.match.params.dessertId);
-  // const user = state.entities.users[ownProps.match.params.userId];
-  // const userId = parseInt(ownProps.match.params.userId);
-debugger
   return {
     currentUser: state.session.currentUser,
     checkins: selectAllCheckins(state)
@@ -20,8 +14,6 @@ debugger
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  debugger
-// const currentPage = ownProps.location.pathname === '/desserts/' ? 'signup' : 'login';
   return {
     removeCheckin: (checkin) => dispatch(removeCheckin(checkin)),
     removeErrors: () => dispatch(removeErrors()),
