@@ -4,9 +4,10 @@ import { removeErrors } from '../../actions/session_actions';
 import { fetchSingleCheckin, createCheckin, fetchAllCheckins, deleteCheckin, removeCheckin}
 from '../../actions/checkin_actions';
 
-import { selectAllCheckins } from '../../reducers/selectors';
+import { selectAllCheckins, selectUserCheckins, selectDessertCheckins } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
+  // debugger
   // const dessert = state.entities.desserts[ownProps.match.params.dessertId];
   // const dessertId = parseInt(ownProps.match.params.dessertId);
   // const user = state.entities.users[ownProps.match.params.userId];
@@ -15,10 +16,6 @@ debugger
   return {
     currentUser: state.session.currentUser,
     checkins: selectAllCheckins(state)
-    // dessert: dessert,
-    // dessertId: dessertId,
-    // user: user,
-    // userId: userId
   };
 };
 
