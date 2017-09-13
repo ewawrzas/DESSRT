@@ -71,7 +71,7 @@ class UserProfile extends React.Component {
             </header>
             <div className="searchDrop">
                 <div className="feedUserImgDiv">
-                  <img id="userFeedAvatar" src={this.props.user.image}/>
+                  <img id="userFeedAvatar" src={this.props.currentUser.image}/>
                 </div>
                 {link}
             </div>
