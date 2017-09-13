@@ -87,9 +87,9 @@ class CheckinForm extends React.Component {
 
               <div id="checkInHeading">
                 <h3 >Check-In</h3>
-                <Link id="checkInExit" to="/home">X</Link>
+                <Link id="checkInExit" to={`/desserts/${this.props.match.params.dessertId}`}>X</Link>
               </div>
-              
+
               <div className="checkinErrDiv">
                 { this.renderErrors() }
               </div>

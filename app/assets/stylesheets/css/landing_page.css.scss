@@ -32,10 +32,9 @@
 .landingContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
+  align-items: space-between;
+  justify-content: space-between;
+  margin-left: 20px;
 }
 
 .logo {
@@ -52,6 +51,9 @@
   justify-content: center;
   color: #9E9E9E;
   margin: 45px;
+  position: relative;
+  left: 45px;
+  top: 40px;
 }
 
 #landingLinks li {
