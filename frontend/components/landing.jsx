@@ -16,7 +16,8 @@ class LandingPage extends React.Component {
           </header>
           <div className="logo">
             <h1>DESSRT</h1>
-            <h4>EAT SOCIALLY</h4>
+            <h4 id="sloganLanding">EAT SOCIALLY</h4>
+            <p id="landingCopy">Discover and share your favorite desserts</p>
           </div>
         </div>
 

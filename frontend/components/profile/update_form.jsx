@@ -132,7 +132,6 @@ class UpdateForm extends React.Component {
                         />
                     </span>
 
-                  
                   </div>
                 <div className="userErrDiv">
                   { this.renderErrors() }
