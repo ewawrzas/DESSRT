@@ -5,15 +5,21 @@ import { fetchSingleDessert } from '../../actions/dessert_actions';
 
 const mapStateToProps = (state, ownProps) => {
   debugger
+  let checkins;
+  let dessertId;
   const dessert = state.entities.desserts[ownProps.match.params.dessertId];
-  const dessertId = parseInt(ownProps.match.params.dessertId);
-  const checkins = dessert.checkins;
-  return {
-    currentUser: state.session.currentUser,
-    dessert: dessert,
-    dessertId: dessertId,
-    checkins: checkins
-  };
+
+  if (dessert) {
+    checkins = dessert.checkins
+    dessertId = parseInt(ownProps.match.params.dessertId);
+  }  else {
+    checkins = {};
+    dessertId = "";
+  }
+
+  const currentUser = state.session.currentUser;
+
+  return { currentUser, dessert, dessertId, checkins };
 };
 
 const mapDispatchToProps = (dispatch) => {
