@@ -46,41 +46,14 @@ class DessertForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // if (imageFile) {
     const formData = new FormData();
     formData.append("dessert[name]", this.state.name);
     formData.append("dessert[description]", this.state.description);
     formData.append("dessert[dessert_type]", this.state.dessert_type);
     formData.append("dessert[dessert_origin]", this.state.dessert_origin);
     formData.append("dessert[avatar_image]", this.state.imageFile);
-    debugger
-    // if (!this.state.imageFile) {
-    //   this.state.imageFile = {
-    //     Tempfile:'/var/folders/yp/tvw25d1n21g44dbp5n2nzpc00000gn/T/RackMultipart20170912-571-1f2b3z0.png',
-    //     original_filename: "cupcake (2).png",
-    //     content_type: "image/png",
-    //     headers: "Content-Disposition: form-data; name=\"dessert[avatar_image]\"; filename=\"cupcake (2).png\"\r\nContent-Type: image/png\r\n"
-    //   }
-      // this.state.imageFile = {
-      //   name: 'cupcake(2).png',
-      //   lastModified: 1505269213000,
-      //   lastModifiedDate: 'Tue Sep 12 2017 22:20:13 GMT-0400 (EDT)',
-      //   size: 5947,
-      //   type: "image/png",
-      //   webkitRelativePath: ""
-      // }
-    // formData.append("dessert[avatar_image]", 'cupcake.png');
-  // }
-    // formData.append("dessert[avatar_image]", this.state.imageFile)
-
     this.props.createDessert(formData)
       .then(dessert => this.props.history.push(`/desserts/${dessert.id}`));
-    // } else {
-    //   const newDessert = Object.assign({}, this.state);
-    //   this.props.createDessert(newDessert)
-    //   .then(dessert => this.props.history.push(`/desserts/${dessert.id}`));
-    // }
-
   }
 
   renderErrors() {
@@ -105,8 +78,7 @@ class DessertForm extends React.Component {
             <div className="homeNav">
               <header className="navBar">
                 <div className="userProfileLogo">
-                  <Link to="/home"><h1 id="slogan1">DESSRT</h1></Link>
-                  <h5 id="slogan">EAT SOCIALLY</h5>
+                  <Link to="/home"><h1 id="slogan1">DESSRT</h1><h5 id="slogan">EAT SOCIALLY</h5></Link>
                 </div>
                 <ul id="homeNavLinks">
                   <button id="logout" onClick={this.handleClick}>Logout</button>

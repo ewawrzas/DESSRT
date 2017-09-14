@@ -7,14 +7,15 @@ import { fetchSingleUser, updateUser } from '../../actions/user_actions';
 const mapStateToProps = (state, ownProps) => {
   let checkins;
   const user = state.entities.users[ownProps.match.params.userId];
+
   if (user) {
     checkins = user.checkins;
   } else {
     checkins = {}
   }
+
   const currentUser = state.session.currentUser;
   return { currentUser, user, checkins }
-
 };
 
 const mapDispatchToProps = (dispatch) => {

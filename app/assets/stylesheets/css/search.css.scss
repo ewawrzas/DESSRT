@@ -41,7 +41,7 @@
 }
 
 #addNewMsg {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   background: #ffccd5;
   display: flex;
   flex-direction: column;
@@ -92,6 +92,7 @@
 #resultsTitle {
   align-self: left;
   font-weight: 600;
+  margin: 0;
 }
 
 .dessertIcons {
@@ -103,6 +104,9 @@
   padding: 0;
 }
 
+#addNewMsg p {
+  color: grey;
+}
 
 .searchImgDiv {
   overflow: hidden;
