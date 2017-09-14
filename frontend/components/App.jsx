@@ -21,6 +21,7 @@ const App = () => (
       <ProtectedRoute path="/account" component={UpdateFormContainer} />
       <ProtectedRoute path="/desserts/:dessertId" component={DessertProfileContainer} />
       <ProtectedRoute path="/desserts" exact component={DessertFormContainer} />
+      <ProtectedRoute path="/search" exact component={DessertIndexContainer} />
       <Route path="/" exact component={LandingPage} />
     </Switch>
   </div>

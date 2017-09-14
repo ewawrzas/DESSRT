@@ -13,20 +13,41 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      search: ""
+    }
   }
 
   handleClick() {
     this.props.logout();
   }
 
-
-  componentDidMount() {
-    this.props.fetchAllDesserts();
-    this.props.fetchAllUsers();
+  handleChange(field) {
+    return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
-  render () {
+  handleKeyPress(e) {
+    debugger
+    // debugger
+    // e.preventDefault();
+    if (e.key === 'Enter') {
+    this.props.fetchAllDesserts(this.state).then(
+      () => this.setState({
+      search: ""
+      })
+    ).then(search => this.props.history.push(`/search`));
+    }
+  }
 
+  //
+  // componentDidMount() {
+  //   this.props.fetchAllDesserts();
+  //   this.props.fetchAllUsers();
+  // }
+
+  render () {
     return (
       <div className="greeting">
         <div className="navBackground">
@@ -40,6 +61,7 @@ class Greeting extends React.Component {
               <ul id="homeNavLinks">
                 <button id="logout" onClick={this.handleClick}>Logout</button>
                 <Link to="/desserts" id="addDessert">Add Dessert</Link>
+                <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
               </ul>
             </header>
 
@@ -47,7 +69,9 @@ class Greeting extends React.Component {
               <div className="feedUserImgDiv">
                 <img id="userFeedAvatar" src={this.props.currentUser.image}/>
               </div>
-              <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
+              <div className="searchContainer">
+                <input onKeyPress={ this.handleKeyPress } onChange={ this.handleChange('search') } className="searchBar"/>
+              </div>
             </div>
 
           </div>
@@ -62,7 +86,7 @@ class Greeting extends React.Component {
           <Route path ="/users/:userId" component={UserProfileContainer} />
           <Route path="/users/:userId/update" component={UpdateFormContainer} />
         </div>
-        
+
       </div>
     );
   }

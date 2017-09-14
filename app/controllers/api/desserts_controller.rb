@@ -14,14 +14,17 @@ class Api::DessertsController < ApplicationController
   end
 
   def index
-    @desserts = Dessert.all
+    @desserts = Dessert.search_any_word(dessert_params[:search])
+    debugger
     render :index
   end
+
+
 
   private
 
   def dessert_params
-    params.require(:dessert).permit(:description, :image_url, :name, :dessert_type, :dessert_origin, :avatar_image)
+    params.require(:dessert).permit(:description, :image_url, :name, :dessert_type, :dessert_origin, :avatar_image, :search)
   end
 
 end

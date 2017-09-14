@@ -9,6 +9,27 @@
   background-size: cover;
 }
 
+.searchBar {
+  background-image: image-url('musica-searcher.png');
+  background-size: 18px;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 96%;
+  height: 24px;
+  margin: 0;
+}
+
+.searchContainer {
+  border: 1px solid lightgrey;
+  margin: 5px 2px 5px 5px;
+  display: flex;
+  background-color: white;
+  align-self: center;
+  align-items: flex-start;
+  padding: 5px 2px 5px 8px;
+  border-radius: 5px;
+}
+
 #sloganLanding {
   font-size: 12px;
 }
@@ -27,6 +48,10 @@
   width: 100%;
   justify-content: center;
   padding-top: 15px;
+}
+
+.searchLanding {
+  border: 2px black solid;
 }
 
 .landingContent {

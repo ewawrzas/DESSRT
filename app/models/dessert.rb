@@ -1,4 +1,9 @@
 class Dessert < ApplicationRecord
+include PgSearch
+
+pg_search_scope :search_any_word,
+  against: [:name, :dessert_type, :description], 
+  using: { tsearch: { any_word: true } }
 
 DESSERT_TYPES = ['custard', "frozen", 'cake', 'cookie', 'pie', 'chocolate', 'pastry', 'candy', 'miscellaneous'].sort.freeze
 DESSERT_ORIGINS = ["homemade", "store", "cafe", "restaurant", "other"].sort.freeze

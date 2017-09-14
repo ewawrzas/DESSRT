@@ -15,9 +15,11 @@ export const createDessert = (dessert) => {
   });
 }
 
-export const fetchAllDesserts = () => (
-  $.ajax({
+export const fetchAllDesserts = (search) => {
+  debugger
+  return $.ajax({
     method: 'GET',
-    url: 'api/desserts'
-  })
-)
+    url: 'api/desserts',
+    data: { dessert: search }
+  });
+}

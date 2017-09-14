@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
     fetchAllUsers: () => dispatch(fetchAllUsers()),
-    fetchAllDesserts: () => dispatch(fetchAllDesserts()),
+    fetchAllDesserts: (search) => dispatch(fetchAllDesserts(search)),
     selectAllCheckins: () => dispatch(selectAllCheckins())
    };
 };

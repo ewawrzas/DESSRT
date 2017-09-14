@@ -7,7 +7,6 @@ import CheckinItem from './checkinItem'
 class CheckinIndex extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   componentDidMount() {
@@ -16,7 +15,7 @@ class CheckinIndex extends React.Component {
 
   render () {
     const { checkins, deleteCheckin, currentUser } = this.props
-debugger
+
     // const filteredCheckins = (this.props.location.pathname === `/users/${this.props.user.id}`) ? <Link to={`/account`}id="updateLink" >Account</Link> :
     // <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 

@@ -26,7 +26,7 @@ export const createDessert = dessert => dispatch => (
   }).fail(err => dispatch(receiveErrors(err.responseJSON)))
 );
 
-export const fetchAllDesserts = () => dispatch => (
-  DessertAPIUtil.fetchAllDesserts().then(desserts =>
+export const fetchAllDesserts = (search) => dispatch => (
+  DessertAPIUtil.fetchAllDesserts(search).then(desserts =>
   dispatch(receiveAllDesserts(desserts)))
 );

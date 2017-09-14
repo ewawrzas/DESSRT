@@ -30,7 +30,7 @@ class CheckinItem extends React.Component {
     const userLink = <Link to={`/users/${checkin.user_id}`} onClick={ () => window.scroll(0, 0) } ><span id="feedUserLink">{checkin.user}</span></Link>;
     const dessertLink = <Link to={`/desserts/${checkin.dessert_id}`} onClick={ () => window.scroll(0, 0) } ><span id="feedUserLink">{checkin.dessert}</span></Link>;
     const canDelete = (checkin.user_id === currentUser.id) ? 'deleteCheckin' : 'dontDelete'
-debugger
+
     return (
 
       <div className="checkinItem">

@@ -20,10 +20,12 @@ class DessertIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllDesserts();
+    debugger
+    this.props.fetchAllDesserts(search);
   }
 
   render () {
+    debugger
     return (
       <div>
 
