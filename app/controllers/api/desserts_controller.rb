@@ -15,7 +15,6 @@ class Api::DessertsController < ApplicationController
 
   def index
     @desserts = Dessert.search_any_word(dessert_params[:search])
-    debugger
     render :index
   end
 

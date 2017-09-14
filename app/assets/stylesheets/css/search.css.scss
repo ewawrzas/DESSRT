@@ -1,0 +1,129 @@
+.searchResults {
+  background-color: #f2f2f2;
+  background-size: cover;
+  min-height: 900px;
+}
+
+.dessertIdx {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dessertList {
+  padding: 16px 16px 0 16px;
+  background: white;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dessertItems {
+  list-style: none;
+  align-self: flex-start;
+}
+
+.dessertItems::after {
+  margin: 12px;
+}
+
+.dessertItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px lightgrey solid;
+  width: 630px;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+#addNewMsg {
+  margin-bottom: 12px;
+  background: #ffccd5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px 20px 20px;
+}
+
+.dessertItems::before {
+  border-top: 1px lightgrey solid;
+}
+
+.searchBar2 {
+  background-image: image-url('musica-searcher.png');
+  background-size: 35px;
+  padding-left: 39px;
+  background-position: left;
+  background-repeat: no-repeat;
+  width: 96%;
+  height: 45px;
+  margin: 0;
+}
+
+.searchContainer2 {
+  margin-top: 30px;
+  border: 10px solid #F9F9F9;
+  display: flex;
+  background-color: white;
+  align-self: center;
+  align-items: flex-start;
+  padding: 5px 2px 5px 8px;
+  width: 700px;
+}
+
+#searchButton {
+  background-color: #ffccd5;
+  margin-right: 10px;
+  border: none;
+  color: white;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  align-self: center;
+}
+
+#resultsTitle {
+  align-self: left;
+  font-weight: 600;
+}
+
+.dessertIcons {
+  display: flex;
+  flex-direction: row;
+  align-self: left;
+  align-items: center;
+  margin: 0px 10px 10px 0px;
+  padding: 0;
+}
+
+
+.searchImgDiv {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 3px solid pink;
+  margin: 10px;
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+}
+
+#itemInfo {
+  margin-bottom: 0;
+  font-size: 16px;
+  color: lightgrey;
+}
+
+#text1 {
+  display: flex;
+  align-items: center;
+  color: grey;
+  font-weight: bold;
+}

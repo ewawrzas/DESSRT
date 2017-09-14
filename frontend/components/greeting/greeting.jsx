@@ -29,9 +29,6 @@ class Greeting extends React.Component {
   }
 
   handleKeyPress(e) {
-    debugger
-    // debugger
-    // e.preventDefault();
     if (e.key === 'Enter') {
     this.props.fetchAllDesserts(this.state).then(
       () => this.setState({
@@ -40,12 +37,6 @@ class Greeting extends React.Component {
     ).then(search => this.props.history.push(`/search`));
     }
   }
-
-  //
-  // componentDidMount() {
-  //   this.props.fetchAllDesserts();
-  //   this.props.fetchAllUsers();
-  // }
 
   render () {
     return (
@@ -70,7 +61,11 @@ class Greeting extends React.Component {
                 <img id="userFeedAvatar" src={this.props.currentUser.image}/>
               </div>
               <div className="searchContainer">
-                <input onKeyPress={ this.handleKeyPress } onChange={ this.handleChange('search') } className="searchBar"/>
+                <input
+                  placeholder="Search for a dessert"
+                  onKeyPress={ this.handleKeyPress }
+                  onChange={ this.handleChange('search') }
+                  className="searchBar"/>
               </div>
             </div>
 

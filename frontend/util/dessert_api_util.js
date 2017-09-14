@@ -16,7 +16,6 @@ export const createDessert = (dessert) => {
 }
 
 export const fetchAllDesserts = (search) => {
-  debugger
   return $.ajax({
     method: 'GET',
     url: 'api/desserts',

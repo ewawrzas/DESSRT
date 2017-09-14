@@ -1,12 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
+
+
 
 const DessertItem = ({ dessert }) => (
-  <li className="dessertItem">
-    <Link to={`/desserts/${dessert.id}`}>
-      <span>{dessert.name}</span>
 
-    </Link>
+
+  <li className="dessertItem">
+    <div className="dessertIcons">
+    <div className="searchImgDiv">
+      <img id="userFeedAvatar" src={dessert.dessert_avatar} />
+    </div>
+    <div>
+      <Link to={`/desserts/${dessert.id}`} id="text1" ><span>{dessert.name}</span></Link>
+      <p id='itemInfo'>{dessert.description.slice(0, 30)}...</p>
+    </div>
+      </div>
+      <div className='dessertStats'>
+        <div id="dessertStatsTable">
+          <table className="dessertTable">
+            <tr>
+              <th id="left">Total</th>
+              <th id="right">Users</th>
+            </tr>
+            <tr>
+              <td id="left" className="topData">{dessert.num_checkins}</td>
+              <td id="right" className="topData">{dessert.num_users}</td>
+            </tr>
+            <tr>
+              <th id="left" className="bottom">Unique</th>
+              <th id="right" className="bottom">Added</th>
+            </tr>
+            <tr>
+              <td id="left" >{dessert.num_unique_users}</td>
+              <td id="right">{dessert.date_created}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
   </li>
 );
 
