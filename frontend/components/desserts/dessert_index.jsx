@@ -32,8 +32,7 @@ class DessertIndex extends React.Component {
 
             <header className="navBar">
               <div className="userProfileLogo">
-                <Link to="/home"><h1 id="slogan1">DESSRT</h1></Link>
-                <h5 id="slogan">EAT SOCIALLY</h5>
+                <Link to="/home"><h1 id="slogan1">DESSRT</h1><h5 id="slogan">EAT SOCIALLY</h5></Link>
               </div>
               <ul id="homeNavLinks">
                 <button id="logout" onClick={this.handleClick}>Logout</button>
@@ -63,7 +62,7 @@ class DessertIndex extends React.Component {
              </ul>
              <div id="addNewMsg">
                <p>{'Don\'t see the dessert you\'re looking for ?'}</p>
-               <Link to={`/desserts`} id="text1" ><span>{'Add a new dessert here'}</span></Link>
+               <Link to={`/desserts`} id="text1"><span>{'Add a new dessert here'}</span></Link>
              </div>
             <Route path ="/users/:userId" component={UserProfileContainer} />
             <Route path="/desserts/:dessertId" component={DessertProfileContainer} />

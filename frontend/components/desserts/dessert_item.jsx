@@ -10,10 +10,10 @@ const DessertItem = ({ dessert }) => (
   <li className="dessertItem">
     <div className="dessertIcons">
     <div className="searchImgDiv">
-      <img id="userFeedAvatar" src={dessert.dessert_avatar} />
+      <img id="dessertIdxAvatar" src={dessert.avatar_image} />
     </div>
     <div>
-      <Link to={`/desserts/${dessert.id}`} id="text1" ><span>{dessert.name}</span></Link>
+      <Link to={`/desserts/${dessert.id}`} id="text1" onClick={ () => window.scroll(0, 0) }><span>{dessert.name}</span></Link>
       <p id='itemInfo'>{dessert.description.slice(0, 30)}...</p>
     </div>
       </div>

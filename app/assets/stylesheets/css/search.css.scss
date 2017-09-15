@@ -119,6 +119,12 @@
   display: inline-block;
 }
 
+#dessertIdxAvatar {
+  display: inline-block;
+  object-fit: cover;
+  width: 80px;
+}
+
 #itemInfo {
   margin-bottom: 0;
   font-size: 16px;
