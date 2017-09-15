@@ -25,7 +25,6 @@ h4 {
 }
 
 
-
 .img1 {
   background-image: image-url('blurrypinkcupcakes.jpg');
   min-height: 1000px;
@@ -107,29 +106,36 @@ h4 {
 }
 
 .username {
+  background-image: image-url('001-profile.png');
+  background-position: 0.3em;
+  background-repeat: no-repeat;
   border: 1px solid lightgrey;
   margin: 5px 2px 5px 5px;
-  background-image: image-url('001-profile.png');
-  background-position: left;
-  background-repeat: no-repeat;
   display: flex;
   align-self: center;
   align-items: flex-start;
   padding: 5px 2px 5px 18px;
-
 }
 
+
 .password {
+  background-image: image-url('002-padlock.png');
+  background-position: 0.3em;
+  background-repeat: no-repeat;
   border: 1px solid lightgrey;
   margin: 5px 2px 5px 5px;
-  background-image: image-url('002-padlock.png');
-  background-position: left;
-  background-repeat: no-repeat;
   display: flex;
   align-self: center;
   align-items: flex-start;
-  padding: 5px 2px 5px 17px;
+  padding: 5px 2px 5px 18px;
+}
 
+#username {
+  padding-left: 10px;
+}
+
+#password {
+  padding-left: 10px;
 }
 
 .errDiv {
