@@ -38,6 +38,7 @@
   height: 59px;
   width: 60px;
   background-size: cover;
+  margin: 10px;
 }
 
 .ImgDiv {
@@ -128,7 +129,7 @@
 
 
 .inputFile{
-  width: 150px;
+  width: 10px;
 }
 
 .inputFile::-webkit-file-upload-button {
@@ -142,7 +143,7 @@
   display: inline-block;
   background: white;
   border-radius: 3px;
-  padding: 5px 180px 5px 25px;
+  padding: 5px 10px 5px 25px;
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
@@ -151,7 +152,7 @@
   font-size: 12pt;
   color: grey;
   position: relative;
-  right: 40px;
+  right: 100px;
 }
 
 
@@ -163,6 +164,7 @@
   align-self: center;
   align-items: flex-end;
   width: 100%;
+  padding-bottom: 10px;
 }
 
 .updateFormContent {

@@ -10,7 +10,6 @@ class UpdateForm extends React.Component {
 
     this.state = {
       username: "",
-      // password: "",
       imageFile: null,
       imageUrl: null
     };
@@ -46,13 +45,11 @@ class UpdateForm extends React.Component {
     e.preventDefault();
     const formData = new FormData();
     formData.append("user[username]", this.state.username);
-    // formData.append("user[password]", this.state.password);
     formData.append("user[image]", this.state.imageFile);
 
     this.props.updateUser(formData).then(
       () => this.setState({
         username: "",
-        // password: "",
         imageFile: ""
       })
     ).then(user => this.props.history.push(`/users/${this.props.currentUser.id}`)
@@ -79,7 +76,7 @@ class UpdateForm extends React.Component {
     const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/users/${this.props.user.id}/update`}id="updateLink" >Update</Link> :
     <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
-
+debugger
 
     const { user } = this.props
 
@@ -114,7 +111,7 @@ class UpdateForm extends React.Component {
                 <div id="avatarUpdate">
                   <span id="avatarTitle">Profile Picture
                     <div className="imgDiv">
-                      <img id="avatar" src={this.state.imageUrl} />
+                      <img id="avatar" src={this.props.currentUser.image} />
                     </div>
                   </span>
 
