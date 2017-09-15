@@ -6,6 +6,6 @@
     json.avatar asset_path(checkin.user.image.url)
     json.dessert_avatar asset_path(checkin.dessert.avatar_image.url)
     json.created_at checkin.date_created
-    json.image asset_path(checkin.image.url)
+    json.image checkin.image.url
   end
 end

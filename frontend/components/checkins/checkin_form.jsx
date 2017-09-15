@@ -36,11 +36,15 @@ class CheckinForm extends React.Component {
     e.preventDefault();
     const formData = new FormData();
     const dessert_id = this.props.match.params.dessertId;
+    // if (this.state.imageFile){
+    // } else {
+    //   formData.append("checkin[image]", )
+    // }
+    formData.append("checkin[image]", this.state.imageFile);
     formData.append("checkin[comment]", this.state.comment);
     formData.append("checkin[dessert_id]", dessert_id);
-    formData.append("checkin[image]", this.state.imageFile);
     formData.append("checkin[rating]", this.state.rating);
-
+debugger
     this.props.createCheckin(formData).then(
       () => this.setState({
         rating: 0,

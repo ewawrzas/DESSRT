@@ -7,10 +7,8 @@ class Checkin < ApplicationRecord
   belongs_to :user
   belongs_to :dessert
 
-  image_names = ["background1.jpg", "background2.jpg", "background3.jpg", "background4.jpg", "background5.jpg", "background6.jpg", "background7.jpg", "background8.jpg", "background9.jpg"]
-
-  has_attached_file :image, default_url: "default.png"
-  # validates_attachment :image, allow_nil: true
+  has_attached_file :image, default_url: 'default.png'
+  validates_attachment :image, allow_nil: true
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 

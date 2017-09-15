@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+  width: 25%;
 }
 
 .dessertTable {
@@ -14,7 +15,6 @@
 
 #dessertHeaderLeft {
   display: flex;
-
 }
 
 #dessertStatsTable {
@@ -53,6 +53,7 @@
   width: 100%;
   border-top: 1px solid lightgrey;
   color: grey;
+  margin-top: 10px;
 }
 
 .dessertHeaderCenter {

@@ -8,7 +8,7 @@ const DessertItem = ({ dessert }) => (
 
 
   <li className="dessertItem">
-    <div className="dessertIcons">
+    <div className="searchDessertIcons">
     <div className="searchImgDiv">
       <img id="dessertIdxAvatar" src={dessert.avatar_image} />
     </div>

@@ -32,7 +32,7 @@ class DessertProfile extends React.Component {
   }
 
   render () {
-    debugger
+  
     const { dessert } = this.props;
     if (!dessert) return null;
 
@@ -85,6 +85,7 @@ class DessertProfile extends React.Component {
                   <div className='dessertStats'>
                     <div id="dessertStatsTable">
                       <table className="dessertTable">
+                        <tbody>
                         <tr>
                           <th id="left">Total</th>
                           <th id="right">Users</th>
@@ -101,6 +102,7 @@ class DessertProfile extends React.Component {
                           <td id="left" >{dessert.num_unique_users}</td>
                           <td id="right">{dessert.date_created}</td>
                         </tr>
+                        </tbody>
                       </table>
                     </div>
                   </div>
