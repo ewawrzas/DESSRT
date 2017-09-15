@@ -44,7 +44,7 @@ class CheckinForm extends React.Component {
     formData.append("checkin[comment]", this.state.comment);
     formData.append("checkin[dessert_id]", dessert_id);
     formData.append("checkin[rating]", this.state.rating);
-debugger
+
     this.props.createCheckin(formData).then(
       () => this.setState({
         rating: 0,

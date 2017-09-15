@@ -103,6 +103,7 @@ class DessertForm extends React.Component {
                   <li>{`Please make your dessert name the proper case`}</li>
                   <li>{`Give your homemade desserts an original name. Using a commercial name will cause confusion`}</li>
                   <li>{`Please do not add non-dessert food items to DESSRT`}</li>
+                  <li>{`Please add a photo to your dessert`}</li>
                   <li>{`Please note that not following these guidelines may result in revoking your Dessert Creation privileges`}</li>
                 </ul>
 

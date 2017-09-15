@@ -28,6 +28,7 @@ Based on the social drinking app Untappd, DESSRT is a full-stack web application
 
   The landing page directs users to either the sign in form or sign up form, both of which are rendered by a single presentational component. Upon registration, user passwords are stored in the database as encrypted hashes produced by BCrypt. Session tokens are also randomly generated and stored in the user's cookies at the start of a new session. Backend validations require users to be signed in to access the app. Signed in users can update their accounts via the account settings form, which dispatches an API call to patch the newly inputted information to the database. Users can view other profiles, search for, create and view desserts and create and delete checkins as well.
 
+![alt text](https://github.com/ewawrzas/DESSRT/blob/master/app/assets/images/userprofile.png)
 
 ## Future Directions for the Project
 
@@ -41,4 +42,4 @@ Based on the social drinking app Untappd, DESSRT is a full-stack web application
 
 ### Search
 
-  Once friendships are added, I plan to expand the search functionality that will allow users to look for other users. 
+  Once friendships are added, I plan to expand the search functionality that will allow users to look for other users.

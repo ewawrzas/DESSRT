@@ -23,7 +23,7 @@ class UserProfile extends React.Component {
     const imgFile = file
     const formData = new FormData();
     formData.append("user[wall_image]", imgFile);
-    debugger
+    
     this.props.updateUser(formData)
   };
 
@@ -32,19 +32,19 @@ class UserProfile extends React.Component {
   }
 
   componentDidMount() {
-    debugger
+    
     this.props.fetchSingleUser(this.props.match.params.userId);
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger
+    
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
       this.props.fetchSingleUser(nextProps.match.params.userId);
     }
   }
 
   render () {
-    debugger
+    
     const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/account`}id="updateLink" >Account</Link> :
     <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 

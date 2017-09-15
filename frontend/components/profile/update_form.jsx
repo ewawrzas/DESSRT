@@ -76,7 +76,7 @@ class UpdateForm extends React.Component {
     const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/users/${this.props.user.id}/update`}id="updateLink" >Update</Link> :
     <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
 
-debugger
+
 
     const { user } = this.props
 
