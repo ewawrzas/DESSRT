@@ -60,7 +60,7 @@ class UserProfile extends React.Component {
         <div className="greeting">
 
           <div className="navBackground">
-          <div className="homeNav">
+          <div className="userNav">
 
             <header className="navBar">
               <div className="userProfileLogo">

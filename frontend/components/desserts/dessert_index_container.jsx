@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     logout: () => dispatch(logout()),
-    fetchAllDesserts: () => dispatch(fetchAllDesserts())
+    fetchAllDesserts: (search) => dispatch(fetchAllDesserts(search))
    };
 };
 

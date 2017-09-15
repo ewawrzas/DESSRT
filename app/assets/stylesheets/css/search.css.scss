@@ -122,7 +122,8 @@
 #dessertIdxAvatar {
   display: inline-block;
   object-fit: cover;
-  width: 80px;
+  min-width: 80px;
+  min-height: 80px;
 }
 
 #itemInfo {

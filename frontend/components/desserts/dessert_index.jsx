@@ -12,19 +12,37 @@ class DessertIndex extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {
+      search: ""
+    }
   }
 
+  handleChange(field) {
+    return (e) => this.setState({ [field]: e.currentTarget.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault(e)
+    this.props.fetchAllDesserts(this.state).then(
+      () => this.setState({
+      search: ""
+      })
+    ).then(search => this.props.history.push(`/search`));
+    }
+  
 
   handleClick() {
     this.props.logout();
   }
 
   componentDidMount() {
-    this.props.fetchAllDesserts(search);
+    this.props.fetchAllDesserts();
   }
 
   render () {
-    debugger
+
     return (
       <div>
         <div className="navBackground">
@@ -51,10 +69,13 @@ class DessertIndex extends React.Component {
         </div>
         <div className="searchResults">
           <div className="dessertIdx">
-            <div className="searchContainer2">
-              <input onKeyPress={ this.handleKeyPress } className="searchBar2"/>
+            <form onSubmit={ this.handleSubmit } className="searchContainer2">
+              <input
+                onChange={this.handleChange('search')}
+                placeholder="Search"
+                className="searchBar2"/>
               <button id="searchButton">Search</button>
-            </div>
+            </form>
             <div className="dessertList">
               <p id='resultsTitle'>{this.props.desserts.length} results</p>
               <ul className="dessertItems">
