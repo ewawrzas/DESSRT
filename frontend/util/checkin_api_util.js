@@ -6,12 +6,12 @@ export const fetchSingleCheckin = (id) => {
 }
 
 export const createCheckin = (checkin) => {
-  
+debugger
   return $.ajax({
     method: 'POST',
     url: 'api/checkins',
-    contentType: false,
-    processData: false,
+    // contentType: false,
+    // processData: false,
     data: checkin
   });
 }

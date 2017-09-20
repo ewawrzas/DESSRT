@@ -10,38 +10,39 @@ class CheckinForm extends React.Component {
     this.state = {
       rating: 5,
       comment: "",
-      image_url: "",
-      imageFile: null,
-      imageUrl: null
+      image_url: ""
+      // imageFile: null,
+      // imageUrl: null
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.updateFile = this.updateFile.bind(this);
+    // this.updateFile = this.updateFile.bind(this);
   };
 
-  updateFile (e) {
-    const file = e.currentTarget.files[0];
-    const fileReader = new FileReader();
-    fileReader.onloadend = function () {
-      this.setState({ imageFile: file, imageUrl: fileReader.result });
-    }.bind(this);
-
-    if (file) {
-      fileReader.readAsDataURL(file);
-    }
-  }
+  // updateFile (e) {
+  //   const file = e.currentTarget.files[0];
+  //   const fileReader = new FileReader();
+  //   fileReader.onloadend = function () {
+  //     this.setState({ imageFile: file, imageUrl: fileReader.result });
+  //   }.bind(this);
+  //
+  //   if (file) {
+  //     fileReader.readAsDataURL(file);
+  //   }
+  // }
 
   handleSubmit(e) {
     e.preventDefault();
-    const formData = new FormData();
-    const dessert_id = this.props.match.params.dessertId;
-    formData.append("checkin[image]", this.state.imageFile);
-    formData.append("checkin[comment]", this.state.comment);
-    formData.append("checkin[dessert_id]", dessert_id);
-    formData.append("checkin[rating]", this.state.rating);
-
-    this.props.createCheckin(formData).then(
+    const checkin = merge({}, this.state, {
+      dessert_id: this.props.match.params.dessertId
+    })
+    // const formData = new FormData();
+    // formData.append("checkin[image]", this.state.imageFile);
+    // formData.append("checkin[comment]", this.state.comment);
+    // formData.append("checkin[dessert_id]", dessert_id);
+    // formData.append("checkin[rating]", this.state.rating);
+    this.props.createCheckin({checkin}).then(
       () => this.setState({
         rating: 0,
         comment: "",
