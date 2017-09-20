@@ -32,7 +32,7 @@ class DessertProfile extends React.Component {
   }
 
   render () {
-  
+
     const { dessert } = this.props;
     if (!dessert) return null;
 
@@ -120,7 +120,7 @@ class DessertProfile extends React.Component {
                 </div>
                 <div className="dessertHeaderBottom">
                   <p id="dessertDescription">{dessert.description}</p>
-                  <Link to={`/desserts/${dessert.id}/checkin`} id="checkInLink"></Link>
+                  <Link to={`/desserts/${dessert.id}/checkin`} id="checkInLink">Checkin</Link>
                 </div>
               </div>
             </div>

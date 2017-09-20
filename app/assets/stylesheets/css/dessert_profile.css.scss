@@ -40,12 +40,12 @@
 }
 
 #checkInLink {
-  width: 70px;
+  width: 60px;
   height: 60px;
   background-image: image-url('checkin01.png');
   background-repeat: no-repeat;
-  background-size: 50px;
-  background-position: center;
+  background-size: 40px;
+  background-position: bottom;
   background-color: #ff8095;
   color: white;
   order: 3;
@@ -54,7 +54,9 @@
   align-self: flex-end;
   display: flex;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 2px;
+  font-variant: small-caps;
+  border: 5px solid #ff8095;
 }
 
 #checkInLink:hover {
