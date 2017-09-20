@@ -43,7 +43,7 @@ class CheckinItem extends React.Component {
             <span id='text'>{userLink} <p>is eating </p> {dessertLink} </span>
           </div>
           <div className="checkinDesImgDiv">
-            <img id="userFeedAvatar" src={checkin.dessert_avatar} />
+            <img id="userFeedDesAvatar" src={checkin.dessert_avatar} />
           </div>
         </div>
 

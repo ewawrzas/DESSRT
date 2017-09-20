@@ -48,9 +48,3 @@ html {
 body {
   min-height: 100%;
 }
-
-/*.group:after {
-  content: "";
-  display: block;
-  clear: both;
-}*/
