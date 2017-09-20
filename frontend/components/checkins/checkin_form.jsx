@@ -36,10 +36,6 @@ class CheckinForm extends React.Component {
     e.preventDefault();
     const formData = new FormData();
     const dessert_id = this.props.match.params.dessertId;
-    // if (this.state.imageFile){
-    // } else {
-    //   formData.append("checkin[image]", )
-    // }
     formData.append("checkin[image]", this.state.imageFile);
     formData.append("checkin[comment]", this.state.comment);
     formData.append("checkin[dessert_id]", dessert_id);
@@ -107,14 +103,6 @@ class CheckinForm extends React.Component {
                   onChange={ this.handleChange('comment') }
                   value={ this.state.comment }
                   />
-
-                <div className="checkinIconContainer">
-                <input
-                  className="checkinInputFile"
-                  type="file"
-                  onChange={ this.updateFile }
-                  />
-                </div>
 
                 <div className="ratingSlider">
                   <input
