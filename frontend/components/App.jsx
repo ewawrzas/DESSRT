@@ -3,12 +3,13 @@ import GreetingContainer from './greeting/greeting_container';
 import AuthFormContainer from './authform/auth_form_container';
 import { Route, Link, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import LandingPage from './landing'
+import LandingContainer from './landing/landing_container'
 import UpdateFormContainer from './profile/update_form_container';
 import UserProfileContainer from './profile/user_profile_container';
 import DessertIndexContainer from './desserts/dessert_index_container';
 import DessertProfileContainer from './desserts/dessert_profile_container';
 import DessertFormContainer from './desserts/dessert_form_container';
+
 
 const App = () => (
   <div>
@@ -22,7 +23,7 @@ const App = () => (
       <ProtectedRoute path="/desserts/:dessertId" component={DessertProfileContainer} />
       <ProtectedRoute path="/desserts" exact component={DessertFormContainer} />
       <ProtectedRoute path="/search" exact component={DessertIndexContainer} />
-      <Route path="/" exact component={LandingPage} />
+      <AuthRoute path="/" exact component={LandingContainer} />
     </Switch>
   </div>
 );

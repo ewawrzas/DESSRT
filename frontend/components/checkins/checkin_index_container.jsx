@@ -7,6 +7,7 @@ from '../../actions/checkin_actions';
 import { selectAllCheckins, selectUserCheckins, selectDessertCheckins } from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
+  debugger
   return {
     currentUser: state.session.currentUser,
     checkins: selectAllCheckins(state)

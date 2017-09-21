@@ -1,7 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class LandingPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: "",
+    };
+    this.handleDemo = this.handleDemo.bind(this);
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    this.props.demoLogin(this.props.demoUser);
+    this.setState({username: "", password: ""})
+  }
 
   render () {
     return (
@@ -12,6 +26,7 @@ class LandingPage extends React.Component {
             <ul id="landingLinks">
               <li id="landingSignUp"><Link to="/signup">CREATE AN ACCOUNT</Link></li>
               <li id="landingSignIn"><Link to="/login">{'SIGN IN'}</Link></li>
+              <li id="landingSignIn"><button onClick={this.handleDemo}>Demo</button></li>
             </ul>
           </header>
           <div className="logo">
@@ -27,4 +42,4 @@ class LandingPage extends React.Component {
 
 
 
-export default LandingPage;
+export default (LandingPage);
