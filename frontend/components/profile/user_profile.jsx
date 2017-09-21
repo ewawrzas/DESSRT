@@ -50,10 +50,7 @@ class UserProfile extends React.Component {
 
     const upload = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? "profileInputFile" : "hiddenUploadIcon"
 
-      const image = (this.props.location.pathname === `/users/${this.props.currentUser.id}` ||
-      `/users/account`) ? "userProfileContent1" : "userProfileContent2"
-
-      const { user, currentUser, deleteCheckin, fetchAllCheckins } = this.props;
+    const { user, currentUser, deleteCheckin, fetchAllCheckins } = this.props;
 
       if (!user) return null;
 
@@ -84,7 +81,7 @@ class UserProfile extends React.Component {
 
           <div className="profilePage">
 
-            <div className={image}>
+            <div className='userProfileContent1'>
               <img id="wallImg" src={this.props.user.wall_image}/>
               <div id="prof">
                 <div className="userImgDiv">
