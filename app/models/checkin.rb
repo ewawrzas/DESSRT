@@ -7,7 +7,7 @@ class Checkin < ApplicationRecord
   belongs_to :user
   belongs_to :dessert
 
-  has_attached_file :image, default_url: 'default.png'
+  has_attached_file :image
   validates_attachment :image, allow_nil: true
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 

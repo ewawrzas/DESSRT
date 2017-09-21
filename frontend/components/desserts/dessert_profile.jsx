@@ -33,8 +33,11 @@ class DessertProfile extends React.Component {
 
   render () {
 
-    const { dessert } = this.props;
+    const { dessert, deleteCheckin, currentUser, fetchAllCheckins } = this.props;
     if (!dessert) return null;
+
+    const displayCheckins = (dessert.checkins.length <= 0) ? 'empty' : 'checkinList'
+    const displayActivity = (dessert.checkins.length <= 0) ? 'No Recent Activity' : `${dessert.name} Recent Activity`
 
     const starRating = `rating${dessert.avg_rating}`;
 
@@ -126,9 +129,9 @@ class DessertProfile extends React.Component {
             </div>
 
             <div className="checkinsIdx">
-                <div className="checkinList">
-                  {dessert.checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} deleteCheckin={deleteCheckin} currentUser={this.props.currentUser} fetchAllCheckins={fetchAllCheckins} />)}
-                  <h2 id="feed">Recent Activity</h2>
+                <div className={displayCheckins}>
+                  {dessert.checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} deleteCheckin={deleteCheckin}  fetchAllCheckins={fetchAllCheckins} currentUser={this.props.currentUser} />)}
+                  <h2 id="feed">{displayActivity}</h2>
                 </div>
               </div>
 
