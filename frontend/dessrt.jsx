@@ -15,16 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
-
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-
-  window.fetchSingleCheckin = fetchSingleCheckin;
-  window.fetchAllCheckins = fetchAllCheckins;
-  window.createCheckin = createCheckin;
-  window.updateCheckin = updateCheckin;
-  window.deleteCheckin = deleteCheckin;
-
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
 });
