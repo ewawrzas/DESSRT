@@ -17,6 +17,7 @@ class CheckinIndex extends React.Component {
 
     const { checkins, deleteCheckin, currentUser, fetchAllCheckins } = this.props
 
+
     return (
       <div>
 
