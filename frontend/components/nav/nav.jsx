@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, NavLink, Link } from 'react-router-dom';
+import { Route, NavLink, Link, withRouter } from 'react-router-dom';
 import NavContainer from './nav_container';
 
 
@@ -44,10 +44,10 @@ class Nav extends React.Component {
               <Link to="/home"><h1 id="slogan1">DESSRT</h1><h5 id="slogan">EAT SOCIALLY</h5></Link>
             </div>
             <ul id="homeNavLinks">
-              <button id="logout" onClick={this.handleClick}>Logout</button>
-              <Link to="/desserts" id="addDessert">Add Dessert</Link>
-              <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
-              <Link to={`/account`}id="updateLink" >Account</Link>
+              <li><button id="logout" onClick={this.handleClick}>Logout</button></li>
+              <li><Link to="/desserts" id="addDessert">Add Dessert</Link></li>
+              <li><Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link></li>
+              <li><Link to={`/account`}id="updateLink" >Account</Link></li>      
             </ul>
           </header>
           <div className="searchDrop">
@@ -57,7 +57,7 @@ class Nav extends React.Component {
               <div className="searchContainer">
                 <input
                   placeholder="Search for a dessert"
-                  onKeyPress={ this.handleKeyPress }
+                  onKeyPress={ this.handleKeyPress.bind(this) }
                   onChange={ this.handleChange('search') }
                   className="searchBar"/>
               </div>
@@ -69,4 +69,4 @@ class Nav extends React.Component {
   }
 }
 
-export default Nav;
+export default withRouter(Nav);

@@ -8,7 +8,6 @@ import NavContainer from '../nav/nav_container'
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
-    // this.handleClick = this.handleClick.bind(this);
     this.updateFile = this.updateFile.bind(this);
     this.updateImage = this.updateImage.bind(this);
   }
@@ -28,17 +27,12 @@ class UserProfile extends React.Component {
     this.props.updateUser(formData)
   };
 
-  // handleClick() {
-  //   this.props.logout();
-  // }
 
   componentDidMount() {
-
     this.props.fetchSingleUser(this.props.match.params.userId);
   }
 
   componentWillReceiveProps(nextProps) {
-
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
       this.props.fetchSingleUser(nextProps.match.params.userId);
     }

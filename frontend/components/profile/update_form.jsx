@@ -16,13 +16,7 @@ class UpdateForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateFile = this.updateFile.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
   };
-  //
-  // handleClick() {
-  //   this.props.logout();
-  // }
-
 
   updateFile (e) {
     const file = e.currentTarget.files[0];
