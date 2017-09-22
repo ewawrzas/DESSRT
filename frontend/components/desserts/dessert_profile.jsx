@@ -3,7 +3,7 @@ import { Route, NavLink, Link } from 'react-router-dom';
 import CheckinFormContainer from '../checkins/checkin_form_container';
 import CheckinIndexContainer from '../checkins/checkin_index_container';
 import CheckinItem from '../checkins/checkinItem';
-
+import NavContainer from '../nav/nav_container';
 
 class DessertProfile extends React.Component {
   constructor(props) {
@@ -14,11 +14,7 @@ class DessertProfile extends React.Component {
       num_users: null,
       num_unique_users: null
     }
-    this.handleClick = this.handleClick.bind(this);
-  }
 
-  handleClick() {
-    this.props.logout();
   }
 
   componentDidMount() {
@@ -44,28 +40,7 @@ class DessertProfile extends React.Component {
       return (
         <div className="dessertProfile">
 
-          <div className="navBackground">
-            <div className="homeNav">
-
-              <header className="navBar">
-                <div className="userProfileLogo">
-                  <Link to="/home"><h1 id="slogan1">DESSRT</h1><h5 id="slogan">EAT SOCIALLY</h5></Link>
-                </div>
-                <ul id="homeNavLinks">
-                  <button id="logout" onClick={this.handleClick}>Logout</button>
-                  <Link to="/desserts" id="addDessert">Add Dessert</Link>
-                </ul>
-              </header>
-
-              <div className="searchDrop">
-                <div className="feedUserImgDiv">
-                  <img id="userFeedAvatar" src={this.props.currentUser.image}/>
-                </div>
-                <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
-              </div>
-
-            </div>
-          </div>
+        <NavContainer />
 
           <div className="dessertPage">
             <div id="dessert">

@@ -3,11 +3,12 @@ import { Route, NavLink, Link } from 'react-router-dom';
 import updateFormContainer from '../profile/update_form_container';
 import CheckinIndexContainer from '../checkins/checkin_index_container';
 import CheckinItem from '../checkins/checkinItem'
+import NavContainer from '../nav/nav_container'
 
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
     this.updateFile = this.updateFile.bind(this);
     this.updateImage = this.updateImage.bind(this);
   }
@@ -27,9 +28,9 @@ class UserProfile extends React.Component {
     this.props.updateUser(formData)
   };
 
-  handleClick() {
-    this.props.logout();
-  }
+  // handleClick() {
+  //   this.props.logout();
+  // }
 
   componentDidMount() {
 
@@ -57,27 +58,7 @@ class UserProfile extends React.Component {
       return (
         <div className="greeting">
 
-          <div className="navBackground">
-          <div className="userNav">
-
-            <header className="navBar">
-              <div className="userProfileLogo">
-                <Link to="/home"><h1 id="slogan1">DESSRT</h1><h5 id="slogan">EAT SOCIALLY</h5></Link>
-              </div>
-              <ul id="homeNavLinks">
-                <button id="logout" onClick={this.handleClick}>Logout</button>
-                <Link to="/desserts" id="addDessert">Add Dessert</Link>
-              </ul>
-            </header>
-            <div className="searchDrop">
-                <div className="feedUserImgDiv">
-                  <img id="userFeedAvatar" src={this.props.currentUser.image}/>
-                </div>
-                {link}
-            </div>
-
-          </div>
-        </div>
+          <NavContainer />
 
           <div className="profilePage">
 

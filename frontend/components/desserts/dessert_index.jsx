@@ -6,12 +6,11 @@ import DessertProfileContainer from './dessert_profile_container';
 import DessertFormContainer from './dessert_form_container';
 import UserProfileContainer from '../profile/user_profile_container';
 import DessertForm from './dessert_form';
-
+import NavContainer from '../nav/nav_container';
 
 class DessertIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
@@ -31,11 +30,7 @@ class DessertIndex extends React.Component {
       })
     ).then(search => this.props.history.push(`/search`));
     }
-  
 
-  handleClick() {
-    this.props.logout();
-  }
 
   componentDidMount() {
     this.props.fetchAllDesserts();
@@ -45,28 +40,8 @@ class DessertIndex extends React.Component {
 
     return (
       <div>
-        <div className="navBackground">
-          <div className="homeNav">
+        <NavContainer />
 
-            <header className="navBar">
-              <div className="userProfileLogo">
-                <Link to="/home"><h1 id="slogan1">DESSRT</h1><h5 id="slogan">EAT SOCIALLY</h5></Link>
-              </div>
-              <ul id="homeNavLinks">
-                <button id="logout" onClick={this.handleClick}>Logout</button>
-                <Link to="/desserts" id="addDessert">Add Dessert</Link>
-              </ul>
-            </header>
-
-            <div className="searchDrop">
-              <div className="feedUserImgDiv">
-                <img id="userFeedAvatar" src={this.props.currentUser.image}/>
-              </div>
-              <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
-            </div>
-
-          </div>
-        </div>
         <div className="searchResults">
           <div className="dessertIdx">
             <form onSubmit={ this.handleSubmit } className="searchContainer2">

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
 import { merge }from 'lodash';
-
+import NavContainer from '../nav/nav_container'
 
 class UpdateForm extends React.Component {
   constructor(props) {
@@ -16,12 +16,12 @@ class UpdateForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateFile = this.updateFile.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   };
-
-  handleClick() {
-    this.props.logout();
-  }
+  //
+  // handleClick() {
+  //   this.props.logout();
+  // }
 
 
   updateFile (e) {
@@ -73,34 +73,13 @@ class UpdateForm extends React.Component {
   };
 
   render() {
-    const link = (this.props.location.pathname === `/users/${this.props.currentUser.id}`) ? <Link to={`/users/${this.props.user.id}/update`}id="updateLink" >Update</Link> :
-    <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
-
-
 
     const { user } = this.props
 
       return (
         <div>
-          <div className="navBackground">
-        <div className="homeNav">
-          <header className="navBar">
-            <div className="userProfileLogo">
-              <Link to="/home"><h1 id="slogan1">DESSRT</h1><h5 id="slogan">EAT SOCIALLY</h5></Link>
-            </div>
-            <ul id="homeNavLinks">
-              <button id="logout" onClick={this.handleClick}>Logout</button>
-              <Link to="/desserts" id="addDessert">Add Dessert</Link>
-            </ul>
-          </header>
-          <div className="searchDrop">
-            <div className="feedUserImgDiv">
-              <img id="userFeedAvatar" src={this.props.currentUser.image}/>
-            </div>
-              {link}
-          </div>
-          </div>
-        </div>
+
+        <NavContainer />
 
         <div className="userAccountDiv">
           <div className="updateDiv">

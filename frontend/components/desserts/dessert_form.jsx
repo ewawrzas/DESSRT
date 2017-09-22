@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 import { merge }from 'lodash'
+import NavContainer from '../nav/nav_container'
 
 const DESSERT_TYPES = ["What is the dessert type?", 'custard', "frozen", 'cake', 'cookie', 'pie', 'chocolate', 'pastry', 'candy', 'miscellaneous']
 const DESSERT_ORIGINS = ["Where did the dessert come from?", "homemade", "store", "cafe", 'restaurant', "other"]
@@ -19,14 +20,9 @@ class DessertForm extends React.Component {
       imageFile: null,
       imageUrl: null
     };
-    this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateFile = this.updateFile.bind(this);
   };
-
-  handleClick() {
-    this.props.logout();
-  }
 
   handleChange(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value });
@@ -73,25 +69,7 @@ class DessertForm extends React.Component {
       return (
 
         <div>
-
-          <div className="navBackground">
-            <div className="homeNav">
-              <header className="navBar">
-                <div className="userProfileLogo">
-                  <Link to="/home"><h1 id="slogan1">DESSRT</h1><h5 id="slogan">EAT SOCIALLY</h5></Link>
-                </div>
-                <ul id="homeNavLinks">
-                  <button id="logout" onClick={this.handleClick}>Logout</button>
-                </ul>
-              </header>
-              <div className="searchDrop">
-                <div className="feedUserImgDiv">
-                  <img id="userFeedAvatar" src={this.props.currentUser.image}/>
-                </div>
-                <Link to={`/users/${this.props.currentUser.id}`} id="userLink">My Profile</Link>
-              </div>
-            </div>
-          </div>
+          <NavContainer />
 
           <div className="dessertsDiv">
             <div className="createDessert">
