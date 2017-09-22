@@ -83,7 +83,21 @@
   top: 40px;
 }
 
-#landingLinks li {
+#landingLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+#landingLinks a:hover {
+  opacity: .5;
+}
+
+#landingLinks button:hover {
+  opacity: .5;
+}
+
+#landingLinks a {
   z-index: 1;
   background-color: #E7E9EB;
   color: #9E9E9E;
@@ -97,11 +111,24 @@
   border-radius: 5px 5px 5px 5px;
   margin-left: 8px;
   margin-right: 4px;
-  border: 1px #9E9E9E solid;
+  border: 1px white solid;
   opacity: 0.9;
 }
 
-#landingLinks li:hover {
-  opacity: 0.4;
-  border: 1px solid white;
+#landingLinks button {
+  z-index: 1;
+  background-color: #E7E9EB;
+  color: #9E9E9E;
+  padding: 10px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 5px 5px 5px 5px;
+  margin-left: 8px;
+  margin-right: 4px;
+  border: 1px white solid;
+  opacity: 0.9;
 }

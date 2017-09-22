@@ -23,6 +23,7 @@ header {
   color: grey;
   margin: 0;
   padding: 10px;
+  background-color: transparent;
 }
 
 #homeNavLinks li:hover {
@@ -33,36 +34,7 @@ h1 {
   display: grid;
 }
 
-#navSignIn {
-  background-color: #ffccd5;
-  border: none;
-  color: white;
-  padding: 5px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  font-size: 16px;
-  position: relative;
-  margin-right: 25px;
-  align-items: center;
-  border-radius: 5px 5px 5px 5px;
-}
-
-#navSignUp {
-  background-color: #ffccd5;
-  border: none;
-  color: white;
-  padding: 5px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  font-size: 16px;
-  position: relative;
-  margin-right: 25px;
-  align-items: center;
-  border-radius: 5px 5px 5px 5px;
-}
 
 li:hover {
-  background-color: lightgrey;
+  // background-color: lightgrey;
 }
