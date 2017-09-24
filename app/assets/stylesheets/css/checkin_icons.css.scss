@@ -2,70 +2,32 @@
   display:none;
 }
 
-#rating1{
-  background-image: image-url('donut2.png');
-  background-repeat: repeat-x;
-  height: 30px;
-  width: 24px;
+#rating1, #rating2, #rating3, #rating4, #rating5 {
   text-align: top;
-  background-position: bottom;
-  font-variant: small-caps;
-  font-weight: bold;
+  background-position: bottom right;
   color: #ff8095;
+  background-repeat: repeat-x;
+  height: 70px;
+  padding-top: 10px;
+  background-image: image-url('donut2.png');
+}
+
+#rating1{
+  width: 24px;
 }
 
 #rating2 {
-  background-image: image-url('donut2.png');
-  background-repeat: repeat-x;
-  height: 30px;
   width: 48px;
-  text-align: left;
-  background-position: bottom right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
-  color: #ff8095;
-  padding-top: 10px;
 }
 
 #rating3{
-  background-image: image-url('donut2.png');
-  background-repeat: repeat-x;
-  height: 70px;
   width: 72px;
-  text-align: left;
-  background-position: bottom right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
-  color: #ff8095;
-  padding-top: 10px;
 }
 
 #rating4{
-  background-image: image-url('donut2.png');
-  background-repeat: repeat-x;
-  height: 57px;
   width: 96px;
-  text-align: left;
-  background-position: bottom right;
-  font-size: 16px;
-  font-variant: small-caps;
-  font-weight: bold;
-  color: #ff8095;
-  padding-top: 10px;
 }
 
 #rating5{
-  background-image: image-url('donut2.png');
-  background-repeat: repeat-x;
-  height: 57px;
   width: 120px;
-  text-align: left;
-  background-position: bottom right;
-  font-size: 16px;
-  font-variant: small-caps;
-  font-weight: bold;
-  color: #ff8095;
-  padding-top: 10px;
 }
