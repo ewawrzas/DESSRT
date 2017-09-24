@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Footer from '../footer'
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class LandingPage extends React.Component {
             <p id="landingCopy">Discover and share your favorite desserts</p>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
