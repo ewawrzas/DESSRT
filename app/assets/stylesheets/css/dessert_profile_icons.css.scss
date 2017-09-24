@@ -1,222 +1,83 @@
-#chocolate{
+#chocolate, #cookie, #restaurant, #pie, #cake, #pastry, #miscellaneous, #frozen, #custard, #store, #homemade, #cafe, #candy, #other {
   height: 45px;
-  width: 95px;
   text-align: right;
   font-size: 15px;
   font-variant: small-caps;
   font-weight: bold;
-  background-image: image-url('chocolate.png');
   background-repeat: no-repeat;
   background-size: 30px;
   padding: 2px 12px 10px 4px;
   color: #4d4d4d;
   margin-top: 4px;
+}
+
+#chocolate{
+  width: 95px;
+  background-image: image-url('chocolate.png');
 }
 
 #cookie{
-  height: 45px;
   width: 73px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('icons8-Cookie-50.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #restaurant{
-  height: 45px;
   width: 103px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('icons8-Waiter-50.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #pie{
-  height: 45px;
   width: 50px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('icons8-Pie-50.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #cake{
-  height: 45px;
   width: 60px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('003-cake-slice-with-cherry.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #pastry{
-  height: 45px;
   width: 75px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('icons8-Doughnut-50.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #miscellaneous{
-  height: 45px;
   width: 115px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('001-marshmallow-with-stick.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #frozen{
-  height: 45px;
   width: 70px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('005-food.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #custard{
-  height: 45px;
   width: 80px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('custard.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #store{
-  height: 45px;
   width: 70px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('003-shopping-cart.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #homemade{
-  height: 45px;
   width: 100px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('001-electric-mixer.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #cafe{
-  height: 45px;
   width: 55px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('002-coffee-cup.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #candy{
   height: 60px;
   width: 70px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('toffee.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
 }
 
 #other {
-  height: 45px;
   width: 65px;
-  text-align: right;
-  font-size: 15px;
-  font-variant: small-caps;
-  font-weight: bold;
   background-image: image-url('001-fruit.png');
-  background-repeat: no-repeat;
-  background-size: 30px;
-  padding: 2px 12px 10px 4px;
-  color: #4d4d4d;
-  margin-top: 4px;
-}
-
-#rating41{
-  background-image: image-url('donut2.png');
-  background-repeat: repeat-x;
-  background-size: 20px;
-  height: 30px;
-  width: 80px;
-  background-position: bottom right;
-  color: #ff8095;
-  display: inline-block;
-  margin: 0px 5px 10px 5px;
-  margin-top: 4px;
 }

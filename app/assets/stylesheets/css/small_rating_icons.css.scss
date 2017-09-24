@@ -1,5 +1,4 @@
-#rating01{
-  background-image: image-url('tray.png');
+#rating01, #rating41, #rating31, #rating21, #rating11, #rating51 {
   background-repeat: repeat-x;
   background-size: 20px;
   height: 30px;
@@ -8,64 +7,30 @@
   color: #ff8095;
   display: inline-block;
   margin: 0px 5px 10px 5px;
+  background-image: image-url('donut2.png');
+}
+
+#rating01{
+  background-image: image-url('tray.png');
+
 }
 
 #rating41{
-  background-image: image-url('donut2.png');
-  background-repeat: repeat-x;
-  background-size: 20px;
-  height: 30px;
   width: 80px;
-  background-position: bottom right;
-  color: #ff8095;
-  display: inline-block;
-  margin: 0px 5px 10px 5px;
 }
 
 #rating31{
-  background-image: image-url('donut2.png');
-  background-repeat: repeat-x;
-  background-size: 20px;
-  height: 30px;
   width: 60px;
-  background-position: bottom right;
-  color: #ff8095;
-  display: inline-block;
-  margin: 0px 5px 10px 5px;
 }
 
 #rating21{
-  background-image: image-url('donut2.png');
-  background-repeat: repeat-x;
-  background-size: 20px;
-  height: 30px;
   width: 40px;
-  background-position: bottom right;
-  color: #ff8095;
-  display: inline-block;
-  margin: 0px 5px 10px 5px;
 }
 
 #rating11{
-  background-image: image-url('donut2.png');
-  background-repeat: repeat-x;
-  background-size: 20px;
-  height: 30px;
   width: 20px;
-  background-position: bottom right;
-  color: #ff8095;
-  display: inline-block;
-  margin: 0px 5px 10px 5px;
 }
 
 #rating51{
-  background-image: image-url('donut2.png');
-  background-repeat: repeat-x;
-  background-size: 20px;
-  height: 30px;
   width: 100px;
-  background-position: bottom right;
-  color: #ff8095;
-  display: inline-block;
-  margin: 0px 5px 10px 5px;
 }
