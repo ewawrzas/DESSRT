@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
-import UserProfile from './user_profile'
+import UserProfile from './user_profile';
 import { fetchSingleUser, updateUser } from '../../actions/user_actions';
 import { deleteCheckin, fetchAllCheckins } from '../../actions/checkin_actions';
 
@@ -21,7 +20,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchSingleUser: (id) => dispatch(fetchSingleUser(id)),
-    logout: () => dispatch(logout()),
     updateUser: (user) => dispatch(updateUser(user)),
     fetchAllCheckins: () => dispatch(fetchAllCheckins()),
     deleteCheckin: (checkin) => dispatch(deleteCheckin(checkin))

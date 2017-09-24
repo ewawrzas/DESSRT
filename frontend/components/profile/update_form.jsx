@@ -73,45 +73,43 @@ class UpdateForm extends React.Component {
       return (
         <div>
 
-        <NavContainer />
+          <NavContainer />
 
-        <div className="userAccountDiv">
-          <div className="updateDiv">
-
+          <div className="userAccountDiv">
             <form onSubmit={ this.handleSubmit } className="updateForm" >
               <p id="updateTitle">Profile Settings</p>
               <div className="updateFormContent">
+
                 <div id="avatarUpdate">
                   <span id="avatarTitle">Profile Picture
                     <div className="imgDiv">
                       <img id="avatar" src={this.props.currentUser.image} />
                     </div>
                   </span>
-
-                  <input className="inputFile" type="file" onChange={ this.updateFile }/>
+                  <input className="inputFile"
+                    type="file"
+                    onChange={ this.updateFile }
+                    />
                 </div>
-                <div className="updateInputs">
 
+                <div className="updateInputs">
                   <span className="updateLabel">Username
                     <input
-                        type="text"
-                        id="usernameChange"
-                        onChange={ this.handleChange('username') }
-                        value={ this.state.username }
-                        />
-                    </span>
-
-                  </div>
-                <div className="userErrDiv">
-                  { this.renderErrors() }
+                      type="text"
+                      id="usernameChange"
+                      onChange={ this.handleChange('username') }
+                      value={ this.state.username }
+                      />
+                  </span>
                 </div>
+
+                <div className="userErrDiv">{ this.renderErrors() }</div>
                 <button id="updateUserBtn">Update Settings</button>
 
-                </div>
+              </div>
             </form>
-
           </div>
-        </div>
+
         </div>
       )
   }

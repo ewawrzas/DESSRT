@@ -1,6 +1,4 @@
 import { connect } from 'react-redux';
-
-import { logout } from '../../actions/session_actions';
 import { fetchAllUsers } from '../../actions/user_actions';
 import { fetchAllDesserts } from '../../actions/dessert_actions';
 import Greeting from './greeting';
@@ -18,7 +16,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    logout: () => dispatch(logout()),
     fetchAllUsers: () => dispatch(fetchAllUsers()),
     fetchAllDesserts: (search) => dispatch(fetchAllDesserts(search)),
     selectAllCheckins: () => dispatch(selectAllCheckins())
