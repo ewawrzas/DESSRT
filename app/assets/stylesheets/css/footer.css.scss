@@ -1,10 +1,22 @@
 .footer {
   align-self: flex-end;
   width: 100%;
+  background: rgba(255,255,255, 0.5);
 }
 
 .footerLinks {
   display: flex;
   flex-direction: row;
   list-style: none;
+  justify-content: center;
+  color: grey;
+}
+
+.footerLinks li {
+  padding: 10px;
+}
+
+.footerLinks li:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
