@@ -2,16 +2,25 @@
   align-self: flex-end;
   width: 100%;
   background: rgba(255,255,255, 0.5);
-  height: 50px;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: grey;
+  font-size: 12px;
+  align-items: center;
+  padding: 0px 20px 0px 0px;
+}
+
+.footer p {
+  margin-left: 40px;
 }
 
 .footerLinks {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   list-style: none;
-  justify-content: center;
-  color: grey;
-  font-size: 12px;
 }
 
 .footerLinks li {
