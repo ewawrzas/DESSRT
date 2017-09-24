@@ -59,6 +59,9 @@ class CheckinForm extends React.Component {
     };
 
   render() {
+
+    const { rating } = this.state
+
       return (
 
         <div id="id01" className="modal">
@@ -94,6 +97,7 @@ class CheckinForm extends React.Component {
                     value={ this.state.rating }
                     onChange={ this.handleChange('rating') }
                     />
+                  <div>Rating: {rating}</div>
                 </div>
 
                 <button id="confirmCheckinBtn">Confirm</button>
