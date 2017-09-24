@@ -37,6 +37,7 @@ class UpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    
     const formData = new FormData();
     formData.append("user[username]", this.state.username);
     formData.append("user[image]", this.state.imageFile);

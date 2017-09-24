@@ -40,7 +40,7 @@ class DessertProfile extends React.Component {
       return (
         <div className="dessertProfile">
 
-        <NavContainer />
+          <NavContainer />
 
           <div className="dessertPage">
             <div id="dessert">

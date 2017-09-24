@@ -17,10 +17,12 @@ class CheckinIndex extends React.Component {
 
     const { checkins, deleteCheckin, currentUser, fetchAllCheckins } = this.props
 
+    const firstCheckins = checkins.slice(checkins.length - 10)
+
     return (
       <div className="checkinsIdx">
         <div className="checkinList">
-          {checkins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} deleteCheckin={deleteCheckin} currentUser={currentUser} fetchAllCheckins={fetchAllCheckins} />)}
+          {firstCheckins.map(checkin => <CheckinItem key={checkin.id} checkin={checkin} deleteCheckin={deleteCheckin} currentUser={currentUser} fetchAllCheckins={fetchAllCheckins} />)}
           <h2 id="feed">Recent Activity</h2>
         </div>
       </div>
