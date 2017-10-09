@@ -13,6 +13,13 @@ class CheckinIndex extends React.Component {
     this.props.fetchAllCheckins();
   }
 
+  componentWillReceiveProps(nextProps) {
+    
+    if (this.props.checkins.length !== nextProps.checkins.length) {
+      this.props.fetchAllCheckins();
+    }
+  }
+
   render () {
 
     const { checkins, deleteCheckin, currentUser, fetchAllCheckins } = this.props

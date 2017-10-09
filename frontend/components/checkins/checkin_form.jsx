@@ -12,7 +12,6 @@ class CheckinForm extends React.Component {
       comment: "",
       image_url: ""
     };
-    this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   };
@@ -32,11 +31,6 @@ class CheckinForm extends React.Component {
       })
     ).then(dessert => this.props.history.push(`/desserts/${this.props.match.params.dessertId}`)), () => this.props.fetchAllCheckins();
   }
-
-
-    handleClick() {
-      this.props.logout();
-    }
 
     handleChange(field) {
       return (e) => this.setState({ [field]: e.currentTarget.value });

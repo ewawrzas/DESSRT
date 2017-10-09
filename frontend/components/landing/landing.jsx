@@ -36,7 +36,6 @@ class LandingPage extends React.Component {
             <p id="landingCopy">Discover and share your favorite desserts</p>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
