@@ -61,10 +61,21 @@
 }
 
 #userFeedAvatar {
-  display: inline-block;
-  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: auto;
+}
+
+.feedUserImgDiv {
   width: 40px;
   height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  border: 3px solid pink;
 }
 
 .checkinDesImgDiv {
@@ -74,18 +85,6 @@
   margin: 10px;
   height: 50px;
   width: 50px;
-  display: inline-block;
-}
-
-.feedUserImgDiv {
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: center center;
-  border: 3px solid pink;
-  border-radius: 100%;
-  margin: 10px;
-  height: 40px;
-  width: 40px;
   display: inline-block;
 }
 
