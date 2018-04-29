@@ -125,7 +125,6 @@
 #titleText {
   display: flex;
   align-items: center;
-
 }
 
 .checkinTitle {
@@ -186,4 +185,47 @@
 
 #feed {
   align-self: left;
+}
+
+@media screen and (max-device-width: 320px) {
+
+  .checkinsIdx {
+    width: 320px;
+  }
+
+  .checkinList {
+    width: 300px;
+  }
+
+  .checkinItem {
+    width: 300px;
+  }
+
+  .checkinComment {
+    width: 280px;
+  }
+
+  .navBackground {
+    width: 320px;
+  }
+
+  #homeNavLinks li {
+    display: none;
+  }
+
+  .userNav{
+    width: 300px;
+  }
+
+  .feedUserImgDiv {
+    display: none;
+  }
+
+  #userFeedAvatar {
+    display: none;
+  }
+
+  #text {
+    font-size: 10px;
+  }
 }

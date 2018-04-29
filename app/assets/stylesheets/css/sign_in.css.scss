@@ -27,7 +27,14 @@ h4 {
 
 .img1 {
   background-image: image-url('blurrypinkcupcakes.jpg');
-  min-height: 1000px;
+}
+
+.img2 {
+  background-image: image-url('blueberry.jpg');
+}
+
+.img1, .img2 {
+  height: 100vh;
   width: auto;
   display: flex;
   background-position: center;
@@ -37,17 +44,6 @@ h4 {
   align-items: center;
 }
 
-.img2 {
-  background-image: image-url('blueberry.jpg');
-  min-height: 1000px;
-  width: auto;
-  display: flex;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-}
 
 .signInForm {
   display: flex;
@@ -61,6 +57,7 @@ h4 {
   display: flex;
   flex-direction: column-reverse;
   height: 75%;
+  max-height: 500px;
   min-height: 453px;
   width: 350px;
   background: white;
