@@ -33,24 +33,21 @@
   color: grey;
 }
 
-.checkinList1 {
+.checkinList1, .checkinList {
   margin: 20px 0 100px 0px;
   padding: 16px 16px 0 16px;
   background: white;
   width: 700px;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
+.checkinList1 {
+  flex-direction: column;
+}
+
 .checkinList {
-  margin: 20px 0 100px 0px;
-  padding: 16px 16px 0 16px;
-  background: white;
-  width: 700px;
-  display: flex;
   flex-direction: column-reverse;
-  align-items: center;
 }
 
 #userFeedDesAvatar {
@@ -185,6 +182,48 @@
 
 #feed {
   align-self: left;
+}
+
+@media screen and (max-device-width: 770px) {
+  .checkinsIdx {
+    // width: 520px;
+    width: 95%;
+  }
+
+  .checkinList1 {
+    width: 100%;
+  }
+
+  .checkinList {
+    width: 100%;
+  }
+
+  .checkinItem {
+    // width: 500px;
+    width: 87%;
+  }
+
+  .checkinComment {
+    // width: 480px;
+    width: 94%;
+  }
+
+  #checkinInfo {
+    width: 100%;
+  }
+
+  .navBackground {
+    width: 520px;
+  }
+
+  #homeNavLinks li {
+    display: none;
+  }
+
+  .userNav{
+    width: 500px;
+  }
+
 }
 
 @media screen and (max-device-width: 320px) {

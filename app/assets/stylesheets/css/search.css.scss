@@ -1,7 +1,7 @@
 .searchResults {
   background-color: #f2f2f2;
   background-size: cover;
-  min-height: 900px;
+  height: 100vh;
 }
 
 .dessertIdx {
@@ -137,4 +137,18 @@
   align-items: center;
   color: grey;
   font-weight: bold;
+}
+
+@media screen and (max-device-width: 770px) {
+  .searchContainer2 {
+    width: 95%;
+  }
+
+  .dessertList {
+    width: 92%;
+  }
+
+  .dessertItem {
+    width: 99%;
+  }
 }

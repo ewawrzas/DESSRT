@@ -135,5 +135,14 @@
   justify-content: space-between;
   border-top: 1px lightgrey solid;
   position: relative;
+}
 
+@media screen and (max-device-width: 770px) {
+  #dessert {
+    width: 95%;
+  }
+
+  .dessertInfo {
+    width: 95%;
+  }
 }

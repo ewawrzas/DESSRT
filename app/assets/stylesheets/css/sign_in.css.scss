@@ -24,7 +24,6 @@ h4 {
   color: #9E9E9E;
 }
 
-
 .img1 {
   background-image: image-url('blurrypinkcupcakes.jpg');
 }
@@ -102,8 +101,7 @@ h4 {
   background-color: lightgrey;
 }
 
-.username {
-  background-image: image-url('001-profile.png');
+.username, .password {
   background-position: 0.3em;
   background-repeat: no-repeat;
   border: 1px solid lightgrey;
@@ -114,17 +112,13 @@ h4 {
   padding: 5px 2px 5px 18px;
 }
 
+.username {
+  background-image: image-url('001-profile.png');
+}
+
 
 .password {
   background-image: image-url('002-padlock.png');
-  background-position: 0.3em;
-  background-repeat: no-repeat;
-  border: 1px solid lightgrey;
-  margin: 5px 2px 5px 5px;
-  display: flex;
-  align-self: center;
-  align-items: flex-start;
-  padding: 5px 2px 5px 18px;
 }
 
 #username {
@@ -144,7 +138,6 @@ h4 {
 .erList {
   display: flex;
 }
-
 
 #errors {
   background-color: white;
